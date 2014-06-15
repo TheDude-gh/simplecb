@@ -1,0 +1,95 @@
+
+KNOWN BUGS
+GUI growing flaw
+When town grow mechanism Normal is selected and when town is supplied, but has no transport service, 
+as required in normal OpenTTD for town growing, GUI will incorrectly say town is growing even when it is
+in fact not.
+Currently games script cannot recognize whether town is or is not growing because of missing transport service.
+You can support adding new API for this by voting in https://bugs.openttd.org/task/5934?project=1&pagenum=3
+
+
+CHANGELOG
+
+Version - date
+
+================
+8 - 2014-05-11
+=FIXES=
+Fixed declaration bug in GoalProgress()
+Fixed game end message in GoalProgress()
+Fixed grow ratio calculation TownUpdate(), now maximum is really 100% and not more
+Fixed bad negative calculation for town grow counter
+
+
+
+================
+7 - 2014-05-07
+=FIXES=
+Town::Service function bad placement fix (was in bad scope and caused strange things)
+
+
+
+================
+6 - 2014-04-27
+=FIXES=
+Save/Load wrong reference
+
+
+
+================
+5 - 2014-04-26
+=FIXES=
+Town area signs fixed
+
+=CHANGES=
+Cargo is stored even if not required yet
+Game progress and cargo requirements are displayed in StoryBook
+New growth mechanism NORMAL (same as normal OpenTTD town growth, but requires cargo, from 1.4)
+Funding buildings enabled (from 1.4)
+New settings: Dynamic growth, Town name change, Grow mechanism and Goal progress
+Goal progress - when goal is reached, a message is diplayed
+Option for not disabling food and water cargo goals removed
+Czech language added
+
+
+
+================
+4 - 2014-04-01
+Beta version. Preparation for 1.4
+
+
+
+================
+3 - 2013-11-10
+=FIXES=
+Check for delivered cargo was not taking 0 as OK
+Added check if town population is under limit when claiming town with HQ
+Dont check for own company when checking if there is claimed town nearby when claiming town
+Towngui update was in bad loop
+
+=CHANGES=
+Town gui supports up to 6 cargos
+
+
+
+================
+2 - 2013-11-08
+
+=FIXES=
+Grow counter gui fix
+- When town growth rate was very high (2 or less), grow counter could go negative in goal gui
+
+Some variable type misshape fix
+- boolean comparisson to int caused crash
+
+=CHANGES=
+Loops reorganization
+
+=NEWS=
+Month counter added to Goal gui even when town did not grow
+
+
+
+================
+1 - 2013-10-20
+Script created

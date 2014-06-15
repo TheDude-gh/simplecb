@@ -1,0 +1,101 @@
+#
+# Simpleton City Builder   english.txt
+#
+
+#town area
+STR_HQTOWN                        :{COMPANY} - Město
+STR_HQAREA_TOP                    : ^ {COMPANY} ^
+STR_HQAREA_RIGHT                  :> {COMPANY}
+STR_HQAREA_BOTTOM                 : v {COMPANY} v
+STR_HQAREA_LEFT                   :{COMPANY} <
+STR_HQERR                         :VELKOMĚSTO nelze zvolit
+STR_CITY                          :.:: Velkoměsto ::.
+STR_CITY2                         :{YELLOW}.:: Velkoměsto ::.
+
+##############
+#welcome message
+STR_WELCOME                       :{}{BIG_FONT}Vítej ve hře Budování města{}{}Připraveno pro Vás{}{}{YELLOW}skupinou vývojářů Novapolis{}{}{WHITE}http://novapolis.net{}{}
+
+
+#news
+STR_NEW_HQ                        :Společnost {COMPANY} si zvolila {TOWN}
+STR_PLACE_HQ                      :Postav svojí centrálu poblíž města, abys ho zabral. Velkoměsta se nedají zabrat!
+STR_TOWN_CLAIMED                  :Společnost {COMPANY} si zvolila {TOWN}
+STR_TOWN_POPLIMIT                 :Společnost {COMPANY} neúspěšně zabrala {TOWN}. Město má příliš velkou populaci
+STR_TOWN_NOTCLAIMED               :Společnost {COMPANY} nenašla poblíž žádné město
+STR_CITY_NOTCLAIMED               :Společnost {COMPANY} nemůže zabrat velkoměsto
+STR_TOWN_HAS_OWNER                :{TOWN} je už zabráno společností {COMPANY}
+STR_TOWN_NEIGHBOUR_CLOSE          :Společnost {COMPANY} neúspěšně zkusila zabrat město, které už je v okolí jiné společnosti
+
+#information
+STR_PLACE_HQ_INFO                 :Postav svojí centrálu poblíž města s populací méně než {YELLOW}{COMMA} {BLACK} abys ho zabral. Velkoměsta nelze zabrat
+STR_TOWN_CLAIMED_INFO             :{BLACK}Zvolil sis {YELLOW}{TOWN}{BLACK}. {}{}V okně cílů můžeš vidět, co tvoje město potřebuje.
+STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK} má příliš velkou populaci. Maximální počet obyvatel pro zabrání je {YELLOW}{COMMA}
+STR_TOWN_NOTCLAIMED_INFO          :Poblíž není žádné město
+STR_CITY_NOTCLAIMED_INFO          :Nemůžeš zabrat {YELLOW}Velkoměsto
+STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}je už zabrané
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}je příliš blízko jinému město
+
+STR_TOWN_CLAIMED_RES              :{BLACK}Město bude potřebovat
+STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK} za každých 1000 obyvatel {ORANGE}* {BLACK}od populace {GREEN}{COMMA} {BLACK}{ORANGE}* {BLACK}Stárnutí suroviny {GREEN}{NUM}%
+STR_POINT_TO_STORY_REQ            :{BLACK}Seznam surovin, které město potřebuje můžeš vidět v {YELLOW}Knize příběhu{BLACK}, kdy budeš chtít
+
+
+#goal gui
+STR_GLOBAL_GOAL_CB                :{ORANGE}Stavitel města ::: Cíl hry je  :  {GREEN}{COMMA} {BLACK}obyvatel
+STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}rok{P "" ů} do konce hry
+
+STR_TOWN_CB_HEADER                :  {ORANGE}Požadavky tvého města
+
+STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK} s{YELLOW}{COMMA} {BLACK} obyvateli v {YELLOW}{TOWN}
+STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}s{YELLOW}{COMMA} {BLACK}obyvateli v {YELLOW}{TOWN}
+
+STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Sklad: {GREEN}{COMMA} {BLACK}ks  ( {YELLOW}{NUM}{BLACK} % ), Doručeno / Požadováno : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Doručeno / Požadováno: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}Město {GREEN}roste {YELLOW}{NUM} {BLACK}měsíc{P "" ů} v řadě. Celkem by růst {YELLOW}{NUM} {BLACK}měsíc{P "" ů} z celkových {YELLOW}{NUM}
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Město {RED}ne{BLACK}roste {YELLOW}{NUM} {BLACK}měsíc{P "" ů} v řadě. Růst zastaven {YELLOW}{NUM} {BLACK}měsíc{P "" ů} z {YELLOW}{NUM} {BLACK}celkem
+
+STR_TOWN_FUNDED                   :  {BLACK}Město staví budovy v období {YELLOW}{NUM} {BLACK}měsíc{P "" ů}. Město stavělo budovy po{YELLOW}{NUM} {BLACK}měsíc{P "" ů} celkem.
+
+STR_TOWN_MISSING_CARGO            :  {BLACK}Městu chybí :   {WHITE}{CARGO_LIST}
+STR_TOWN_GROWTH_RATE              :  {BLACK}1 budova každých{ORANGE}{COMMA} {BLACK}d{P en ní} ({ORANGE}{COMMA}{BLACK}%), další za {YELLOW}{COMMA}{BLACK} d{P en ní}
+
+STR_TOWN_NEXT_CARGO               :  {BLACK}Další: {GREEN}{CARGO_LIST} {BLACK}od {GREEN}{COMMA} {BLACK}obyvatel
+
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}Město {GREEN}roste
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}Město {RED}ne{BLACK}roste
+STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Chybí dopravní služby
+
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Město {GREEN}roste{}   {BLACK}Chybějící suroviny:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}Město {RED}ne{BLACK}roste{}   {BLACK}Chybějící suroviny:
+
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Město patří společnosti {COMPANY}{}   {BLACK}Chybějící suroviny: {STRING}
+
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Městu chybí:   {WHITE}{CARGO_LIST}{STRING}
+STR_TOWNW_GROWTH_RATE             :{}   {BLACK}Růst {ORANGE}{COMMA}{BLACK}%, další budova {YELLOW}{COMMA}{BLACK} za d{P en ní}
+
+STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Další surovina: {GREEN}{CARGO_LIST} {BLACK}od {GREEN}{COMMA} {BLACK}obyvatel
+
+STR_SEE_GOAL_GUI                  :{}   {BLACK}Více podrobností v {WHITE}okně cílů{STRING}{STRING}
+
+#town names according to population
+STR_TOWNNAME_POP0                 :Osada
+STR_TOWNNAME_POP1                 :Letovisko
+STR_TOWNNAME_POP2                 :Vesnice
+STR_TOWNNAME_POP3                 :Město
+STR_TOWNNAME_POP4                 :Velkoměsto
+STR_TOWNNAME_POP5                 :Metropolis
+
+STR_TOWNNAME_PRESIDENT            : {PRESIDENT_NAME} - {STRING}
+
+
+#goal progress
+STR_WINNER_GOAL                   :{BLACK}Společnost {YELLOW}{COMPANY} {BLACK}zvítězila{}Cíl splněn s {YELLOW}{COMMA} {BLACK}obyvateli
+STR_WINNER_TIME                   :{BLACK}Hra skončila{}{BLACK}Společnost {YELLOW}{COMPANY} {BLACK}zvítězila s {YELLOW}{COMMA} {BLACK}obyvateli
+
+STR_STORY_TITLE_REQ               :{GREEN}Požadavky na zásobování města
+
+STR_STORY_TITLE                   :{WHITE}Výroční ceny pro stavitele města
+STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}s {YELLOW}{COMMA} {BLACK}Obyvateli ({YELLOW}{STRING}{COMMA}{BLACK}).
+
