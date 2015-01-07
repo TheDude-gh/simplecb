@@ -23,6 +23,7 @@ function SimpletonCB::Save() {
 		sv_growmech = this.growmech,
 		sv_goalprogress = this.goalprogress,
 		sv_dyngrowth = this.dyn_growth,
+		sv_maxCityPop = this.maxCityPop,
 		sv_townstring = this.townstring,
 	};
 
@@ -66,6 +67,7 @@ function SimpletonCB::Load(version, tbl) {
 		else if(key == "sv_growmech") this.growmech = val;
 		else if(key == "sv_goalprogress") this.goalprogress = val;
 		else if(key == "sv_dyngrowth") this.dyn_growth = val;
+		else if(key == "sv_maxCityPop") this.maxCityPop = val;
 		else if(key == "sv_townstring") this.townstring = val;
 		else if(key == "sv_companies"){
 			foreach(company in val){

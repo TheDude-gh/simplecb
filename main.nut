@@ -43,7 +43,6 @@ class SimpletonCB extends GSController
 	townstring = 0;
 	townarea = 0;
 
-	current_date = 0;
 	last_date = 0;
 	sleeptime = 74; //refresh
 	firstrun = true;
@@ -55,6 +54,7 @@ class SimpletonCB extends GSController
 	flow_days = 0;
 	game_length = 0;
 	dyn_growth = 0;
+	maxCityPop = 0;
 	goalprogress = 0;
 	goalstatus = 0;
 
@@ -70,6 +70,7 @@ class SimpletonCB extends GSController
 	max_storage = 4;
 	
 	story = []; //storypage ids
+	storyElement = []; //storypage elements ids
 
 	signlist = null; //sings pool
 
@@ -253,6 +254,7 @@ function SimpletonCB::DailyLoop(){
 
 function SimpletonCB::MonthlyLoop(){
 	local goal_id;
+	this.LimitCityPopulation(); //check for overgrown cities
 
 	//clear goals to show new info
 	for (local i = 0; i < this.goals.len(); i++) {
@@ -303,9 +305,11 @@ function SimpletonCB::MonthlyLoop(){
 
 function SimpletonCB::YearlyLoop(){
 	local year_run_time = this.current_year - GSGameSettings.GetValue("game_creation.starting_year");
-	if(year_run_time > 0 && (year_run_time % 5 == 0)){
-		local growrate = GSGameSettings.GetValue("economy.town_growth_rate");
-		if(growrate < 4) GSGameSettings.SetValue("economy.town_growth_rate", ++growrate);
+	if(this.dyn_growth > 0){
+		if(year_run_time > 0 && (year_run_time % this.dyn_growth == 0)){
+			local growrate = GSGameSettings.GetValue("economy.town_growth_rate");
+			if(growrate < 4) GSGameSettings.SetValue("economy.town_growth_rate", ++growrate);
+		}
 	}
 
 	this.Story();
@@ -506,6 +510,7 @@ function SimpletonCB::PrepareCB(){
 	this.growmech = GSController.GetSetting("growmechanism");
 	this.dyn_growth = GSController.GetSetting("dyngrowth");
 	this.goalprogress = GSController.GetSetting("goalprogress");
+	this.maxCityPop = GSController.GetSetting("cityPopLimit");
 	if(this.growmech < Growth.GROW_NORMAL || this.growmech >= Growth.GROW_END) this.growmech = Growth.GROW_NORMAL;
 
 	//adjust some game settings
@@ -540,6 +545,34 @@ function SimpletonCB::StopTownMonitor(companyid, townid){
 	foreach(cargo in this.CBcargo) {
 		if (companyid != GSCompany.COMPANY_INVALID && GSTown.IsValidTown(townid)) {
 			GSCargoMonitor.GetTownDeliveryAmount(companyid, cargo.id, townid, false);
+		}
+	}
+}
+//limit city growing if population is too big
+function SimpletonCB::LimitCityPopulation(){
+	if(this.maxCityPop == 0) return; //disabled
+
+	local townlist = GSTownList();
+	local cityList = [];
+	local maxTownPop = 2000; //least allowable city size
+	foreach(townid, _ in townlist){
+		if(!GSTown.IsCity(townid)) maxTownPop = max(maxTownPop, GSTown.GetPopulation(townid)); //get max town pop
+		else cityList.append(townid); //cities for later
+	}
+
+	maxTownPop = maxTownPop * this.maxCityPop;
+	//Log("max "  + maxTownPop);
+	foreach(townid in cityList){
+		local growrate = GSTown.GetGrowthRate(townid);
+		if(GSTown.GetPopulation(townid) > maxTownPop){ //if bigger
+			//Log(GSTown.GetName(townid) + " NOT growing " + GSTown.GetPopulation(townid));
+			if(growrate != GSTown.TOWN_GROWTH_NONE){ //check if already not growing
+				GSTown.SetGrowthRate(townid, GSTown.TOWN_GROWTH_NONE);
+			}
+		}
+		else if(growrate == GSTown.TOWN_GROWTH_NONE){ //lower, check if we need to set to normal
+			//Log(GSTown.GetName(townid) + " growing " + GSTown.GetPopulation(townid));
+			GSTown.SetGrowthRate(townid, GSTown.TOWN_GROWTH_NORMAL);
 		}
 	}
 }

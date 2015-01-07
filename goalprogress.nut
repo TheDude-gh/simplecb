@@ -72,11 +72,20 @@ function SimpletonCB::Story(){
 	local diff = score - company.score_last_year; //pop increase during last year
 	local Tpositive = diff > 0 ? GSText.STR_PLUS : GSText.STR_EMPTY0; //plus or minus sign?
 
-	GSStoryPage.NewElement(
+	local newElementId = GSStoryPage.NewElement(
 		this.story[0],
 		GSStoryPage.SPET_LOCATION,
 		GSCompany.GetCompanyHQ(companyid),
 		GSText(GSText.STR_STORY_PROGRESS, this.current_year - 1, companyid, score, GSText(Tpositive), diff)
 	);
+	
+	this.storyElement.append(newElementId);
+	if(this.storyElement.len() > 24){
+		foreach(id, element in this.storyElement){
+			this.storyElement.remove(id);
+			GSStoryPage.RemoveElement(element);
+		  break;
+		}
+	}
 }
 /* /story page*/

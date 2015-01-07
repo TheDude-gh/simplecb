@@ -15,8 +15,8 @@ class SimpletonCBInfo extends GSInfo {
 	function GetAuthor()      { return "TheDude"; }
 	function GetName()        { return "Simpleton's City Builder"; }
 	function GetDescription() { return "Easily configured City Builder simulation script"; }
-	function GetVersion()     { return 8; }
-	function GetDate()        { return "2014-05-11"; }
+	function GetVersion()     { return 9; }
+	function GetDate()        { return "2014-12-22"; }
 	function CreateInstance() { return "SimpletonCB"; }
 	function GetShortName()   { return "SMCB"; }
 	function GetAPIVersion()  { return "1.4"; }
@@ -110,12 +110,26 @@ class SimpletonCBInfo extends GSInfo {
 
 		AddSetting({
 			name = "dyngrowth",
-			description = "Dynamic change of town growth rate. Every 5 years is increased by 1 up to maximum 4",
+			description = "Dynamic change of town growth rate. Every X years is increased by 1 up to maximum 4. Set to 0 to disable it",
 			easy_value = 0,
 			medium_value = 0,
 			hard_value = 0,
 			custom_value = 0,
-			flags = CONFIG_BOOLEAN | CONFIG_INGAME,
+			flags = CONFIG_NONE | CONFIG_INGAME,
+			min_value = 0,
+			max_value = 100,
+		});
+		
+		AddSetting({
+			name = "cityPopLimit",
+			description = "Limit cities population to X times biggest town on map",
+			easy_value = 0,
+			medium_value = 0,
+			hard_value = 0,
+			custom_value = 0,
+			flags = CONFIG_NONE | CONFIG_INGAME,
+			min_value = 0,
+			max_value = 10,
 		});
 
 		AddSetting({
@@ -170,26 +184,26 @@ class SimpletonCBInfo extends GSInfo {
 		local cargoDef = [
 /* CARGOID  REQ   FROM  DEC  CARGO NAME (NORMAL, E=ECS, F=FIRS) */
 /* 00 */ [  200,     0,   0, "Passengers" ],
-/* 01 */ [  100,   250,   0, "Coal / Rubber / Sugar" ],
+/* 01 */ [  100,   250,   0, "Coal / Rubber / Sugar / Y:Stone" ],
 /* 02 */ [   40,   500,   0, "Mail" ],
-/* 03 */ [    0,     0,   0, "Oil / Toys" ],
-/* 04 */ [    0,     0,   0, "Livestock / Fruit / Batteries" ],
-/* 05 */ [  150,  1500,   0, "Goods/ Sweets" ],
+/* 03 */ [    0,     0,   0, "Oil / Toys / Y:Wood" ],
+/* 04 */ [    0,     0,   0, "Livestock / Fruit / Batteries / Y:Building Materials" ],
+/* 05 */ [  150,  1500,   0, "Goods/ Sweets / Y:-" ],
 /* 06 */ [    0,     0,   0, "Grain / Wheat / Maize / Toffee / E:Cereals" ],
-/* 07 */ [    0,     0,   0, "Wood / Cola" ],
-/* 08 */ [    0,     0,   0, "Iron Ore / - / Copper Ore / Cotton Candy" ],
-/* 09 */ [    0,     0,   0, "Steel / Paper / Water / Bubbles / F:Metal" ],
-/* 10 */ [   20,  2500,   0, "Valuables / Gold / Diamonds / Plastic / F:Milk" ],
-/* 11 */ [    0,     0,   0, "Food / Fizzy Drinks" ],
-/* 12 */ [    0,     0,   0, " - / E:Paper / F:Sugar Cane (Beet)" ],
-/* 13 */ [    0,     0,   0, " - / E:F:Fruit" ],
-/* 14 */ [    0,     0,   0, " - / E:F:Fish" ],
-/* 15 */ [    0,     0,   0, " - / E:F:Wool" ],
-/* 16 */ [    0,     0,   0, " - / F:F:Clay" ],
-/* 17 */ [    0,     0,   0, " - / E:F:Sand" ],
-/* 18 */ [    0,     0,   0, " - / E:Glass / F:Manufacturing Supplies" ],
-/* 19 */ [    0,     0,   0, " - / E:Wood Products / F:Lumber" ],
-/* 20 */ [    0,     0,   0, " - / E:Dyes / F:Scrap Metal" ],
+/* 07 */ [    0,     0,   0, "Wood / Cola / Y:Fruit" ],
+/* 08 */ [    0,     0,   0, "Iron Ore / - / Copper Ore / Cotton Candy / Y:Food" ],
+/* 09 */ [    0,     0,   0, "Steel / Paper / Water / Bubbles / F:Metal / Y:-" ],
+/* 10 */ [   20,  2500,   0, "Valuables / Gold / Diamonds / Plastic / F:Milk / Y:Food" ],
+/* 11 */ [    0,     0,   0, "Food / Fizzy Drinks / Y:-" ],
+/* 12 */ [    0,     0,   0, " - / E:Paper / F:Sugar Cane (Beet) / Y:Steel" ],
+/* 13 */ [    0,     0,   0, " - / E:F:Fruit / Y:Refined Products" ],
+/* 14 */ [    0,     0,   0, " - / E:F:Fish / Y:Batteries" ],
+/* 15 */ [    0,     0,   0, " - / E:F:Wool / Y:Machinery" ],
+/* 16 */ [    0,     0,   0, " - / F:F:Clay / Y:YETI dudes" ],
+/* 17 */ [    0,     0,   0, " - / E:F:Sand / Y:Clay" ],
+/* 18 */ [    0,     0,   0, " - / E:Glass / F:Manufacturing Supplies / Y:PigCows" ],
+/* 19 */ [    0,     0,   0, " - / E:Wood Products / F:Lumber / Y:Uranium" ],
+/* 20 */ [    0,     0,   0, " - / E:Dyes / F:Scrap Metal / Y:Iron ore" ],
 /* 21 */ [    0,     0,   0, " - / E:Fertiliser / F:Farm Supplies" ],
 /* 22 */ [    0,     0,   0, " - / E:Oil seed / F:Plant Fibres" ],
 /* 23 */ [    0,     0,   0, " - / E:Refined products / F:Chemicals" ],

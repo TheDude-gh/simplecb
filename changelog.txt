@@ -13,6 +13,18 @@ CHANGELOG
 Version - date
 
 ================
+9 - 2014-11-1
+=CHANGES=
+Setting for limiting City population to maximum twice the biggest town
+Maximum Goal Progress lines limited to 24
+
+
+=FIXES=
+Dynamic growth interval is changeable now and disabling it works
+
+
+
+================
 8 - 2014-05-11
 =FIXES=
 Fixed declaration bug in GoalProgress()
