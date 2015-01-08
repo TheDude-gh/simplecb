@@ -12,7 +12,6 @@ STR_HQERR                         :VELKOMĚSTO nelze zvolit
 STR_CITY                          :.:: Velkoměsto ::.
 STR_CITY2                         :{YELLOW}.:: Velkoměsto ::.
 
-##############
 #welcome message
 STR_WELCOME                       :{}{BIG_FONT}Vítej ve hře Budování města{}{}Připraveno pro Vás{}{}{YELLOW}skupinou vývojářů Novapolis{}{}{WHITE}http://novapolis.net{}{}
 
@@ -29,16 +28,24 @@ STR_TOWN_NEIGHBOUR_CLOSE          :Společnost {COMPANY} neúspěšně zkusila z
 
 #information
 STR_PLACE_HQ_INFO                 :Postav svojí centrálu poblíž města s populací méně než {YELLOW}{COMMA} {BLACK} abys ho zabral. Velkoměsta nelze zabrat
-STR_TOWN_CLAIMED_INFO             :{BLACK}Zvolil sis {YELLOW}{TOWN}{BLACK}. {}{}V okně cílů můžeš vidět, co tvoje město potřebuje.
+STR_TOWN_CLAIMED_INFO             :{BLACK}Zvolil sis {YELLOW}{TOWN}{BLACK}.{}{}V okně cílů můžeš vidět, co tvoje město potřebuje.
 STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK} má příliš velkou populaci. Maximální počet obyvatel pro zabrání je {YELLOW}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :Poblíž není žádné město
 STR_CITY_NOTCLAIMED_INFO          :Nemůžeš zabrat {YELLOW}Velkoměsto
 STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}je už zabrané
 STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}je příliš blízko jinému město
 
+#STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}Město bude potřebovat
 STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK} za každých 1000 obyvatel {ORANGE}* {BLACK}od populace {GREEN}{COMMA} {BLACK}{ORANGE}* {BLACK}Stárnutí suroviny {GREEN}{NUM}%
 STR_POINT_TO_STORY_REQ            :{BLACK}Seznam surovin, které město potřebuje můžeš vidět v {YELLOW}Knize příběhu{BLACK}, kdy budeš chtít
+
+#dummy
+STR_EMPTY0                        :
+STR_EMPTY1                        :{STRING}
+STR_EMPTY2                        :{STRING}{STRING}
+STR_EMPTY3                        :{STRING}{STRING}{STRING}
+STR_PLUS                          :+
 
 
 #goal gui
@@ -63,6 +70,10 @@ STR_TOWN_GROWTH_RATE              :  {BLACK}1 budova každých{ORANGE}{COMMA} {B
 
 STR_TOWN_NEXT_CARGO               :  {BLACK}Další: {GREEN}{CARGO_LIST} {BLACK}od {GREEN}{COMMA} {BLACK}obyvatel
 
+
+#town gui
+STR_TOWNGUI                       :{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}
+
 STR_TOWNW_GROWTYPE_GROW           :{BLACK}Město {GREEN}roste
 STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}Město {RED}ne{BLACK}roste
 STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Chybí dopravní služby
@@ -71,6 +82,11 @@ STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Město {GREEN}roste{}   {BLACK}Chyběj
 STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}Město {RED}ne{BLACK}roste{}   {BLACK}Chybějící suroviny:
 
 STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Město patří společnosti {COMPANY}{}   {BLACK}Chybějící suroviny: {STRING}
+
+STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
+STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
+STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
+
 
 STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Městu chybí:   {WHITE}{CARGO_LIST}{STRING}
 STR_TOWNW_GROWTH_RATE             :{}   {BLACK}Růst {ORANGE}{COMMA}{BLACK}%, další budova {YELLOW}{COMMA}{BLACK} za d{P en ní}
@@ -89,7 +105,6 @@ STR_TOWNNAME_POP5                 :Metropolis
 
 STR_TOWNNAME_PRESIDENT            : {PRESIDENT_NAME} - {STRING}
 
-
 #goal progress
 STR_WINNER_GOAL                   :{BLACK}Společnost {YELLOW}{COMPANY} {BLACK}zvítězila{}Cíl splněn s {YELLOW}{COMMA} {BLACK}obyvateli
 STR_WINNER_TIME                   :{BLACK}Hra skončila{}{BLACK}Společnost {YELLOW}{COMPANY} {BLACK}zvítězila s {YELLOW}{COMMA} {BLACK}obyvateli
@@ -99,3 +114,10 @@ STR_STORY_TITLE_REQ               :{GREEN}Požadavky na zásobování města
 STR_STORY_TITLE                   :{WHITE}Výroční ceny pro stavitele města
 STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}s {YELLOW}{COMMA} {BLACK}Obyvateli ({YELLOW}{STRING}{COMMA}{BLACK}).
 
+#test
+#STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
+
+#usable and well visible in GUI:
+#{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}
+#usable colours
+#{BLACK}  {WHITE} {RED}    {GREEN} {BLUE}   {YELLOW} {ORANGE} {PURPLE} {GRAY}   {BROWN} {SILVER} {GOLD} {CREAM}  {LTBLUE} {DKBLUE} {DKGREEN} {LTBROWN}

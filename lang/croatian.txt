@@ -1,0 +1,117 @@
+##plural 6
+#
+# Simpleton City Builder   english.txt
+#
+
+#town area
+STR_HQTOWN                        :Grad od {COMPANY}
+STR_HQAREA_TOP                    : ^ Područje {COMPANY} ^
+STR_HQAREA_RIGHT                  :> Područje {COMPANY}
+STR_HQAREA_BOTTOM                 : v Područje {COMPANY} v
+STR_HQAREA_LEFT                   :Područje {COMPANY} <
+STR_HQERR                         :Ne možete zauzeti GRAD
+STR_CITY                          :.:: Grad ::.
+STR_CITY2                         :{YELLOW}.:: Grad ::.
+
+#welcome message
+STR_WELCOME                       :{}{BIG_FONT}Pozdrav i dobrodošli u iskustvo Graditelja Gradova{}{}Prezentirano od{}{}{YELLOW}Novapolis Tima{}{}{WHITE}http://novapolis.net{}{}
+
+
+#news
+STR_NEW_HQ                        :{COMPANY} je zauzela {TOWN}
+STR_PLACE_HQ                      :Postavite vaše Sjedište u grad da bi ga zauzeli, veliki gradovi ne mogu biti zauzeti!
+STR_TOWN_CLAIMED                  :{COMPANY} je zauzela {TOWN}
+STR_TOWN_POPLIMIT                 :{COMPANY} nije uspjela zauzeti {TOWN} radi prevelikog broja stanovnika
+STR_TOWN_NOTCLAIMED               :{COMPANY} nije našla nijedan grad u blizini
+STR_CITY_NOTCLAIMED               :{COMPANY} ne može zauzeti GRAD
+STR_TOWN_HAS_OWNER                :{TOWN} je već zauzet od strane {COMPANY}
+STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} je pokušala zauzeti grad preblizu drugoj kompaniji
+
+#information
+STR_PLACE_HQ_INFO                 :Postavite vaše Sjedište u grad sa manje od {YELLOW}{COMMA} {BLACK}stanovnika da bi ga zauzeli, veliki gradovi ne mogu biti zauzeti!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Zauzeli ste {YELLOW}{TOWN}{BLACK}.{}{}Možete vidjeti što vaš grad treba u prozoru grada ili u sučelju ciljeva.
+STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}ima preveliki broj stanovnika da bi bio zauzet. Najveći dozvoljeni broj stanovnika je {YELLOW}{COMMA}
+STR_TOWN_NOTCLAIMED_INFO          :Nema grada u blizini
+STR_CITY_NOTCLAIMED_INFO          :Ne možete zauzeti {YELLOW}GRAD
+STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}je već zauzet
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}je preblizu drugom zauzetom gradu
+
+#STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+STR_TOWN_CLAIMED_RES              :{BLACK}Grad će trebati
+STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}na 1000 stanovnika {ORANGE}* {BLACK}Od{GREEN}{COMMA} {BLACK}stanovnika {ORANGE}* {BLACK}Kvarenje {GREEN}{NUM}%
+STR_POINT_TO_STORY_REQ            :{BLACK}Možete provjeriti popis potrebnih tereta za grad na {YELLOW} Stranici Priče {BLACK}u bilo kojem trenutku
+
+#dummy
+STR_EMPTY0                        :
+STR_EMPTY1                        :{STRING}
+STR_EMPTY2                        :{STRING}{STRING}
+STR_EMPTY3                        :{STRING}{STRING}{STRING}
+STR_PLUS                          :+
+
+
+#goal gui
+STR_GLOBAL_GOAL_CB                :{ORANGE}GRADITELJ GRADOVA ::: Cilj igre je  :  {GREEN}{COMMA} {BLACK}stanovnika
+
+STR_TOWN_CB_HEADER                :{ORANGE} Potrebe vašeg grada
+
+STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}sa {YELLOW}{COMMA} {BLACK}stanovnika u {YELLOW}{TOWN}
+STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}sa {YELLOW}{COMMA} {BLACK}stanovnika u {YELLOW}{TOWN}
+
+STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Zalihe : {GREEN}{COMMA} {BLACK}jedinica  ( {YELLOW}{NUM}{BLACK} % ), Dostavljeno / Potrebno : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Dostavljeno / Potrebno : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+
+
+
+STR_TOWN_MISSING_CARGO            :  {BLACK}Gradu nedostaje :   {WHITE}{CARGO_LIST}
+
+STR_TOWN_NEXT_CARGO               :  {BLACK}Sljedeće: {GREEN}{CARGO_LIST} {BLACK}na {GREEN}{COMMA} {BLACK}stanovnika
+
+
+#town gui
+
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}Grad {GREEN}raste
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}Grad {RED}ne {BLACK}raste
+STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Usluge koje nedostaju
+
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Grad {GREEN}raste{}   {BLACK}Količine tereta koje nedostaju:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}Grad {RED}ne {BLACK}raste{}   {BLACK}Količine tereta koje nedostaju:
+
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Ovaj grad je zauzed od {COMPANY}{}   {BLACK}Količine tereta koje nedostaju:{STRING}
+
+STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
+STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
+STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
+
+
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Gradu nedostaje :   {WHITE}{CARGO_LIST}{STRING}
+
+STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Sljedeće: {GREEN}{CARGO_LIST} {BLACK}na {GREEN}{COMMA} {BLACK}stanovnika
+
+STR_SEE_GOAL_GUI                  :{}   {BLACK}Vidite više detalja u {WHITE}sučelju ciljeva{STRING}{STRING}
+
+#town names according to population
+STR_TOWNNAME_POP0                 :Naselje
+STR_TOWNNAME_POP1                 :Odmaralište
+STR_TOWNNAME_POP2                 :Selo
+STR_TOWNNAME_POP3                 :Grad
+STR_TOWNNAME_POP4                 :Grad
+STR_TOWNNAME_POP5                 :Metropola
+
+STR_TOWNNAME_PRESIDENT            :{PRESIDENT_NAME}'s' {STRING}
+
+#goal progress
+STR_WINNER_GOAL                   :{YELLOW}{COMPANY} {BLACK}je pobijedio, dostigao je cilj sa {YELLOW}{COMMA} {BLACK}stanovnika
+STR_WINNER_TIME                   :{BLACK}Igra je završila.{} {YELLOW}{COMPANY} {BLACK}je probijedio sa {YELLOW}{COMMA} {BLACK}stanovništva
+
+STR_STORY_TITLE_REQ               :{GREEN}Potrebe za Graditelja Gradova
+
+STR_STORY_TITLE                   :{WHITE}Godišnje nagrade Graditelja Gradova
+STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}sa {YELLOW}{COMMA} {BLACK}brojem stanovnika ({YELLOW}{STRING}{COMMA}{BLACK}).
+
+#test
+#STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
+
+#usable and well visible in GUI:
+#{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}
+#usable colours
+#{BLACK}  {WHITE} {RED}    {GREEN} {BLUE}   {YELLOW} {ORANGE} {PURPLE} {GRAY}   {BROWN} {SILVER} {GOLD} {CREAM}  {LTBLUE} {DKBLUE} {DKGREEN} {LTBROWN}

@@ -1,0 +1,78 @@
+##plural 2
+#
+# Simpleton City Builder   english.txt
+#
+
+#town area
+STR_HQTOWN                        :Ville de {COMPANY}
+STR_HQAREA_LEFT                   :{COMPANY} zone &lt;
+STR_CITY                          :.:: Cité ::.
+STR_CITY2                         :{YELLOW}.:: Cité ::.
+
+#welcome message
+STR_WELCOME                       :{}{BIG_FONT}Bonjour et bienvenue dans l'expérience City Builder{}{}Auteurs{}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
+
+
+#news
+STR_TOWN_CLAIMED                  :{COMPANY} a pris {TOWN}
+STR_TOWN_POPLIMIT                 :{COMPANY} ne peux revendiquer {TOWN} en raison d'une population trop élevée
+STR_TOWN_NOTCLAIMED               :{COMPANY} n'a pas trouvée de ville proche
+STR_TOWN_HAS_OWNER                :{TOWN} est déjà réclamée par {COMPANY}
+
+#information
+STR_PLACE_HQ_INFO                 :Placez votre QG dans une ville avec une population de moins de {YELLOW}{COMMA} {BLACK}pour la réclamer, les cités ne peuvent pas être réclamées!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Vous avez pris {YELLOW}{TOWN}{BLACK}.{}{}Vous pouvez voir les besoins de la ville dans l'interface de la ville ou le menu Objectif.
+STR_CITY_NOTCLAIMED_INFO          :Vous ne pouvez pas réclamer une {YELLOW}CITE
+
+#STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+STR_TOWN_CLAIMED_RES              :{BLACK}La ville va avoir besoin
+
+#dummy
+STR_EMPTY0                        :
+
+
+#goal gui
+
+
+STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}avec une population de {YELLOW}{COMMA} {BLACK} dans {YELLOW}{TOWN}
+
+STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Stock : {GREEN}{COMMA} {BLACK}unités  ( {YELLOW}{NUM}{BLACK} % ), Delivrées / Requises : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+
+
+
+
+STR_TOWN_NEXT_CARGO               :  {BLACK}Suivant: {GREEN}{CARGO_LIST} {BLACK}à {GREEN}{COMMA} {BLACK}population
+
+
+#town gui
+
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}Ville est {GREEN}croissante
+
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Ville est {GREEN}croissante{}   {BLACK}Cargaison montant requis:
+
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Cette ville est prise par {COMPANY}{}   {BLACK}Cargaison montant requis:{STRING}
+
+
+
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Ville manque de :   {WHITE}{CARGO_LIST}{STRING}
+
+
+
+#town names according to population
+STR_TOWNNAME_POP2                 :Village
+STR_TOWNNAME_POP4                 :Cité
+STR_TOWNNAME_POP5                 :Métropole
+
+
+#goal progress
+
+STR_STORY_TITLE_REQ               :{GREEN}City Builder Exigences
+
+
+#test
+#STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
+
+#usable and well visible in GUI:
+#{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}
+#usable colours
+#{BLACK}  {WHITE} {RED}    {GREEN} {BLUE}   {YELLOW} {ORANGE} {PURPLE} {GRAY}   {BROWN} {SILVER} {GOLD} {CREAM}  {LTBLUE} {DKBLUE} {DKGREEN} {LTBROWN}
