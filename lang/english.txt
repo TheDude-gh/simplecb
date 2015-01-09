@@ -12,7 +12,6 @@ STR_HQERR                         :You can't claim CITY
 STR_CITY                          :.:: City ::.
 STR_CITY2                         :{YELLOW}.:: City ::.
 
-##############
 #welcome message
 STR_WELCOME                       :{}{BIG_FONT}Hello and welcome to the City Builder experience{}{}Brought to you by {}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
 
