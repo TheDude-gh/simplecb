@@ -1,4 +1,4 @@
-#
+##plural 0
 # Simpleton City Builder   english.txt
 #
 
@@ -30,7 +30,7 @@ STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} tried to claim town too close to an
 #information
 STR_PLACE_HQ_INFO                 :Place your HQ in a town with less than {YELLOW}{COMMA} {BLACK}population to claim it, cities cannot be claimed!
 STR_TOWN_CLAIMED_INFO             :{BLACK}You claimed {YELLOW}{TOWN}{BLACK}. {}{}You can see what your town need in town window or in goal gui.
-STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}has to high population to be claimed. Maximum populatio allowed is {YELLOW}{COMMA}
+STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}has too high population to be claimed. Maximum population allowed is {YELLOW}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :No town nearby
 STR_CITY_NOTCLAIMED_INFO          :You can not claim a {YELLOW}CITY
 STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}is already claimed

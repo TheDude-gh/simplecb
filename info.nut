@@ -16,7 +16,7 @@ class SimpletonCBInfo extends GSInfo {
 	function GetName()        { return "Simpleton's City Builder"; }
 	function GetDescription() { return "Easily configured City Builder simulation script"; }
 	function GetVersion()     { return 9; }
-	function GetDate()        { return "2014-12-22"; }
+	function GetDate()        { return "2014-01-07"; }
 	function CreateInstance() { return "SimpletonCB"; }
 	function GetShortName()   { return "SMCB"; }
 	function GetAPIVersion()  { return "1.4"; }
@@ -178,11 +178,11 @@ class SimpletonCBInfo extends GSInfo {
 			name = "category000", description = " >>> TOWN REQUIREMENTS PER 1000 INHABITANTS <<< ", easy_value = 1, medium_value = 1, hard_value = 1, custom_value = 1, flags = CONFIG_BOOLEAN,
 		});
 		AddSetting({
-			name = "category001", description = "   > ECS and FIRS cargos are marked E: or F: when they are different from original cargos < ", easy_value = 1, medium_value = 1, hard_value = 1, custom_value = 1, flags = CONFIG_BOOLEAN,
+			name = "category001", description = "   > ECS, FIRS and YETI cargos are marked E:, F: or Y: when they are different from original cargos < ", easy_value = 1, medium_value = 1, hard_value = 1, custom_value = 1, flags = CONFIG_BOOLEAN,
 		});
 
 		local cargoDef = [
-/* CARGOID  REQ   FROM  DEC  CARGO NAME (NORMAL, E=ECS, F=FIRS) */
+/* CARGOID  REQ   FROM  DEC  CARGO NAME (NORMAL, E=ECS, F=FIRS, Y=YETI) */
 /* 00 */ [  200,     0,   0, "Passengers" ],
 /* 01 */ [  100,   250,   0, "Coal / Rubber / Sugar / Y:Stone" ],
 /* 02 */ [   40,   500,   0, "Mail" ],
