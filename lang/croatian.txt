@@ -1,5 +1,4 @@
 ##plural 6
-#
 # Simpleton City Builder   english.txt
 #
 
@@ -68,6 +67,7 @@ STR_TOWN_NEXT_CARGO               :  {BLACK}Sljedeće: {GREEN}{CARGO_LIST} {BLAC
 
 
 #town gui
+STR_TOWNGUI                       :{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}
 
 STR_TOWNW_GROWTYPE_GROW           :{BLACK}Grad {GREEN}raste
 STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}Grad {RED}ne {BLACK}raste
