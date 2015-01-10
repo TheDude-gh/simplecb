@@ -78,7 +78,7 @@ STR_TOWNW_GROWTYPE_GROW           :{BLACK}La ville est {GREEN}croissante
 STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}La ville est {RED}non {BLACK}croissante
 STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Service manquant
 
-STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}La ville est {GREEN}croissante{}   {BLACK}Cargo amounts missing:
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}La ville est {GREEN}croissante{}   {BLACK}Montant de cargaison manquant:
 STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}La ville est {RED}non {BLACK}croissante{}   {BLACK}Montant de cargaison manquant:
 
 STR_TOWN_OWNED_COMPANY            :{}{YELLOW}La ville est prise par {COMPANY}{}   {BLACK}Montant de cargaison manquant:{STRING}

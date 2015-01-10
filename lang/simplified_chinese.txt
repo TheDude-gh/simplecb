@@ -1,0 +1,122 @@
+##plural 1
+# Simpleton City Builder   english.txt
+#
+
+#town area
+STR_HQTOWN                        :{COMPANY}之城
+STR_HQAREA_TOP                    : ^ {COMPANY}的领地 ^
+STR_HQAREA_RIGHT                  :> {COMPANY}的领地
+STR_HQAREA_BOTTOM                 : v {COMPANY}的领地 v
+STR_HQAREA_LEFT                   :{COMPANY}的领地 <
+STR_HQERR                         :你不能认领 都市。
+STR_CITY                          :.:: 都市 ::.
+STR_CITY2                         :{YELLOW}.:: 都市 ::.
+
+#welcome message
+STR_WELCOME                       :{}{BIG_FONT}欢迎来到城建世界{}{}由{}{}{YELLOW}Novapolis Team{}呈现{}{WHITE}http://novapolis.net{}{}
+
+
+#news
+STR_NEW_HQ                        :{COMPANY} 已认领 {TOWN}
+STR_PLACE_HQ                      :你的 总部 建设在一个城镇来认领她, 都市不可认领!
+STR_TOWN_CLAIMED                  :{COMPANY} 认领了 {TOWN}
+STR_TOWN_POPLIMIT                 :{COMPANY} 未能认领 {TOWN} 因为人口太多
+STR_TOWN_NOTCLAIMED               :{COMPANY} 尚未在城镇附近修建
+STR_CITY_NOTCLAIMED               :{COMPANY} 不能认领都市
+STR_TOWN_HAS_OWNER                :{TOWN} 已被 {COMPANY} 认领
+STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} 试图认领的城镇太靠近另一公司
+
+#information
+STR_PLACE_HQ_INFO                 :将你的 总部 建设在人口少于 {YELLOW}{COMMA} {BLACK} 的城镇来认领她, 都市不可认领!
+STR_TOWN_CLAIMED_INFO             :{BLACK}你认领了 {YELLOW}{TOWN}{BLACK}.{}{}你可以在城镇窗口或者目标界面查看城镇需求。
+STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}人口太多不能认领. 允许认领的最大人口数为 {YELLOW}{COMMA}
+STR_TOWN_NOTCLAIMED_INFO          :附近没有城镇
+STR_CITY_NOTCLAIMED_INFO          :你不能认领 {YELLOW} 都市
+STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}已被认领
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK} 距离另一个被认领的城镇太近
+
+#STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+STR_TOWN_CLAIMED_RES              :{BLACK}城镇将需要
+STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}每1000人口 {ORANGE}* {BLACK}从{GREEN}{COMMA} {BLACK}人口{ORANGE}* {BLACK}衰退{GREEN}{NUM}%
+STR_POINT_TO_STORY_REQ            :{BLACK}你可以随时在 {YELLOW}故事页面 {BLACK} 查看城镇货物需求列表
+
+#dummy
+STR_EMPTY0                        :
+STR_EMPTY1                        :{STRING}
+STR_EMPTY2                        :{STRING}{STRING}
+STR_EMPTY3                        :{STRING}{STRING}{STRING}
+STR_PLUS                          :+
+
+
+#goal gui
+STR_GLOBAL_GOAL_CB                :{ORANGE}城建 ::: 游戏目标为  :  {GREEN}{COMMA} {BLACK}人口
+STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}年游戏结束
+
+STR_TOWN_CB_HEADER                :  {ORANGE}你城镇的需求
+
+STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}辖有{YELLOW}{COMMA} {BLACK}人口的 {YELLOW}{TOWN}
+STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}辖有{YELLOW}{COMMA} {BLACK}人口的城镇 {YELLOW}{TOWN}
+
+STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}库存: {GREEN}{COMMA} {BLACK}单位 ( {YELLOW}{NUM}{BLACK} % ), 运输/需求: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}运输 / 需求: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}城镇连续 {GREEN}增长 {YELLOW}{NUM} {BLACK}月. 增长了 {YELLOW}{NUM} {BLACK}月，共 {YELLOW}{NUM} {BLACK}月
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}城镇 {RED}停止{BLACK}增长了{YELLOW}{NUM} {BLACK}月。 停滞了 {YELLOW}{NUM} {BLACK}月， 共 {YELLOW}{NUM} {BLACK}月
+
+STR_TOWN_FUNDED                   :  {BLACK}城镇建筑被资助 {YELLOW}{NUM} {BLACK} 月. 城镇共被资助 {YELLOW}{NUM} {BLACK}月.
+
+STR_TOWN_MISSING_CARGO            :  {BLACK}城镇缺失货物量 :   {WHITE}{CARGO_LIST}
+STR_TOWN_GROWTH_RATE              :  {BLACK}1 建筑在 {ORANGE}{COMMA} {BLACK}天内 ({ORANGE}{COMMA}{BLACK}%), 下一栋在 {YELLOW}{COMMA}{BLACK} 天内
+
+STR_TOWN_NEXT_CARGO               :  {BLACK}下一需求: {GREEN}{CARGO_LIST} {BLACK}在{GREEN}{COMMA} {BLACK}人口
+
+
+#town gui
+
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}城镇 {GREEN}增长中
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}城镇 {RED}停止{BLACK}增长
+STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}缺失服务
+
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}城镇 {GREEN}发展中{}   {BLACK}缺失货物数量:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}城镇 {RED}停止{BLACK}增长{}   {BLACK}缺失货物量为:
+
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}该城镇已被 {COMPANY} 认领{}   {BLACK}缺失货物量为:{STRING}
+
+STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
+STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
+STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
+
+
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}城镇缺失 :   {WHITE}{CARGO_LIST}{STRING}
+STR_TOWNW_GROWTH_RATE             :{}   {BLACK}增长率{ORANGE}{COMMA}{BLACK}%, 下一步在 {YELLOW}{COMMA}{BLACK} 天内
+
+STR_TOWNW_NEXT_CARGO              :{}   {BLACK}下一需求: {GREEN}{CARGO_LIST} {BLACK}在 {GREEN}{COMMA} {BLACK}人口
+
+STR_SEE_GOAL_GUI                  :{}   {BLACK}参见更多细节，在 {WHITE}目标界面{STRING}{STRING}
+
+#town names according to population
+STR_TOWNNAME_POP0                 :结算
+STR_TOWNNAME_POP1                 :度假圣地
+STR_TOWNNAME_POP2                 :乡村
+STR_TOWNNAME_POP3                 :城镇
+STR_TOWNNAME_POP4                 :都市
+STR_TOWNNAME_POP5                 :大都会
+
+STR_TOWNNAME_PRESIDENT            : {PRESIDENT_NAME} 的  {STRING}
+
+#goal progress
+STR_WINNER_GOAL                   :{YELLOW}{COMPANY} {BLACK}获得胜利, 达到目标 {YELLOW}{COMMA} {BLACK} 人口
+STR_WINNER_TIME                   :{BLACK}游戏结束.{} {YELLOW}{COMPANY} {BLACK}获得胜利，辖有 {YELLOW}{COMMA} {BLACK}人口
+
+STR_STORY_TITLE_REQ               :{GREEN} 城建需求
+
+STR_STORY_TITLE                   :{WHITE}市建筑年度奖
+STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}辖有{YELLOW}{COMMA} {BLACK}人口 ({YELLOW}{STRING}{COMMA}{BLACK}).
+
+#test
+#STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
+
+#usable and well visible in GUI:
+#{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}
+#usable colours
+#{BLACK}  {WHITE} {RED}    {GREEN} {BLUE}   {YELLOW} {ORANGE} {PURPLE} {GRAY}   {BROWN} {SILVER} {GOLD} {CREAM}  {LTBLUE} {DKBLUE} {DKGREEN} {LTBROWN}
