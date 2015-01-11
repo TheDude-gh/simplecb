@@ -1,0 +1,58 @@
+##plural 0
+# Simpleton City Builder   english.txt
+#
+
+#town area
+STR_CITY                          :.:: Ciutat ::.
+
+#welcome message
+
+
+#news
+
+#information
+
+#STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+
+#dummy
+
+
+#goal gui
+STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}any{P "" s} per a finalitzar la partida
+
+
+STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}amb {YELLOW}{COMMA} {BLACK}població en {YELLOW}{TOWN}
+
+
+
+
+
+
+
+#town gui
+
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}La població {RED}no {BLACK}està creixent
+
+
+
+STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
+
+
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}A la població li falta:   {WHITE}{CARGO_LIST}{STRING}
+
+
+
+#town names according to population
+
+
+#goal progress
+
+
+
+#test
+#STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
+
+#usable and well visible in GUI:
+#{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}
+#usable colours
+#{BLACK}  {WHITE} {RED}    {GREEN} {BLUE}   {YELLOW} {ORANGE} {PURPLE} {GRAY}   {BROWN} {SILVER} {GOLD} {CREAM}  {LTBLUE} {DKBLUE} {DKGREEN} {LTBROWN}

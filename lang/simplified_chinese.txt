@@ -72,6 +72,7 @@ STR_TOWN_NEXT_CARGO               :  {BLACK}下一需求: {GREEN}{CARGO_LIST} {B
 
 
 #town gui
+STR_TOWNGUI                       :{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}
 
 STR_TOWNW_GROWTYPE_GROW           :{BLACK}城镇 {GREEN}增长中
 STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}城镇 {RED}停止{BLACK}增长

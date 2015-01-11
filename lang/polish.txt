@@ -3,6 +3,7 @@
 #
 
 #town area
+STR_HQTOWN                        :miejscowość firmy {COMPANY}
 STR_HQAREA_TOP                    : ^ Obszar firmy {COMPANY} ^
 STR_HQAREA_RIGHT                  :&gt; Obszar firmy {COMPANY}
 STR_HQAREA_BOTTOM                 : v Obszar firmy {COMPANY} v
@@ -12,28 +13,36 @@ STR_CITY                          :.:: Miasto ::.
 STR_CITY2                         :{YELLOW}.:: Miasto ::.
 
 #welcome message
+STR_WELCOME                       :{}{BIG_FONT}Witamy w trybie City Builder{}{}strzworzonemu dzięki zespołowi{}{}{YELLOW}Novapolis{}{}{WHITE}http://novapolis.net{}{}Życzymy miłej gry :){}{}
 
 
 #news
+STR_NEW_HQ                        :Firma {COMPANY} wybrała miejscowość {TOWN}
+STR_PLACE_HQ                      :Aby rozpocząć należy umieścić siedzibę firmy w miejscowości, wielkie miasta nie mogą zostać wybrane!
 STR_TOWN_CLAIMED                  :firma {COMPANY} wybrała miasto {TOWN}
 STR_TOWN_POPLIMIT                 :{COMPANY} nie udało się wybrać miasta {TOWN} z powodu zbyt dużej liczby mieszkańców
+STR_TOWN_NOTCLAIMED               :Firma {COMPANY} nie wybrała miejscowości
 STR_CITY_NOTCLAIMED               :firma {COMPANY} nie może wybrać MIASTA
 STR_TOWN_HAS_OWNER                :Miasto {TOWN} jest już zajętę przez firmę {COMPANY}
+STR_TOWN_NEIGHBOUR_CLOSE          :Firma {COMPANY} próbowała zająć miejscowość zbyt blisko innej firmy
 
 #information
 STR_PLACE_HQ_INFO                 :Aby wybrać miasto należy umieścić siedzibę firmy w miejscowości poniżej {YELLOW}{COMMA} {BLACK}mieszkańców, w przeciwnym razie miasto nie zostanie wybrane!
 STR_TOWN_CLAIMED_INFO             :{BLACK}Miasto {YELLOW}{TOWN}{BLACK} zostało wybrane.{}{} Wymagania miasta do rozwoju można znaleźć klikając miasto lub listę celów (żółta chorągiewka).
+STR_TOWN_POPLIMIT_INFO            :Miejscowość{YELLOW}{TOWN} {BLACK}posiada zbyt dużo mieszkańców. Maksymalna liczba to {YELLOW}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :Brak wybranego miasto
 STR_CITY_NOTCLAIMED_INFO          :Nie można wybrać {YELLOW}MIASTA
 STR_TOWN_HAS_OWNER_INFO           :miasto {YELLOW}{TOWN} {BLACK}jest już zajęte
 STR_TOWN_NEIGHBOUR_CLOSE_INFO     :Miasto {YELLOW}{TOWN} {BLACK}jest zbyt blisko innego już wybranego miasta
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+STR_TOWN_CLAIMED_RES              :{BLACK}Miejscowość wymaga
 STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}na 1000 mieszkańców {ORANGE}* {BLACK}Od {GREEN}{COMMA} {BLACK}mieszkańców {ORANGE}* {BLACK}Spadek {GREEN}{NUM}%
 STR_POINT_TO_STORY_REQ            :{BLACK}Wymagania niezbędnych usług potrzebnych do rozwoju miasta można w każdej chwili sprawdzić w {YELLOW}oknie opowieści {BLACK}klikając ikonę gazety
 
 #dummy
 STR_EMPTY0                        :
+STR_EMPTY1                        :{STRING}
 STR_EMPTY2                        :{STRING}{STRING}
 STR_EMPTY3                        :{STRING}{STRING}{STRING}
 STR_PLUS                          :+
@@ -41,6 +50,7 @@ STR_PLUS                          :+
 
 #goal gui
 STR_GLOBAL_GOAL_CB                :{ORANGE}CITY BUILDER ::: Celem gry jest liczba  :  {GREEN}{COMMA} {BLACK}mieszkańców
+STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}rok{P lat lat lat} do końca rozgrywki
 
 STR_TOWN_CB_HEADER                :  {ORANGE}Wymagania miasteczka
 
@@ -48,10 +58,12 @@ STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {Y
 STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}z liczbą {YELLOW}{COMMA} {BLACK}mieszkańców w mieście {YELLOW}{TOWN}
 
 STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Zgromadzono : {GREEN}{COMMA} {BLACK}  ( {YELLOW}{NUM}{BLACK} % ), Dostarczono / Zapotrzebowanie : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+STR_TOWN_REQ_GUI_NOSTORAGE        :{LTBLUE}{CARGO_LIST} {BLACK}Dostarczono / Zapotrzebowanie : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
 STR_TOWN_GROWTYPE_GROW            :{BLACK}Twoje miasto  {GREEN} rozwija się już{YELLOW}{NUM} {BLACK}miesiąc z rzędu. Rozwój trwał {YELLOW}{NUM} {BLACK}miesiąc z {YELLOW}{NUM} {BLACK}
 STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Miasto {RED}nie {BLACK}rozwija się już {YELLOW}{NUM} {BLACK}miesiąc z rzędu. Rozwój zatrzymany {YELLOW}{NUM} {BLACK}miesiąc z {YELLOW}{NUM} {BLACK}
 
+STR_TOWN_FUNDED                   :  {BLACK}Budynki w mieście zostały ufundowane na {YELLOW}{NUM} {BLACK}miesiąc{P miesięcy miesięcy miesięcy}. W sumie zostało ufundowanych {YELLOW}{NUM} {BLACK}miesiąc{P miesięcy miesięcy miesięcy}
 
 STR_TOWN_MISSING_CARGO            :  {BLACK}Do miasta potrzeba dostarczyć :   {WHITE}{CARGO_LIST}
 STR_TOWN_GROWTH_RATE              :  {BLACK}1 dom w ciągu {ORANGE}{COMMA} {BLACK}dni ({ORANGE}{COMMA}{BLACK}%), następny w ciągu {YELLOW}{COMMA}{BLACK} dnia {P dni dni dni}
@@ -60,14 +72,20 @@ STR_TOWN_NEXT_CARGO               :  {BLACK}Następna wymagana usługa: Dowóz {
 
 
 #town gui
+STR_TOWNGUI                       :{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}
 
 STR_TOWNW_GROWTYPE_GROW           :{BLACK}Miasto {GREEN}rozwija się
 STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}Miasto  {RED}nie {BLACK} rozwija się
 STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Brakujące usługi
 
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Miasto {GREEN}rozwija się{} {BLACK}Brakuje:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}Miasto {RED}nie {BLACK}rozwija się{}   {BLACK}Brakuje:
 
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Miejscowość należy do firmy {COMPANY}{}   {BLACK}Do miasta potrzeba dostarczyć:{STRING}
 
 STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
+STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
+STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
 
 
 STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Do miasta potrzeba dostarczyć :   {WHITE}{CARGO_LIST}{STRING}
@@ -75,15 +93,21 @@ STR_TOWNW_GROWTH_RATE             :{}   {BLACK}Rozwój {ORANGE}{COMMA}{BLACK}%, 
 
 STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Następna wymagana usługa: Dowóz {GREEN}{CARGO_LIST} {BLACK}od {GREEN}{COMMA} {BLACK}mieszkańców
 
+STR_SEE_GOAL_GUI                  :{}   {BLACK}Więcej szczegółów w {WHITE}Oknie Celów Firmy{STRING}{STRING}
 
 #town names according to population
+STR_TOWNNAME_POP0                 :Osada
 STR_TOWNNAME_POP1                 :Miejscowość
 STR_TOWNNAME_POP2                 :Wioska
+STR_TOWNNAME_POP3                 :Miejscowość
+STR_TOWNNAME_POP4                 :Miasto
 STR_TOWNNAME_POP5                 :Metropolia
 
+STR_TOWNNAME_PRESIDENT            :{PRESIDENT_NAME}'s' {STRING}
 
 #goal progress
 STR_WINNER_GOAL                   :wygrała firma {YELLOW}{COMPANY} {BLACK} uzyskując wynik {YELLOW}{COMMA} {BLACK}mieszkańców
+STR_WINNER_TIME                   :{BLACK}Koniec rozgrywki.{} Wygrywa firma {YELLOW}{COMPANY} {BLACK}z wynikiem {YELLOW}{COMMA} {BLACK}mieszkańców
 
 STR_STORY_TITLE_REQ               :{GREEN}Wymagania City Builder
 
