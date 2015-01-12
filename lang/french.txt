@@ -1,11 +1,14 @@
 ##plural 2
-#
 # Simpleton City Builder   english.txt
 #
 
 #town area
 STR_HQTOWN                        :Ville de {COMPANY}
-STR_HQAREA_LEFT                   :{COMPANY} zone &lt;
+STR_HQAREA_TOP                    : ^ Zone de {COMPANY} ^
+STR_HQAREA_RIGHT                  :> Zone de {COMPANY}
+STR_HQAREA_BOTTOM                 : v Zone de {COMPANY} v
+STR_HQAREA_LEFT                   :Zone de {COMPANY} <
+STR_HQERR                         :Vous ne pouvez prendre une CITE
 STR_CITY                          :.:: Cité ::.
 STR_CITY2                         :{YELLOW}.:: Cité ::.
 
@@ -14,60 +17,102 @@ STR_WELCOME                       :{}{BIG_FONT}Bonjour et bienvenue dans l'expé
 
 
 #news
+STR_NEW_HQ                        :{COMPANY} a pris {TOWN}
+STR_PLACE_HQ                      :Placez votre QG dans une ville pour la prendre, les cités ne peuvent être prises!
 STR_TOWN_CLAIMED                  :{COMPANY} a pris {TOWN}
-STR_TOWN_POPLIMIT                 :{COMPANY} ne peux revendiquer {TOWN} en raison d'une population trop élevée
-STR_TOWN_NOTCLAIMED               :{COMPANY} n'a pas trouvée de ville proche
-STR_TOWN_HAS_OWNER                :{TOWN} est déjà réclamée par {COMPANY}
+STR_TOWN_POPLIMIT                 :{COMPANY} n'a pas pris {TOWN} sa population est trop grande
+STR_TOWN_NOTCLAIMED               :{COMPANY} n'a pas trouvé de ville proche
+STR_CITY_NOTCLAIMED               :{COMPANY} ne peux prendre une CITE
+STR_TOWN_HAS_OWNER                :{TOWN} est déjà prise par {COMPANY}
+STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} a tenté de prendre une ville trop proche d'un concurrant
 
 #information
-STR_PLACE_HQ_INFO                 :Placez votre QG dans une ville avec une population de moins de {YELLOW}{COMMA} {BLACK}pour la réclamer, les cités ne peuvent pas être réclamées!
+STR_PLACE_HQ_INFO                 :Placez votre QG dans une ville avec une population inférieure à {YELLOW}{COMMA} {BLACK}pour la prendre, les cités ne peuvent être prises!
 STR_TOWN_CLAIMED_INFO             :{BLACK}Vous avez pris {YELLOW}{TOWN}{BLACK}.{}{}Vous pouvez voir les besoins de la ville dans l'interface de la ville ou le menu Objectif.
-STR_CITY_NOTCLAIMED_INFO          :Vous ne pouvez pas réclamer une {YELLOW}CITE
+STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}a une trop grande population pour être prise. Population maximum acceptable {YELLOW}{COMMA}
+STR_TOWN_NOTCLAIMED_INFO          :Pas de ville proche
+STR_CITY_NOTCLAIMED_INFO          :Vous ne pouvez prendre une {YELLOW}CITE
+STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}est déjà prise
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}est trop proche d'une autre ville prise
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}La ville va avoir besoin
+STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}par 1000 pop {ORANGE}* {BLACK}De {GREEN}{COMMA} {BLACK}pop {ORANGE}* {BLACK}Perte {GREEN}{NUM}%
+STR_POINT_TO_STORY_REQ            :{BLACK}Vous pouvez vérifier la liste des cargaisons requises pour une ville dans le {YELLOW}Livre d'Histoire {BLACK}
 
 #dummy
 STR_EMPTY0                        :
+STR_EMPTY1                        :{STRING}
+STR_EMPTY2                        :{STRING}{STRING}
+STR_EMPTY3                        :{STRING}{STRING}{STRING}
+STR_PLUS                          :+
 
 
 #goal gui
+STR_GLOBAL_GOAL_CB                :{ORANGE}CITY BUILDER ::: L'Objectif pour cette partie est de  :  {GREEN}{COMMA} {BLACK}population
+STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}année{P "" s} pour finir la partie
 
+STR_TOWN_CB_HEADER                :  {ORANGE}Les besoins de votre ville
 
-STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}avec une population de {YELLOW}{COMMA} {BLACK} dans {YELLOW}{TOWN}
+STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}avec {YELLOW}{COMMA} {BLACK}population dans {YELLOW}{TOWN}
+STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}avec {YELLOW}{COMMA} {BLACK}population dans {YELLOW}{TOWN}
 
-STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Stock : {GREEN}{COMMA} {BLACK}unités  ( {YELLOW}{NUM}{BLACK} % ), Delivrées / Requises : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Stockage : {GREEN}{COMMA} {BLACK}unités  ( {YELLOW}{NUM}{BLACK} % ), Delivrées / Requises : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Delivrées / Requises: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}La ville est {GREEN}croissante {YELLOW}{NUM} {BLACK}mois à la suite. A grandit {YELLOW}{NUM} {BLACK}mois sur un total de {YELLOW}{NUM}
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}La ville est {RED}non {BLACK}croissante {YELLOW}{NUM} {BLACK}mois à la suite. Croissance stoppée {YELLOW}{NUM} {BLACK}mois sur un total de {YELLOW}{NUM}
 
+STR_TOWN_FUNDED                   :  {BLACK}Les constructions sont payés pour {YELLOW}{NUM} {BLACK}mois. La ville a été financée pour {YELLOW}{NUM} {BLACK}mois{P "" s} au total.
 
+STR_TOWN_MISSING_CARGO            :  {BLACK}La ville manque de :   {WHITE}{CARGO_LIST}
+STR_TOWN_GROWTH_RATE              :  {BLACK}1 maison en {ORANGE}{COMMA} {BLACK}jours ({ORANGE}{COMMA}{BLACK}%), la suivante dans {YELLOW}{COMMA}{BLACK} jour{P "" s}
 
 STR_TOWN_NEXT_CARGO               :  {BLACK}Suivant: {GREEN}{CARGO_LIST} {BLACK}à {GREEN}{COMMA} {BLACK}population
 
 
 #town gui
+STR_TOWNGUI                       :{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}
 
-STR_TOWNW_GROWTYPE_GROW           :{BLACK}Ville est {GREEN}croissante
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}La ville est {GREEN}croissante
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}La ville est {RED}non {BLACK}croissante
+STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Service manquant
 
-STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Ville est {GREEN}croissante{}   {BLACK}Cargaison montant requis:
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}La ville est {GREEN}croissante{}   {BLACK}Montant de cargaison manquant:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}La ville est {RED}non {BLACK}croissante{}   {BLACK}Montant de cargaison manquant:
 
-STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Cette ville est prise par {COMPANY}{}   {BLACK}Cargaison montant requis:{STRING}
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}La ville est prise par {COMPANY}{}   {BLACK}Montant de cargaison manquant:{STRING}
+
+STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
+STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
+STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
 
 
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}La ville a besoin :   {WHITE}{CARGO_LIST}{STRING}
+STR_TOWNW_GROWTH_RATE             :{}   {BLACK}Croissance {ORANGE}{COMMA}{BLACK}%, suivante dans {YELLOW}{COMMA}{BLACK} jour{P "" s}
 
-STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Ville manque de :   {WHITE}{CARGO_LIST}{STRING}
+STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Suivant: {GREEN}{CARGO_LIST} {BLACK}à {GREEN}{COMMA} {BLACK}population
 
-
+STR_SEE_GOAL_GUI                  :{}   {BLACK}Voir plus de details dans l'{WHITE}Interface Objectifs{STRING}{STRING}
 
 #town names according to population
+STR_TOWNNAME_POP0                 :Colonie
+STR_TOWNNAME_POP1                 :Bourgade
 STR_TOWNNAME_POP2                 :Village
+STR_TOWNNAME_POP3                 :Ville
 STR_TOWNNAME_POP4                 :Cité
 STR_TOWNNAME_POP5                 :Métropole
 
+STR_TOWNNAME_PRESIDENT            : {PRESIDENT_NAME}'s' {STRING}
 
 #goal progress
+STR_WINNER_GOAL                   :{YELLOW}{COMPANY} {BLACK}a gagné, finissant l'objectif avec une population de {YELLOW}{COMMA}
+STR_WINNER_TIME                   :{BLACK}Partie fine.{} {YELLOW}{COMPANY} {BLACK}a gagné avec une population de {YELLOW}{COMMA}
 
-STR_STORY_TITLE_REQ               :{GREEN}City Builder Exigences
+STR_STORY_TITLE_REQ               :{GREEN}City Builder Besoins
 
+STR_STORY_TITLE                   :{WHITE}City Builder récompense annuelle
+STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}avec une population de {YELLOW}{COMMA} ({YELLOW}{STRING}{COMMA}{BLACK}).
 
 #test
 #STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC

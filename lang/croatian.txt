@@ -1,5 +1,4 @@
 ##plural 6
-#
 # Simpleton City Builder   english.txt
 #
 
@@ -51,6 +50,7 @@ STR_PLUS                          :+
 
 #goal gui
 STR_GLOBAL_GOAL_CB                :{ORANGE}GRADITELJ GRADOVA ::: Cilj igre je  :  {GREEN}{COMMA} {BLACK}stanovnika
+STR_GAME_LENGTH                   :{GREEN}{NUM}  {BLACK}godin{P a a e} do kraja igre
 
 STR_TOWN_CB_HEADER                :{ORANGE} Potrebe vašeg grada
 
@@ -60,14 +60,19 @@ STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {
 STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Zalihe : {GREEN}{COMMA} {BLACK}jedinica  ( {YELLOW}{NUM}{BLACK} % ), Dostavljeno / Potrebno : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Dostavljeno / Potrebno : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}Grad {GREEN}raste {YELLOW}{NUM} {BLACK}mjesec{P "" a i}  zaredom. Rastao je {YELLOW}{NUM} {BLACK}mjesec{P "" a i} od {YELLOW}{NUM} {BLACK}ukupno
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Grad {RED}ne {BLACK}raste {YELLOW}{NUM} {BLACK}mjesec{P "" a i} zaredom. Rast je zapeo {YELLOW}{NUM} {BLACK}mjesec{P "" a i} od {YELLOW}{NUM} {BLACK}ukupno
 
+STR_TOWN_FUNDED                   :  {BLACK}Gradske zgrade su financirane na {YELLOW}{NUM} {BLACK}mjesec{P "" a i}. Grad je bio financiran na {YELLOW}{NUM} {BLACK}mjesec{P "" a i} ukupno.
 
 STR_TOWN_MISSING_CARGO            :  {BLACK}Gradu nedostaje :   {WHITE}{CARGO_LIST}
+STR_TOWN_GROWTH_RATE              :  {BLACK}1 kuća u {ORANGE}{COMMA} {BLACK}dana ({ORANGE}{COMMA}{BLACK}%), sljedeća u {YELLOW}{COMMA}{BLACK} dan{P "" a a}
 
 STR_TOWN_NEXT_CARGO               :  {BLACK}Sljedeće: {GREEN}{CARGO_LIST} {BLACK}na {GREEN}{COMMA} {BLACK}stanovnika
 
 
 #town gui
+STR_TOWNGUI                       :{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}
 
 STR_TOWNW_GROWTYPE_GROW           :{BLACK}Grad {GREEN}raste
 STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}Grad {RED}ne {BLACK}raste
@@ -84,6 +89,7 @@ STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
 
 
 STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Gradu nedostaje :   {WHITE}{CARGO_LIST}{STRING}
+STR_TOWNW_GROWTH_RATE             :{} {BLACK}Rast{ORANGE}{COMMA}{BLACK}%, sljedeći u {YELLOW}{COMMA}{BLACK} dan{P "" a a}
 
 STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Sljedeće: {GREEN}{CARGO_LIST} {BLACK}na {GREEN}{COMMA} {BLACK}stanovnika
 
