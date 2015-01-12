@@ -1,4 +1,4 @@
-#
+##plural 10
 # Simpleton City Builder   english.txt
 #
 
