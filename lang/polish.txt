@@ -13,7 +13,7 @@ STR_CITY                          :.:: Miasto ::.
 STR_CITY2                         :{YELLOW}.:: Miasto ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Witamy w trybie City Builder{}{}strzworzonemu dzięki zespołowi{}{}{YELLOW}Novapolis{}{}{WHITE}http://novapolis.net{}{}Życzymy miłej gry :){}{}
+STR_WELCOME                       :{}{BIG_FONT}Witamy w trybie City Builder{}{}strzworzonemu dzięki zespołowi{}{}{YELLOW}Novapolis{}{}{WHITE}http://novapolis.net{}{}
 
 
 #news
@@ -63,12 +63,12 @@ STR_TOWN_REQ_GUI_NOSTORAGE        :{LTBLUE}{CARGO_LIST} {BLACK}Dostarczono / Zap
 STR_TOWN_GROWTYPE_GROW            :{BLACK}Twoje miasto  {GREEN} rozwija się już{YELLOW}{NUM} {BLACK}miesiąc z rzędu. Rozwój trwał {YELLOW}{NUM} {BLACK}miesiąc z {YELLOW}{NUM} {BLACK}
 STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Miasto {RED}nie {BLACK}rozwija się już {YELLOW}{NUM} {BLACK}miesiąc z rzędu. Rozwój zatrzymany {YELLOW}{NUM} {BLACK}miesiąc z {YELLOW}{NUM} {BLACK}
 
-STR_TOWN_FUNDED                   :  {BLACK}Budynki w mieście zostały ufundowane na {YELLOW}{NUM} {BLACK}miesiąc{P miesięcy miesięcy miesięcy}. W sumie zostało ufundowanych {YELLOW}{NUM} {BLACK}miesiąc{P miesięcy miesięcy miesięcy}
+STR_TOWN_FUNDED                   :  {BLACK}Budynki w mieście zostały ufundowane na {YELLOW}{NUM} {BLACK}{P miesiąc miesiące miesięcy}. W sumie zostało ufundowanych {YELLOW}{NUM} {BLACK}{P miesiąc miesiące miesięcy}
 
 STR_TOWN_MISSING_CARGO            :  {BLACK}Do miasta potrzeba dostarczyć :   {WHITE}{CARGO_LIST}
 STR_TOWN_GROWTH_RATE              :  {BLACK}1 dom w ciągu {ORANGE}{COMMA} {BLACK}dni ({ORANGE}{COMMA}{BLACK}%), następny w ciągu {YELLOW}{COMMA}{BLACK} dnia {P dni dni dni}
 
-STR_TOWN_NEXT_CARGO               :  {BLACK}Następna wymagana usługa: Dowóz {GREEN}{CARGO_LIST} {BLACK}od {GREEN}{COMMA} {BLACK}mieszkańców
+STR_TOWN_NEXT_CARGO               :  {BLACK}Następna wymagana usługa: {GREEN}{CARGO_LIST} {BLACK}od {GREEN}{COMMA} {BLACK}mieszkańców
 
 
 #town gui
@@ -91,7 +91,7 @@ STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
 STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Do miasta potrzeba dostarczyć :   {WHITE}{CARGO_LIST}{STRING}
 STR_TOWNW_GROWTH_RATE             :{}   {BLACK}Rozwój {ORANGE}{COMMA}{BLACK}%, nastepny w ciągu {YELLOW}{COMMA}{BLACK} dnia{P dni dni dni}
 
-STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Następna wymagana usługa: Dowóz {GREEN}{CARGO_LIST} {BLACK}od {GREEN}{COMMA} {BLACK}mieszkańców
+STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Następna wymagana usługa: {GREEN}{CARGO_LIST} {BLACK}od {GREEN}{COMMA} {BLACK}mieszkańców
 
 STR_SEE_GOAL_GUI                  :{}   {BLACK}Więcej szczegółów w {WHITE}Oknie Celów Firmy{STRING}{STRING}
 
