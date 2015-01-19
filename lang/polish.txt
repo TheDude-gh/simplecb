@@ -103,7 +103,7 @@ STR_TOWNNAME_POP3                 :Miejscowość
 STR_TOWNNAME_POP4                 :Miasto
 STR_TOWNNAME_POP5                 :Metropolia
 
-STR_TOWNNAME_PRESIDENT            :{PRESIDENT_NAME}'s' {STRING}
+STR_TOWNNAME_PRESIDENT            :{PRESIDENT_NAME} - {STRING}
 
 #goal progress
 STR_WINNER_GOAL                   :wygrała firma {YELLOW}{COMPANY} {BLACK} uzyskując wynik {YELLOW}{COMMA} {BLACK}mieszkańców
