@@ -103,7 +103,7 @@ STR_TOWNNAME_POP3                 :Grad
 STR_TOWNNAME_POP4                 :Grad
 STR_TOWNNAME_POP5                 :Metropola
 
-STR_TOWNNAME_PRESIDENT            :{PRESIDENT_NAME} - {STRING}
+STR_TOWNNAME_PRESIDENT            : {PRESIDENT_NAME} {STRING}
 
 #goal progress
 STR_WINNER_GOAL                   :{YELLOW}{COMPANY} {BLACK}je pobijedio, dostigao je cilj sa {YELLOW}{COMMA} {BLACK}stanovnika
