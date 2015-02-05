@@ -1,0 +1,123 @@
+##plural 0
+# Simpleton City Builder   english.txt
+#
+
+#town area
+STR_HQTOWN                        :Municipalitá di {COMPANY}
+STR_HQAREA_TOP                    :^ Zona di {COMPANY} ^
+STR_HQAREA_RIGHT                  :> Zona di {COMPANY}
+STR_HQAREA_BOTTOM                 :v Zona di {COMPANY} v
+STR_HQAREA_LEFT                   :Zona di {COMPANY} <
+STR_HQERR                         :Non potete pretendere la CITTÁ
+STR_CITY                          :.:: Cittá ::.
+STR_CITY2                         :{YELLOW}.:: Cittá ::.
+
+#welcome message
+STR_WELCOME                       :{}{BIG_FONT}Ciao e benvenuti alla esperienza di Costruttore di Cittá{}{}Presentato da{}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
+
+
+#news
+STR_NEW_HQ                        :{COMPANY} ha preteso {TOWN}
+STR_PLACE_HQ                      :Mettete il vostro HQ in una municipalitá per pretenderla, le cittá non possono essere pretese!
+STR_TOWN_CLAIMED                  :{COMPANY} ha preteso {TOWN}
+STR_TOWN_POPLIMIT                 :{COMPANY} ha fallito di pretendere {TOWN} a causa di popolazione troppo grande
+STR_TOWN_NOTCLAIMED               :{COMPANY} non ha trovato nessuna municipalitá in vicinanza
+STR_CITY_NOTCLAIMED               :{COMPANY} non puó pretendere una CITTÁ
+STR_TOWN_HAS_OWNER                :{TOWN} é giá pretesa da {COMPANY}
+STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} ha provato a pretendere una municipalitá troppo vicina a un'altra compagnia
+
+#information
+STR_PLACE_HQ_INFO                 :Mettete il vostro HQ in una municipalitá con meno di {YELLOW}{COMMA} {BLACK}abitanti per pretenderla, le cittá non possono essere pretese!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Avete preteso {YELLOW}{TOWN}{BLACK}.{}{}Potete vedere che cosa la vostra municipalitá richiede nella finestra della cittá o nel gui dei obiettivi.
+STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}ha la popolazione troppo grande per essere pretesa. La popolazione massima é {YELLOW}{COMMA}
+STR_TOWN_NOTCLAIMED_INFO          :Non c'é municipalitá in vicinanza
+STR_CITY_NOTCLAIMED_INFO          :Non potete pretendere la {YELLOW}CITTÁ
+STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}é giá pretesa
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}é troppo vicina a un'altra municipalitá pretesa
+
+#STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+STR_TOWN_CLAIMED_RES              :{BLACK}La municipalitá richiederá
+STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}per 1000 abitanti {ORANGE}* {BLACK}Da {GREEN}{COMMA} {BLACK}abitanti {ORANGE}* {BLACK}Degrado {GREEN}{NUM}%
+STR_POINT_TO_STORY_REQ            :{BLACK}Potete controllare la lista delle marci mancanti nella {YELLOW}Pagina di Storia {BLACK}in qualsiasi momento
+
+#dummy
+STR_EMPTY0                        :
+STR_EMPTY1                        :{STRING}
+STR_EMPTY2                        :{STRING}{STRING}
+STR_EMPTY3                        :{STRING}{STRING}{STRING}
+STR_PLUS                          :+
+
+
+#goal gui
+STR_GLOBAL_GOAL_CB                :{ORANGE}COSTRUTTORE DI CIITÁ ::: L'obiettivo del gioco é:  {GREEN}{COMMA} {BLACK}abitanti
+STR_GAME_LENGTH                   :{GREEN}{NUM}  {BLACK}ann{P o i} alla fine del gioco
+
+STR_TOWN_CB_HEADER                :{ORANGE}I requisiti della vostra municipalitá
+
+STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}con {YELLOW}{COMMA} {BLACK}abitanti in {YELLOW}{TOWN}
+STR_SCORE_NOGOAL_CB               :{WHITE} #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}con {YELLOW}{COMMA} {BLACK}abitanti in {YELLOW}{TOWN}
+
+STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Deposito : {GREEN}{COMMA} {BLACK}unitá ( {YELLOW}{NUM}{BLACK} % ), Consegnato / Richiesto : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Consegnato / Richiesto: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}La municipalitá {GREEN}cresce {YELLOW}{NUM} {BLACK}mes{P e i} di seguito. É cresciuta {YELLOW}{NUM} {BLACK}mes{P e i} di {YELLOW}{NUM} {BLACK}in totale
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}La municipalitá {RED}non {BLACK}cresce {YELLOW}{NUM} {BLACK}mes{P e i} di seguito. La crestica é fermata per {YELLOW}{NUM} {BLACK}mes{P e i} di {YELLOW}{NUM} {BLACK}in totale
+
+STR_TOWN_FUNDED                   :  {BLACK}Gli edifici della municipalitá sono finanziati per  {YELLOW}{NUM} {BLACK}mes{P e i}. La municipalitá era finanziata per {YELLOW}{NUM} {BLACK}mes{P e i} in totale.
+
+STR_TOWN_MISSING_CARGO            :{BLACK}La municipalitá manca di:   {WHITE}{CARGO_LIST}
+STR_TOWN_GROWTH_RATE              :  {BLACK}1a casa in {ORANGE}{COMMA} {BLACK}giorni ({ORANGE}{COMMA}{BLACK}%), prossima in {YELLOW}{COMMA}{BLACK} giorn{P o i}
+
+STR_TOWN_NEXT_CARGO               :  {BLACK}Prossimo: {GREEN}{CARGO_LIST} {BLACK}per {GREEN}{COMMA} {BLACK}abitanti
+
+
+#town gui
+STR_TOWNGUI                       :{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}
+
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}La municipalitá {GREEN}cresce
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}La municipalitá {RED}non {BLACK}cresce
+STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Servizio mancante
+
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}La municipalitá {GREEN}cresce{}   {BLACK}Le quantitá di merce mancante:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}La municipalitá {RED}non {BLACK}cresce{}  {BLACK}Le quantitá di merce mancante:
+
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Questa municipalitá e pretesa da {COMPANY}{}   {BLACK}Le quantitá di merce mancante:{STRING}
+
+STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
+STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
+STR_TOWN_CARGO_NO                 :{} {SILVER}{CARGO_LIST}   {COMMA}
+
+
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}La municipalitá manca di:   {WHITE}{CARGO_LIST}{STRING}
+STR_TOWNW_GROWTH_RATE             :{}   {BLACK}Crescita {ORANGE}{COMMA}{BLACK}%, prossima in {YELLOW}{COMMA}{BLACK} giorn{P o i}
+
+STR_TOWNW_NEXT_CARGO              :{}  {BLACK}Prossimo: {GREEN}{CARGO_LIST} {BLACK}per {GREEN}{COMMA} {BLACK}abitanti
+
+STR_SEE_GOAL_GUI                  :{}   {BLACK}Vedere piú dettagli in {WHITE}Gui dei obiettivi{STRING}{STRING}
+
+#town names according to population
+STR_TOWNNAME_POP0                 :Insediamento
+STR_TOWNNAME_POP1                 :Localitá
+STR_TOWNNAME_POP2                 :Villaggio
+STR_TOWNNAME_POP3                 :Municipalitá
+STR_TOWNNAME_POP4                 :Cittá
+STR_TOWNNAME_POP5                 :La metropoli
+
+STR_TOWNNAME_PRESIDENT            :{PRESIDENT_NAME} {STRING}
+
+#goal progress
+STR_WINNER_GOAL                   :{YELLOW}{COMPANY} {BLACK}ha vinto, ha raggiunto l'obiettivo con {YELLOW}{COMMA} {BLACK}abitanti
+STR_WINNER_TIME                   :{BLACK}Il gioco é finito.{} {YELLOW}{COMPANY} {BLACK}ha vinto con {YELLOW}{COMMA} {BLACK}abitanti
+
+STR_STORY_TITLE_REQ               :{GREEN}Requisiti per Costruttore di Cittá
+
+STR_STORY_TITLE                   :{WHITE}Premi annuali del Costruttore di Cittá
+STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}con {YELLOW}{COMMA} {BLACK}abitanti ({YELLOW}{STRING}{COMMA}{BLACK}).
+
+#test
+#STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
+
+#usable and well visible in GUI:
+#{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}
+#usable colours
+#{BLACK}  {WHITE} {RED}    {GREEN} {BLUE}   {YELLOW} {ORANGE} {PURPLE} {GRAY}   {BROWN} {SILVER} {GOLD} {CREAM}  {LTBLUE} {DKBLUE} {DKGREEN} {LTBROWN}
