@@ -3,7 +3,10 @@
 #
 
 #town area
+STR_HQAREA_TOP                    : ^ Àrea de {COMPANY} ^
+STR_HQERR                         :No pots reclamar la ciutat
 STR_CITY                          :.:: Ciutat ::.
+STR_CITY2                         :{YELLOW}.:: Ciutat ::.
 
 #welcome message
 
@@ -11,18 +14,25 @@ STR_CITY                          :.:: Ciutat ::.
 #news
 
 #information
+STR_CITY_NOTCLAIMED_INFO          :No pots reclamar una {YELLOW}CIUTAT
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}està massa prop d'una altra població reclamada
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+STR_TOWN_CLAIMED_RES              :{BLACK}La població necessitarà
 
 #dummy
+STR_PLUS                          :+
 
 
 #goal gui
+STR_GLOBAL_GOAL_CB                :{ORANGE}CITY BUILDER ::: L'objectiu de la partida és: {GREEN}{COMMA} {BLACK}habitants
 STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}any{P "" s} per a finalitzar la partida
 
+STR_TOWN_CB_HEADER                :  {ORANGE}Requisits de la teva població
 
 STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}amb {YELLOW}{COMMA} {BLACK}població en {YELLOW}{TOWN}
 
+STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Enviats / Requerits: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
 
 
@@ -31,23 +41,31 @@ STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {
 
 #town gui
 
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}La població {GREEN}sí {BLACK}està creixent
 STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}La població {RED}no {BLACK}està creixent
 
 
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Aquesta població l'ha reclamat {COMPANY}{}   {BLACK}Quantitats de càrrega que falten:{STRING}
 
+STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
 STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
 
 
-STR_TOWNW_MISSING_CARGO           :{}   {BLACK}A la població li falta:   {WHITE}{CARGO_LIST}{STRING}
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}A la població li falten:   {WHITE}{CARGO_LIST}{STRING}
 
 
 
 #town names according to population
+STR_TOWNNAME_POP3                 :Població
+STR_TOWNNAME_POP4                 :Ciutat
 
 
 #goal progress
+STR_WINNER_TIME                   :{BLACK}La partida ha acabat.{} {YELLOW}{COMPANY} {BLACK}ha guanyat amb {YELLOW}{COMMA} {BLACK}habitants
 
+STR_STORY_TITLE_REQ               :{GREEN}Requisits de City Builder
 
+STR_STORY_TITLE                   :{WHITE}Premis anuals City Builder
 
 #test
 #STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
