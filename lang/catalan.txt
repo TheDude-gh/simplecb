@@ -15,6 +15,7 @@ STR_CITY2                         :{YELLOW}.:: Ciutat ::.
 
 #information
 STR_CITY_NOTCLAIMED_INFO          :No pots reclamar una {YELLOW}CIUTAT
+STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}ja ha estat reclamada
 STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}està massa prop d'una altra població reclamada
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
@@ -36,6 +37,7 @@ STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Enviats / Req
 
 
 
+STR_TOWN_MISSING_CARGO            :  {BLACK}A la població li falten:   {WHITE}{CARGO_LIST}
 
 
 
