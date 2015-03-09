@@ -3,25 +3,47 @@
 #
 
 #town area
+STR_HQTOWN                        :Població de {COMPANY}
 STR_HQAREA_TOP                    : ^ Àrea de {COMPANY} ^
+STR_HQAREA_RIGHT                  :> Àrea de {COMPANY}
+STR_HQAREA_BOTTOM                 : v Àrea de {COMPANY} v
+STR_HQAREA_LEFT                   :Àrea de {COMPANY} <
 STR_HQERR                         :No pots reclamar la ciutat
 STR_CITY                          :.:: Ciutat ::.
 STR_CITY2                         :{YELLOW}.:: Ciutat ::.
 
 #welcome message
+STR_WELCOME                       :{}{BIG_FONT}Benvinguts a l'experiència City Builder{}{}Portada a terme per{}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
 
 
 #news
+STR_NEW_HQ                        :{COMPANY} ha reclamat {TOWN}
+STR_PLACE_HQ                      :Construeix la teva seu en una població per reclamar-la. Les ciutats no poden ser reclamades!
+STR_TOWN_CLAIMED                  :{COMPANY} ha reclamat {TOWN}
+STR_TOWN_POPLIMIT                 :{COMPANY} no ha pogut reclamar {TOWN} perquè té massa habitants
+STR_TOWN_NOTCLAIMED               :{COMPANY} no ha fundat cap població a prop
+STR_CITY_NOTCLAIMED               :{COMPANY} no pot reclamar cap CIUTAT
+STR_TOWN_HAS_OWNER                :{TOWN} ja ha estat reclamada per {COMPANY}
+STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} ha intentat reclamar una població massa propera a una altra companyia
 
 #information
-STR_CITY_NOTCLAIMED_INFO          :No pots reclamar una {YELLOW}CIUTAT
+STR_PLACE_HQ_INFO                 :Construeix la teva seu en una població de menys de {YELLOW}{COMMA} {BLACK}habitants per a reclamar-la. Les ciutats no poden ser reclamades!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Has reclamat {YELLOW}{TOWN}{BLACK}.{}{}Pots veure què necessita la població en les finestres de població o d'objectius.
+STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}té massa habitants per a reclamar-la. El màxim nombre d'habitants permès és {YELLOW}{COMMA}
+STR_TOWN_NOTCLAIMED_INFO          :No hi ha poblacions a prop
+STR_CITY_NOTCLAIMED_INFO          :No pots reclamar cap {YELLOW}CIUTAT
 STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}ja ha estat reclamada
 STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}està massa prop d'una altra població reclamada
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}La població necessitarà
+STR_POINT_TO_STORY_REQ            :{BLACK}Pots mirar la llista de càrregues necessàries de la població al {YELLOW}Llibre de Partida {BLACK}en qualsevol moment
 
 #dummy
+STR_EMPTY0                        :
+STR_EMPTY1                        :{STRING}
+STR_EMPTY2                        :{STRING}{STRING}
+STR_EMPTY3                        :{STRING}{STRING}{STRING}
 STR_PLUS                          :+
 
 
@@ -35,39 +57,55 @@ STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {
 
 STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Enviats / Requerits: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}La població {GREEN}sí{BLACK} ha estat creixent durant {YELLOW}{NUM} {BLACK}mes{P "" os} seguits. Ha crescut durant {YELLOW}{NUM} {BLACK}mes{P "" os} d'un total de {YELLOW}{NUM}
+STR_TOWN_GROWTYPE_NOTGROW         : {BLACK}La població {RED}no{BLACK} ha estat creixent durant {YELLOW}{NUM} {BLACK}mes{P "" os} seguits. No s'ha crescut durant {YELLOW}{NUM} {BLACK}mes{P "" os} d'un total de {YELLOW}{NUM}
 
 
 STR_TOWN_MISSING_CARGO            :  {BLACK}A la població li falten:   {WHITE}{CARGO_LIST}
 
+STR_TOWN_NEXT_CARGO               :  {BLACK}Propers requeriments: {GREEN}{CARGO_LIST} {BLACK}a partir de que la població tingui {GREEN}{COMMA} {BLACK}habitants
 
 
 #town gui
+STR_TOWNGUI                       :{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}
 
 STR_TOWNW_GROWTYPE_GROW           :{BLACK}La població {GREEN}sí {BLACK}està creixent
 STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}La població {RED}no {BLACK}està creixent
+STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Servei inexistent
 
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}La població {GREEN}sí{BLACK} està creixent{}   {BLACK}Quantitats de càrrega que falten:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}La població {RED}no{BLACK} està creixent{} {BLACK}Quantitats de càrrega que falten:
 
 STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Aquesta població l'ha reclamat {COMPANY}{}   {BLACK}Quantitats de càrrega que falten:{STRING}
 
+STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   Bé{STRING}
 STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
 STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
 
 
 STR_TOWNW_MISSING_CARGO           :{}   {BLACK}A la població li falten:   {WHITE}{CARGO_LIST}{STRING}
 
+STR_TOWNW_NEXT_CARGO              :{} {BLACK}Propers requeriments: {GREEN}{CARGO_LIST} {BLACK}a partir de que la població tingui {GREEN}{COMMA} {BLACK}habitants
 
+STR_SEE_GOAL_GUI                  :{}   {BLACK}Veure més detalls en la finestra {WHITE}Llista d'objectius{STRING}{STRING}
 
 #town names according to population
+STR_TOWNNAME_POP0                 :Assentament
+STR_TOWNNAME_POP1                 :Centre turístic
+STR_TOWNNAME_POP2                 :Aldea
 STR_TOWNNAME_POP3                 :Població
 STR_TOWNNAME_POP4                 :Ciutat
+STR_TOWNNAME_POP5                 :Metròpoli
 
 
 #goal progress
+STR_WINNER_GOAL                   :{YELLOW}{COMPANY} {BLACK}ha guanyat, aconseguint l'objectiu amb {YELLOW}{COMMA} {BLACK}habitants
 STR_WINNER_TIME                   :{BLACK}La partida ha acabat.{} {YELLOW}{COMPANY} {BLACK}ha guanyat amb {YELLOW}{COMMA} {BLACK}habitants
 
 STR_STORY_TITLE_REQ               :{GREEN}Requisits de City Builder
 
 STR_STORY_TITLE                   :{WHITE}Premis anuals City Builder
+STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}amb {YELLOW}{COMMA} {BLACK}habitants ({YELLOW}{STRING}{COMMA}{BLACK}).
 
 #test
 #STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
