@@ -37,6 +37,7 @@ STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}està massa prop d'una 
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}La població necessitarà
+STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}per 1.000 habitants {ORANGE}* {BLACK}Des de {GREEN}{COMMA} {BLACK} habitants {ORANGE}* {BLACK}Caiguda {GREEN}{NUM}%
 STR_POINT_TO_STORY_REQ            :{BLACK}Pots mirar la llista de càrregues necessàries de la població al {YELLOW}Llibre de Partida {BLACK}en qualsevol moment
 
 #dummy
@@ -53,15 +54,19 @@ STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}any{P "" s} per a fin
 
 STR_TOWN_CB_HEADER                :  {ORANGE}Requisits de la teva població
 
+STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}amb {YELLOW}{COMMA} {BLACK}habitants en {YELLOW}{TOWN}
 STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}amb {YELLOW}{COMMA} {BLACK}població en {YELLOW}{TOWN}
 
+STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}En dipòsit : {GREEN}{COMMA} {BLACK}unitats  ( {YELLOW}{NUM}{BLACK} % ), Enviats / Requerits : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Enviats / Requerits: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
 STR_TOWN_GROWTYPE_GROW            :  {BLACK}La població {GREEN}sí{BLACK} ha estat creixent durant {YELLOW}{NUM} {BLACK}mes{P "" os} seguits. Ha crescut durant {YELLOW}{NUM} {BLACK}mes{P "" os} d'un total de {YELLOW}{NUM}
 STR_TOWN_GROWTYPE_NOTGROW         : {BLACK}La població {RED}no{BLACK} ha estat creixent durant {YELLOW}{NUM} {BLACK}mes{P "" os} seguits. No s'ha crescut durant {YELLOW}{NUM} {BLACK}mes{P "" os} d'un total de {YELLOW}{NUM}
 
+STR_TOWN_FUNDED                   :  {BLACK}Es fundaran edificis en la població durant {YELLOW}{NUM} {BLACK}mes{P "" os}. A la població se li van donar fons per a {YELLOW}{NUM} {BLACK}mes{P "" os} en total.
 
 STR_TOWN_MISSING_CARGO            :  {BLACK}A la població li falten:   {WHITE}{CARGO_LIST}
+STR_TOWN_GROWTH_RATE              :  {BLACK}1 casa en {ORANGE}{COMMA} {BLACK}dies ({ORANGE}{COMMA}{BLACK}%), pròxima en {YELLOW}{COMMA}{BLACK} di{P a es}
 
 STR_TOWN_NEXT_CARGO               :  {BLACK}Propers requeriments: {GREEN}{CARGO_LIST} {BLACK}a partir de que la població tingui {GREEN}{COMMA} {BLACK}habitants
 
@@ -84,6 +89,7 @@ STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
 
 
 STR_TOWNW_MISSING_CARGO           :{}   {BLACK}A la població li falten:   {WHITE}{CARGO_LIST}{STRING}
+STR_TOWNW_GROWTH_RATE             :{}   {BLACK}Creixement del {ORANGE}{COMMA}{BLACK}%, pròxim en {YELLOW}{COMMA}{BLACK} di{P a es}
 
 STR_TOWNW_NEXT_CARGO              :{} {BLACK}Propers requeriments: {GREEN}{CARGO_LIST} {BLACK}a partir de que la població tingui {GREEN}{COMMA} {BLACK}habitants
 
@@ -97,6 +103,7 @@ STR_TOWNNAME_POP3                 :Població
 STR_TOWNNAME_POP4                 :Ciutat
 STR_TOWNNAME_POP5                 :Metròpoli
 
+STR_TOWNNAME_PRESIDENT            : {PRESIDENT_NAME} de {STRING}
 
 #goal progress
 STR_WINNER_GOAL                   :{YELLOW}{COMPANY} {BLACK}ha guanyat, aconseguint l'objectiu amb {YELLOW}{COMMA} {BLACK}habitants
