@@ -8,8 +8,8 @@ STR_HQAREA_TOP                    : ^ Obszar firmy {COMPANY} ^
 STR_HQAREA_RIGHT                  :&gt; Obszar firmy {COMPANY}
 STR_HQAREA_BOTTOM                 : v Obszar firmy {COMPANY} v
 STR_HQAREA_LEFT                   :Obszar firmy {COMPANY} &gt;
-STR_HQERR                         :MIASTO nie może zostać wybrane
-STR_CITY                          :.:: Miasto ::.
+STR_HQERR                         :MIASTO wojewódzkie nie może zostać wybrane
+STR_CITY                          :.:: Stolica województwa ::.
 STR_CITY2                         :{YELLOW}.:: Miasto ::.
 
 #welcome message
@@ -18,11 +18,11 @@ STR_WELCOME                       :{}{BIG_FONT}Witamy w trybie City Builder{}{}s
 
 #news
 STR_NEW_HQ                        :Firma {COMPANY} wybrała miejscowość {TOWN}
-STR_PLACE_HQ                      :Aby rozpocząć należy umieścić siedzibę firmy w miejscowości, wielkie miasta nie mogą zostać wybrane!
+STR_PLACE_HQ                      :Aby rozpocząć należy umieścić siedzibę firmy w miejscowości, wielkie miasta i stolice nie mogą zostać wybrane!
 STR_TOWN_CLAIMED                  :firma {COMPANY} wybrała miasto {TOWN}
 STR_TOWN_POPLIMIT                 :{COMPANY} nie udało się wybrać miasta {TOWN} z powodu zbyt dużej liczby mieszkańców
 STR_TOWN_NOTCLAIMED               :Firma {COMPANY} nie wybrała miejscowości
-STR_CITY_NOTCLAIMED               :firma {COMPANY} nie może wybrać MIASTA
+STR_CITY_NOTCLAIMED               :firma {COMPANY} nie może wybrać stolicy województwa
 STR_TOWN_HAS_OWNER                :Miasto {TOWN} jest już zajętę przez firmę {COMPANY}
 STR_TOWN_NEIGHBOUR_CLOSE          :Firma {COMPANY} próbowała zająć miejscowość zbyt blisko innej firmy
 
@@ -30,8 +30,8 @@ STR_TOWN_NEIGHBOUR_CLOSE          :Firma {COMPANY} próbowała zająć miejscowo
 STR_PLACE_HQ_INFO                 :Aby wybrać miasto należy umieścić siedzibę firmy w miejscowości poniżej {YELLOW}{COMMA} {BLACK}mieszkańców, w przeciwnym razie miasto nie zostanie wybrane!
 STR_TOWN_CLAIMED_INFO             :{BLACK}Miasto {YELLOW}{TOWN}{BLACK} zostało wybrane.{}{} Wymagania miasta do rozwoju można znaleźć klikając miasto lub listę celów (żółta chorągiewka).
 STR_TOWN_POPLIMIT_INFO            :Miejscowość{YELLOW}{TOWN} {BLACK}posiada zbyt dużo mieszkańców. Maksymalna liczba to {YELLOW}{COMMA}
-STR_TOWN_NOTCLAIMED_INFO          :Brak wybranego miasto
-STR_CITY_NOTCLAIMED_INFO          :Nie można wybrać {YELLOW}MIASTA
+STR_TOWN_NOTCLAIMED_INFO          :Brak wybranej miejscowości
+STR_CITY_NOTCLAIMED_INFO          :Nie można wybrać {YELLOW}STOLICY WOJEWÓDZTWA
 STR_TOWN_HAS_OWNER_INFO           :miasto {YELLOW}{TOWN} {BLACK}jest już zajęte
 STR_TOWN_NEIGHBOUR_CLOSE_INFO     :Miasto {YELLOW}{TOWN} {BLACK}jest zbyt blisko innego już wybranego miasta
 
@@ -50,7 +50,7 @@ STR_PLUS                          :+
 
 #goal gui
 STR_GLOBAL_GOAL_CB                :{ORANGE}CITY BUILDER ::: Celem gry jest liczba  :  {GREEN}{COMMA} {BLACK}mieszkańców
-STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}rok{P lat lat lat} do końca rozgrywki
+STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}{P rok lata lat} do końca rozgrywki
 
 STR_TOWN_CB_HEADER                :  {ORANGE}Wymagania miasteczka
 
@@ -88,7 +88,7 @@ STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
 STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
 
 
-STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Do miasta potrzeba dostarczyć :   {WHITE}{CARGO_LIST}{STRING}
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Do miasta trzeba dostarczyć :   {WHITE}{CARGO_LIST}{STRING}
 STR_TOWNW_GROWTH_RATE             :{}   {BLACK}Rozwój {ORANGE}{COMMA}{BLACK}%, nastepny w ciągu {YELLOW}{COMMA}{BLACK} dnia{P dni dni dni}
 
 STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Następna wymagana usługa: {GREEN}{CARGO_LIST} {BLACK}od {GREEN}{COMMA} {BLACK}mieszkańców
@@ -97,7 +97,7 @@ STR_SEE_GOAL_GUI                  :{}   {BLACK}Więcej szczegółów w {WHITE}Ok
 
 #town names according to population
 STR_TOWNNAME_POP0                 :Osada
-STR_TOWNNAME_POP1                 :Miejscowość
+STR_TOWNNAME_POP1                 :Kurort
 STR_TOWNNAME_POP2                 :Wioska
 STR_TOWNNAME_POP3                 :Miejscowość
 STR_TOWNNAME_POP4                 :Miasto
