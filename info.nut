@@ -15,11 +15,11 @@ class SimpletonCBInfo extends GSInfo {
 	function GetAuthor()      { return "TheDude"; }
 	function GetName()        { return "Simpleton's City Builder"; }
 	function GetDescription() { return "Easily configured City Builder simulation script"; }
-	function GetVersion()     { return 9; }
-	function GetDate()        { return "2014-01-07"; }
+	function GetVersion()     { return 10; }
+	function GetDate()        { return "2015-10-04"; }
 	function CreateInstance() { return "SimpletonCB"; }
 	function GetShortName()   { return "SMCB"; }
-	function GetAPIVersion()  { return "1.4"; }
+	function GetAPIVersion()  { return "1.5"; }
 	function GetUrl()         { return "http://novapolis.net"; }
 
 	function GetSettings() {
