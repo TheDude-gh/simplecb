@@ -96,11 +96,13 @@ class SimpletonCB extends GSController
 	function TownRemoveByID(townid);
 	function TownHasOwner(townid);
 	function ClaimedTownNearby(townid, companyid);
+	function PrepareCB();
+	function PrepareTown(townid);
 	function TownsUpdate(goal_gui_update);
 	function TownUpdate(companyid, townid, update);
 	function PlaceSign(tileIndex, text);
 	function RemoveSign(tileIndex);
-	function TownArea(tileIndex, companyid, place)
+	function TownArea(tileIndex, companyid, place);
 	function CargoGetNext(population);
 	function xMapgen();
 	function PlaceIndustry(ind, cargo, distmin, method, distmax);
@@ -229,6 +231,13 @@ function SimpletonCB::CheckEvents() {
 				}
 				break;
 			}
+			case GSEvent.ET_TOWN_FOUNDED: {
+				//new town funded
+				local newtown = GSEventTownFounded.Convert(event);
+				local townid = newtown.GetTownID();
+				this.PrepareTown(townid);
+				break;
+			}
 		}
 	}
 }
@@ -339,7 +348,7 @@ function SimpletonCB::HQClaimTown(){
 			if(GSTown.IsCity(closest_town_id)){
 				if(company.town_id != INVALID_TOWN) this.TownRemoveByID(company.town_id); //unclaim old first if any
 				company.town_id = INVALID_TOWN;
-				GSNews.Create(GSNews.NT_GENERAL, GSText(GSText.STR_CITY_NOTCLAIMED, company.id), GSCompany.COMPANY_INVALID);
+				GSNews.Create(GSNews.NT_GENERAL, GSText(GSText.STR_CITY_NOTCLAIMED, company.id), GSCompany.COMPANY_INVALID, GSNews.NR_TOWN, closest_town_id);
 				GSGoal.Question(0, company.id, GSText(GSText.STR_CITY_NOTCLAIMED_INFO), GSGoal.QT_INFORMATION, GSGoal.BUTTON_OK);
 				GSLog.Info(GSCompany.GetName(company.id) + " tried claiming a city " + GSTown.GetName(closest_town_id));
 			}
@@ -347,7 +356,7 @@ function SimpletonCB::HQClaimTown(){
 			else if(GSTown.GetPopulation(closest_town_id) > this.claim_pop){
 				if(company.town_id != INVALID_TOWN) this.TownRemoveByID(company.town_id); //unclaim old first if any
 				company.town_id = INVALID_TOWN;
-				GSNews.Create(GSNews.NT_GENERAL, GSText(GSText.STR_TOWN_POPLIMIT, company.id, closest_town_id), GSCompany.COMPANY_INVALID);
+				GSNews.Create(GSNews.NT_GENERAL, GSText(GSText.STR_TOWN_POPLIMIT, company.id, closest_town_id), GSCompany.COMPANY_INVALID, GSNews.NR_TOWN, closest_town_id);
 				GSGoal.Question(0, company.id, GSText(GSText.STR_TOWN_POPLIMIT_INFO, closest_town_id, this.claim_pop), GSGoal.QT_INFORMATION, GSGoal.BUTTON_OK);
 				GSLog.Info(GSCompany.GetName(company.id) + " tried to claim town " + GSTown.GetName(closest_town_id) + "which has too high population");
 			}
@@ -355,7 +364,7 @@ function SimpletonCB::HQClaimTown(){
 			else if(this.TownHasOwner(closest_town_id)){
 				if(company.town_id != INVALID_TOWN) this.TownRemoveByID(company.town_id); //unclaim old first if any
 				company.town_id = INVALID_TOWN;
-				GSNews.Create(GSNews.NT_GENERAL, GSText(GSText.STR_TOWN_HAS_OWNER, closest_town_id, company.id), GSCompany.COMPANY_INVALID);
+				GSNews.Create(GSNews.NT_GENERAL, GSText(GSText.STR_TOWN_HAS_OWNER, closest_town_id, company.id), GSCompany.COMPANY_INVALID, GSNews.NR_TOWN, closest_town_id);
 				GSGoal.Question(0, company.id, GSText(GSText.STR_TOWN_HAS_OWNER_INFO, closest_town_id), GSGoal.QT_INFORMATION, GSGoal.BUTTON_OK);
 				GSLog.Info(GSCompany.GetName(company.id) + " tried to claim owned town: " + GSTown.GetName(closest_town_id));
 			}
@@ -363,7 +372,7 @@ function SimpletonCB::HQClaimTown(){
 			else if(GSTown.GetDistanceManhattanToTile(closest_town_id, hq_tile) > CLAIM_DISTANCE){
 				if(company.town_id != INVALID_TOWN) this.TownRemoveByID(company.town_id); //unclaim old first if any
 				company.town_id = INVALID_TOWN;
-				GSNews.Create(GSNews.NT_GENERAL, GSText(GSText.STR_TOWN_NOTCLAIMED, company.id), GSCompany.COMPANY_INVALID);
+				GSNews.Create(GSNews.NT_GENERAL, GSText(GSText.STR_TOWN_NOTCLAIMED, company.id), GSCompany.COMPANY_INVALID, GSNews.NR_TOWN, closest_town_id);
 				GSGoal.Question(0, company.id, GSText(GSText.STR_TOWN_NOTCLAIMED_INFO), GSGoal.QT_INFORMATION, GSGoal.BUTTON_OK);
 				GSLog.Info(GSCompany.GetName(company.id) + " found no town nearby");
 			}
@@ -371,7 +380,7 @@ function SimpletonCB::HQClaimTown(){
 			else if(this.ClaimedTownNearby(closest_town_id, company.id)){
 				if(company.town_id != INVALID_TOWN) this.TownRemoveByID(company.town_id); //unclaim old first if any
 				company.town_id = INVALID_TOWN;
-				GSNews.Create(GSNews.NT_GENERAL, GSText(GSText.STR_TOWN_NEIGHBOUR_CLOSE, company.id), GSCompany.COMPANY_INVALID);
+				GSNews.Create(GSNews.NT_GENERAL, GSText(GSText.STR_TOWN_NEIGHBOUR_CLOSE, company.id), GSCompany.COMPANY_INVALID, GSNews.NR_TOWN, closest_town_id);
 				GSGoal.Question(0, company.id, GSText(GSText.STR_TOWN_NEIGHBOUR_CLOSE_INFO, closest_town_id), GSGoal.QT_INFORMATION, GSGoal.BUTTON_OK);
 				GSLog.Info(GSCompany.GetName(company.id) + " tried to claim " + GSTown.GetName(closest_town_id) + "which is too close to another company's town");
 			}
@@ -392,7 +401,7 @@ function SimpletonCB::HQClaimTown(){
 					}
 				}
 
-				GSNews.Create(GSNews.NT_GENERAL, GSText(GSText.STR_TOWN_CLAIMED, company.id, company.town_id), GSCompany.COMPANY_INVALID);
+				GSNews.Create(GSNews.NT_GENERAL, GSText(GSText.STR_TOWN_CLAIMED, company.id, company.town_id), GSCompany.COMPANY_INVALID, GSNews.NR_TOWN, closest_town_id);
 				//inform about claiming town
 				if(this.log == 0) GSGoal.Question(0, company.id, GSText(GSText.STR_TOWN_CLAIMED_INFO, company.town_id), GSGoal.QT_INFORMATION, GSGoal.BUTTON_OK);
 				GSLog.Info(GSCompany.GetName(company.id) + " claimed " + GSTown.GetName(closest_town_id));
@@ -521,15 +530,20 @@ function SimpletonCB::PrepareCB(){
 
 	local townlist = GSTownList();
 	foreach(townid, _ in townlist){
-		if(GSTown.IsCity(townid)) this.PlaceSign(GSTown.GetLocation(townid), GSText(GSText.STR_CITY)); // add a sign to each city
-		else GSTown.SetGrowthRate(townid, GSTown.TOWN_GROWTH_NONE); //stop growing towns
-		//disable default TOWN_EFFECT goals
-		GSTown.SetCargoGoal(townid, GSCargo.TE_PASSENGERS, 0);
-		GSTown.SetCargoGoal(townid, GSCargo.TE_MAIL, 0);
-		GSTown.SetCargoGoal(townid, GSCargo.TE_WATER, 0);
-		GSTown.SetCargoGoal(townid, GSCargo.TE_GOODS, 0);
-		GSTown.SetCargoGoal(townid, GSCargo.TE_FOOD, 0);
+		this.PrepareTown(townid);
 	}
+}
+
+/* Prepare towns at start or new funded town */
+function SimpletonCB::PrepareTown(townid){
+	if(GSTown.IsCity(townid)) this.PlaceSign(GSTown.GetLocation(townid), GSText(GSText.STR_CITY)); // add a sign to each city
+	else GSTown.SetGrowthRate(townid, GSTown.TOWN_GROWTH_NONE); //stop growing towns
+	//disable default TOWN_EFFECT goals
+	GSTown.SetCargoGoal(townid, GSCargo.TE_PASSENGERS, 0);
+	GSTown.SetCargoGoal(townid, GSCargo.TE_MAIL, 0);
+	GSTown.SetCargoGoal(townid, GSCargo.TE_WATER, 0);
+	GSTown.SetCargoGoal(townid, GSCargo.TE_GOODS, 0);
+	GSTown.SetCargoGoal(townid, GSCargo.TE_FOOD, 0);
 }
 
 /* start monitoring town once claimed */
