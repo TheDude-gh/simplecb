@@ -96,7 +96,7 @@ STR_TOWNW_NEXT_CARGO              :{}   {BLACK}下一需求: {GREEN}{CARGO_LIST}
 STR_SEE_GOAL_GUI                  :{}   {BLACK}参见更多细节，在 {WHITE}目标界面{STRING}{STRING}
 
 #town names according to population
-STR_TOWNNAME_POP0                 :结算
+STR_TOWNNAME_POP0                 :定居点
 STR_TOWNNAME_POP1                 :度假圣地
 STR_TOWNNAME_POP2                 :乡村
 STR_TOWNNAME_POP3                 :城镇
