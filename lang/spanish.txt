@@ -1,0 +1,59 @@
+##plural 0
+# Simpleton City Builder   english.txt
+#
+
+#town area
+
+#welcome message
+
+
+#news
+
+#information
+
+#STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+
+#dummy
+
+
+#goal gui
+
+
+
+
+
+
+
+
+
+#town gui
+
+
+
+
+
+
+
+
+
+#town names according to population
+STR_TOWNNAME_POP0                 :Asentamiento
+STR_TOWNNAME_POP1                 :Centro turístico
+STR_TOWNNAME_POP2                 :Pueblo
+STR_TOWNNAME_POP3                 :Ciudad
+STR_TOWNNAME_POP4                 :Gran ciudad
+STR_TOWNNAME_POP5                 :Metrópolis
+
+
+#goal progress
+STR_WINNER_TIME                   :{BLACK}El juego ha terminado.{} {YELLOW}{COMPANY} {BLACK}ha ganado con una población de {YELLOW}{COMMA} {BLACK}
+
+
+
+#test
+#STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
+
+#usable and well visible in GUI:
+#{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}
+#usable colours
+#{BLACK}  {WHITE} {RED}    {GREEN} {BLUE}   {YELLOW} {ORANGE} {PURPLE} {GRAY}   {BROWN} {SILVER} {GOLD} {CREAM}  {LTBLUE} {DKBLUE} {DKGREEN} {LTBROWN}
