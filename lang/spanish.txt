@@ -3,6 +3,8 @@
 #
 
 #town area
+STR_CITY                          :.:: Ciudad ::.
+STR_CITY2                         :{YELLOW}.:: Ciudad ::.
 
 #welcome message
 
@@ -17,6 +19,7 @@
 
 
 #goal gui
+STR_GAME_LENGTH                   :{GREEN}{NUM}  {BLACK}año{P "" s} para el fin del juego
 
 
 
