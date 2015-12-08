@@ -26,7 +26,9 @@ STR_GAME_LENGTH                   :{GREEN}{NUM}  {BLACK}año{P "" s} para el fin
 
 
 
+STR_TOWN_MISSING_CARGO            :{BLACK}Servicios adecuados aún carentes en la Ciudad :   {WHITE}{CARGO_LIST}
 
+STR_TOWN_NEXT_CARGO               :{BLACK}Siguiente/s: {GREEN}{CARGO_LIST} {BLACK}para una población de {GREEN}{COMMA} {BLACK}ó mayor
 
 
 #town gui
