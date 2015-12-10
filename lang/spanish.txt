@@ -10,6 +10,7 @@ STR_CITY2                         :{YELLOW}.:: Ciudad ::.
 
 
 #news
+STR_PLACE_HQ                      :Construye tu sede (HQ) en una ciudad para reclamarla; aviso, ¡Las grandes ciudades no pueden ser reclamadas!
 
 #information
 
