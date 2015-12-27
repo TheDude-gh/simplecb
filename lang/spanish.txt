@@ -11,8 +11,10 @@ STR_CITY2                         :{YELLOW}.:: Ciudad ::.
 
 #news
 STR_PLACE_HQ                      :Construye tu sede (HQ) en una ciudad para reclamarla; aviso, ¡Las grandes ciudades no pueden ser reclamadas!
+STR_CITY_NOTCLAIMED               :{COMPANY} no puede reclamar una CIUDAD
 
 #information
+STR_CITY_NOTCLAIMED_INFO          :No puedes reclamar una {YELLOW}CIUDAD
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 
