@@ -9,6 +9,7 @@ STR_CITY                          :.:: Ciudad ::.
 STR_CITY2                         :{YELLOW}.:: Ciudad ::.
 
 #welcome message
+STR_WELCOME                       :{}{BIG_FONT}Saludos y bienvenido a la experiencia City Builder o Ingenieros Urbanos{}{}Traido para ti por{}{}{YELLOW}El Equipo de Novapolis{}{}{WHITE}http://novapolis.net{}{}
 
 
 #news
@@ -24,6 +25,7 @@ STR_CITY_NOTCLAIMED_INFO          :No puedes reclamar una {YELLOW}CIUDAD
 
 
 #goal gui
+STR_GLOBAL_GOAL_CB                :{ORANGE}INGENIERO URBANO ::: La meta del juego es alcanzar una población de : {GREEN}{COMMA} {BLACK}personas
 STR_GAME_LENGTH                   :{GREEN}{NUM}  {BLACK}año{P "" s} para el fin del juego
 
 
@@ -41,6 +43,7 @@ STR_TOWN_NEXT_CARGO               :{BLACK}Siguiente/s: {GREEN}{CARGO_LIST} {BLAC
 
 
 
+STR_TOWN_CARGO_YES                :{} {ORANGE}{CARGO_LIST} {COMMA}
 
 
 
