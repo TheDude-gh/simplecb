@@ -62,6 +62,7 @@ STR_TOWNNAME_POP5                 :Metrópolis
 STR_WINNER_TIME                   :{BLACK}El juego ha terminado.{} {YELLOW}{COMPANY} {BLACK}ha ganado con una población de {YELLOW}{COMMA} {BLACK}
 
 
+STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}con una población de {YELLOW}{COMMA} {BLACK} ({YELLOW}{STRING}{COMMA}{BLACK}).
 
 #test
 #STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
