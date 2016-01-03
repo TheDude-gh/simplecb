@@ -5,6 +5,7 @@
 #town area
 STR_HQAREA_RIGHT                  :> Área de {COMPANY}
 STR_HQAREA_BOTTOM                 : v Área de {COMPANY} v
+STR_HQAREA_LEFT                   :Área de {COMPANY} <
 STR_CITY                          :.:: Ciudad ::.
 STR_CITY2                         :{YELLOW}.:: Ciudad ::.
 
@@ -22,6 +23,7 @@ STR_CITY_NOTCLAIMED_INFO          :No puedes reclamar una {YELLOW}CIUDAD
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 
 #dummy
+STR_EMPTY0                        :
 
 
 #goal gui
