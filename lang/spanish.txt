@@ -3,6 +3,7 @@
 #
 
 #town area
+STR_HQTOWN                        :Ciudad de {COMPANY}
 STR_HQAREA_RIGHT                  :> Área de {COMPANY}
 STR_HQAREA_BOTTOM                 : v Área de {COMPANY} v
 STR_HQAREA_LEFT                   :Área de {COMPANY} <
@@ -20,6 +21,7 @@ STR_CITY_NOTCLAIMED               :{COMPANY} no puede reclamar una CIUDAD
 
 #information
 STR_CITY_NOTCLAIMED_INFO          :No puedes reclamar una {YELLOW}CIUDAD
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}está muy cerca de otra ciudad reclamada
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 
