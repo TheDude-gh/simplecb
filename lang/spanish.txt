@@ -16,6 +16,7 @@ STR_WELCOME                       :{}{BIG_FONT}Saludos y bienvenido a la experie
 
 
 #news
+STR_NEW_HQ                        :{COMPANY} ha reclamado {TOWN}
 STR_PLACE_HQ                      :Construye tu sede (HQ) en una ciudad para reclamarla; aviso, ¡Las grandes ciudades no pueden ser reclamadas!
 STR_CITY_NOTCLAIMED               :{COMPANY} no puede reclamar una CIUDAD
 
@@ -28,6 +29,7 @@ STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}está muy cerca de otra
 #dummy
 STR_EMPTY0                        :
 STR_EMPTY1                        :{STRING}
+STR_EMPTY2                        :{STRING}{STRING}
 
 
 #goal gui
