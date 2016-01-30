@@ -1,0 +1,122 @@
+##plural 2
+# Simpleton City Builder   english.txt
+#
+
+#town area
+STR_HQTOWN                        :Município pertence a {COMPANY}
+STR_HQAREA_TOP                    : ^ Área da {COMPANY} ^
+STR_HQAREA_RIGHT                  :> Área da {COMPANY}
+STR_HQAREA_BOTTOM                 : v Área da {COMPANY} v
+STR_HQAREA_LEFT                   :Área da {COMPANY} <
+STR_HQERR                         :Você não pode reivindicar municípios com população maior que o permitido
+STR_CITY                          :.:: Cidade ::.
+STR_CITY2                         :{YELLOW}.:: Cidade ::.
+
+#welcome message
+STR_WELCOME                       :{}{BIG_FONT}Olá! bem vindo a experiência City Builder{}{}Trazido até você por{}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
+
+
+#news
+STR_NEW_HQ                        :{COMPANY} reivindicou {TOWN}
+STR_PLACE_HQ                      :Construa sua sede em qualquer município para reivindicar. Municípios ou Cidades com número de população maior que o permitido, não podem ser reivindicadas!
+STR_TOWN_CLAIMED                  :{COMPANY} Reivindicou {TOWN}
+STR_TOWN_POPLIMIT                 :{COMPANY} falhou em reivindicar {TOWN} porque a população é muito alta
+STR_TOWN_NOTCLAIMED               :{COMPANY} não encontrou nenhuma vila por perto
+STR_CITY_NOTCLAIMED               :{COMPANY} não pode reivindicar uma CIDADE
+STR_TOWN_HAS_OWNER                :{TOWN} já foi reivindicada por {COMPANY}
+STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} tentou reivindicar uma cidade muito próxima de outra empresa
+
+#information
+STR_PLACE_HQ_INFO                 :Construa a sua sede em um município com menos de {YELLOW}{COMMA} {BLACK} de população para reivindicar, municípios e cidades maiores não podem ser reivindicados!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Você reivindicou {YELLOW}{TOWN}{BLACK}.{}{}Você pode ver o que a sua cidade precisa na lista de objetivos e informações da cidade.
+STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}tem uma população muito alta para ser reivindicada. O máximo de população permitida é {YELLOW}{COMMA}
+STR_TOWN_NOTCLAIMED_INFO          :Nenhum município próximo
+STR_CITY_NOTCLAIMED_INFO          :Você não pode reivindicar uma {YELLOW}CIDADE
+STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}já foi reivindicada
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}está muito perto de outra vila já reivindicada
+
+#STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+STR_TOWN_CLAIMED_RES              :{BLACK}A vila precisa de
+STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}por 1000 pop {ORANGE}* {BLACK}A partir de {GREEN}{COMMA} {BLACK}pop {ORANGE}* {BLACK}Perda {GREEN}{NUM}%
+STR_POINT_TO_STORY_REQ            :{BLACK}Você pode checar a lista de requerimentos totais do município no {YELLOW}Livro de histórias {BLACK}a qualquer momento
+
+#dummy
+STR_EMPTY0                        :
+STR_EMPTY1                        :{STRING}
+STR_EMPTY2                        :{STRING}{STRING}
+STR_EMPTY3                        :{STRING}{STRING}{STRING}
+STR_PLUS                          :+
+
+
+#goal gui
+STR_GLOBAL_GOAL_CB                :{ORANGE}CITY BUILDER ::: O objetivo para este jogo é  :  {GREEN}{COMMA} {BLACK}de população
+STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}ano{P "" s} para terminar o jogo
+
+STR_TOWN_CB_HEADER                :  {ORANGE}Os requerimentos da sua vila
+
+STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}com {YELLOW}{COMMA} {BLACK}de população em {YELLOW}{TOWN}
+STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}com {YELLOW}{COMMA} {BLACK}de população em {YELLOW}{TOWN}
+
+STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Armazenados : {GREEN}{COMMA} {BLACK}unidades  ( {YELLOW}{NUM}{BLACK} % ), Entregue / Requerido : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Entregue / Requerido: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}A cidade {GREEN}está crescendo {YELLOW}{NUM} {BLACK}mes{P "" es} consecutivos. Cresceu {YELLOW}{NUM} {BLACK}mes{P "" es} de {YELLOW}{NUM} {BLACK}no total
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}A cidade {RED}não está {BLACK}crescendo {YELLOW}{NUM} {BLACK}mes{P "" es} consecutivos. Crescimento estagnado a {YELLOW}{NUM} {BLACK}mes{P "" es}, sendo {YELLOW}{NUM} {BLACK}no total
+
+STR_TOWN_FUNDED                   :  {BLACK}Os edificios da cidades são financiados por {YELLOW}{NUM} {BLACK}mes{P "" es}. A cidade foi fundada por {YELLOW}{NUM} {BLACK}mes{P "" es} no total.
+
+STR_TOWN_MISSING_CARGO            :  {BLACK}Falta na cidade :   {WHITE}{CARGO_LIST}
+STR_TOWN_GROWTH_RATE              :  {BLACK}1 casa em {ORANGE}{COMMA} {BLACK}dias ({ORANGE}{COMMA}{BLACK}%), próxima em {YELLOW}{COMMA}{BLACK} dia{P "" s}
+
+STR_TOWN_NEXT_CARGO               :  {BLACK}Próximo: {GREEN}{CARGO_LIST} {BLACK}a partir de {GREEN}{COMMA} {BLACK}de população
+
+
+#town gui
+
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}A cidade está {GREEN}crescendo
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}A cidade {RED}não está {BLACK}crescendo
+STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Serviços faltando
+
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}A cidade está{GREEN}crescendo{}   {BLACK}Quantidade de carga faltando:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}A cidade {RED}não está {BLACK}crescendo{}   {BLACK}Quantidade de carga faltando:
+
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Esta cidade foi reivindicada po {COMPANY}{}   {BLACK}Quantidade de carga faltando:{STRING}
+
+STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
+STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
+STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
+
+
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Está faltando na cidade :   {WHITE}{CARGO_LIST}{STRING}
+STR_TOWNW_GROWTH_RATE             :{}   {BLACK}Cresceu {ORANGE}{COMMA}{BLACK}%, próximo em {YELLOW}{COMMA}{BLACK} dia{P "" s}
+
+STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Próximo: {GREEN}{CARGO_LIST} {BLACK}a partir de {GREEN}{COMMA} {BLACK}de população
+
+STR_SEE_GOAL_GUI                  :{}   {BLACK}Veja mais detalhes na {WHITE}Lista de objetivos{STRING}{STRING}
+
+#town names according to population
+STR_TOWNNAME_POP0                 :Assentamento
+STR_TOWNNAME_POP1                 :Resort
+STR_TOWNNAME_POP2                 :Vila
+STR_TOWNNAME_POP3                 :Município
+STR_TOWNNAME_POP4                 :Cidade
+STR_TOWNNAME_POP5                 :Metrópolis
+
+STR_TOWNNAME_PRESIDENT            : {PRESIDENT_NAME}'s {STRING}
+
+#goal progress
+STR_WINNER_GOAL                   :{YELLOW}{COMPANY} {BLACK}GANHOU, alcançou o objetivo com {YELLOW}{COMMA} {BLACK}de população
+STR_WINNER_TIME                   :{BLACK}O jogo terminou.{} {YELLOW}{COMPANY} {BLACK}vencei com {YELLOW}{COMMA} {BLACK}de população
+
+STR_STORY_TITLE_REQ               :{GREEN}City Builder Requerimentos
+
+STR_STORY_TITLE                   :{WHITE}City Builder premiação anual
+STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}com {YELLOW}{COMMA} {BLACK}de população ({YELLOW}{STRING}{COMMA}{BLACK}).
+
+#test
+#STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
+
+#usable and well visible in GUI:
+#{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}
+#usable colours
+#{BLACK}  {WHITE} {RED}    {GREEN} {BLUE}   {YELLOW} {ORANGE} {PURPLE} {GRAY}   {BROWN} {SILVER} {GOLD} {CREAM}  {LTBLUE} {DKBLUE} {DKGREEN} {LTBROWN}
