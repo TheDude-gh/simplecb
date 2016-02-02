@@ -21,7 +21,7 @@ STR_NEW_HQ                        :{COMPANY} reivindicou {TOWN}
 STR_PLACE_HQ                      :Construa sua sede em qualquer município para reivindicar. Municípios ou Cidades com número de população maior que o permitido, não podem ser reivindicadas!
 STR_TOWN_CLAIMED                  :{COMPANY} Reivindicou {TOWN}
 STR_TOWN_POPLIMIT                 :{COMPANY} falhou em reivindicar {TOWN} porque a população é muito alta
-STR_TOWN_NOTCLAIMED               :{COMPANY} não encontrou nenhuma vila por perto
+STR_TOWN_NOTCLAIMED               :{COMPANY} não encontrou nenhum município por perto
 STR_CITY_NOTCLAIMED               :{COMPANY} não pode reivindicar uma CIDADE
 STR_TOWN_HAS_OWNER                :{TOWN} já foi reivindicada por {COMPANY}
 STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} tentou reivindicar uma cidade muito próxima de outra empresa
@@ -33,10 +33,10 @@ STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}tem uma população mui
 STR_TOWN_NOTCLAIMED_INFO          :Nenhum município próximo
 STR_CITY_NOTCLAIMED_INFO          :Você não pode reivindicar uma {YELLOW}CIDADE
 STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}já foi reivindicada
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}está muito perto de outra vila já reivindicada
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}está muito perto de outro município já reivindicado
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
-STR_TOWN_CLAIMED_RES              :{BLACK}A vila precisa de
+STR_TOWN_CLAIMED_RES              :{BLACK}O município vai precisar de:
 STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}por 1000 pop {ORANGE}* {BLACK}A partir de {GREEN}{COMMA} {BLACK}pop {ORANGE}* {BLACK}Perda {GREEN}{NUM}%
 STR_POINT_TO_STORY_REQ            :{BLACK}Você pode checar a lista de requerimentos totais do município no {YELLOW}Livro de histórias {BLACK}a qualquer momento
 
@@ -52,7 +52,7 @@ STR_PLUS                          :+
 STR_GLOBAL_GOAL_CB                :{ORANGE}CITY BUILDER ::: O objetivo para este jogo é  :  {GREEN}{COMMA} {BLACK}de população
 STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}ano{P "" s} para terminar o jogo
 
-STR_TOWN_CB_HEADER                :  {ORANGE}Os requerimentos da sua vila
+STR_TOWN_CB_HEADER                :  {ORANGE}Os requerimentos do seu município
 
 STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}com {YELLOW}{COMMA} {BLACK}de população em {YELLOW}{TOWN}
 STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}com {YELLOW}{COMMA} {BLACK}de população em {YELLOW}{TOWN}
