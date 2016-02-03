@@ -69,7 +69,9 @@ STR_TOWNNAME_POP5                 :Metrópolis
 #goal progress
 STR_WINNER_TIME                   :{BLACK}El juego ha terminado.{} {YELLOW}{COMPANY} {BLACK}ha ganado con una población de {YELLOW}{COMMA} {BLACK}
 
+STR_STORY_TITLE_REQ               :{GREEN}Requisitos de Ingenieros Urbanos
 
+STR_STORY_TITLE                   :{WHITE}Premios anuales de los Ingenieros Urbanos
 STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}con una población de {YELLOW}{COMMA} {BLACK} ({YELLOW}{STRING}{COMMA}{BLACK}).
 
 #test
