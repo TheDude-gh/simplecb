@@ -48,7 +48,9 @@ STR_TOWN_NEXT_CARGO               :{BLACK}Siguiente/s: {GREEN}{CARGO_LIST} {BLAC
 
 #town gui
 
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}La Ciudad está {GREEN}creciendo
 
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}La Ciudad está {GREEN}creciendo{} {BLACK}Cantidades de carga faltantes:
 
 
 STR_TOWN_CARGO_YES                :{} {ORANGE}{CARGO_LIST} {COMMA}
