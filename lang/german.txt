@@ -1,0 +1,123 @@
+##plural 0
+# Simpleton City Builder   english.txt
+#
+
+#town area
+STR_HQTOWN                        :{COMPANY}'s Stadt
+STR_HQAREA_TOP                    : ^ {COMPANY}'s Gebiet ^
+STR_HQAREA_RIGHT                  :> {COMPANY}'s Gebiet
+STR_HQAREA_BOTTOM                 : v {COMPANY}'s Gebiet v
+STR_HQAREA_LEFT                   :{COMPANY}'s Gebiet <
+STR_HQERR                         :Sie  können keine Stadt mit dieser Einwohnerzahl (oder höher) beanspruchen
+STR_CITY                          :.:: Stadt ::.
+STR_CITY2                         :{YELLOW}.:: Stadt ::.
+
+#welcome message
+STR_WELCOME                       :{}{BIG_FONT}Hello and welcome to the City Builder experience{}{}Brought to you by{}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
+
+
+#news
+STR_NEW_HQ                        :{COMPANY} hat {TOWN} beansprucht
+STR_PLACE_HQ                      :Platzieren sie ihr Hauptquartier in einer Stadt um sie zu beanspruchen. Städte mit dem Banner .:: Stadt ::. können nicht beansprucht werden
+STR_TOWN_CLAIMED                  :{COMPANY} beansprucht {TOWN}
+STR_TOWN_POPLIMIT                 :{COMPANY}kann die Stadt nicht beanspruchen {TOWN} wegen einer zu hohen Einwohnerzahl
+STR_TOWN_NOTCLAIMED               :{COMPANY} hat keine Stadt in der nähe gefunden
+STR_CITY_NOTCLAIMED               :{COMPANY} kann keine Großstadt beanspruchen
+STR_TOWN_HAS_OWNER                :{TOWN} wurde beireits von {COMPANY} beansprucht
+STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY}versucht eine Stadt zu beanspruchen, welche zu nah an einer bereits beanspruchten Stadt liegt
+
+#information
+STR_PLACE_HQ_INFO                 :Platzieren sie ihr Hauptquartier in eine Stadt mit weniger als {YELLOW}{COMMA} {BLACK}Einwohnern um sie zu beanspruchen. Städte mit einer höheren Einwohnerzahl können nicht beansprucht werden.
+STR_TOWN_CLAIMED_INFO             :{BLACK}Sie haben {YELLOW}{TOWN}{BLACK}beansprucht.{}{}Sie können im Stadtmenü, oder im Spielziel-Menü schauen was ihre Stadt braucht.
+STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}hat eine zu hohe Einwohnerzahl um beansprucht zu werden. Die höchste erlaubte Einwohnerzahl liegt bei {YELLOW}{COMMA}
+STR_TOWN_NOTCLAIMED_INFO          :Zu weit von der nächsten Stadt entfernt
+STR_CITY_NOTCLAIMED_INFO          :Sie können kein {YELLOW}Großstadt beanspruchen
+STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}ist bereits beansprucht
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}ist zu nahe an einer anderen, bereits beanspruchten, Stadt
+
+#STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+STR_TOWN_CLAIMED_RES              :Stadt wird{BLACK} benötigen
+STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}per 1000 pop {ORANGE}* {BLACK}From {GREEN}{COMMA} {BLACK}pop {ORANGE}* {BLACK}Decay {GREEN}{NUM}%
+STR_POINT_TO_STORY_REQ            :{BLACK}Sie können die Liste der Güter ,die eine Stadt zum wachsen benötigt, im {YELLOW} Stadtmenü anschauen{BLACK}
+
+#dummy
+STR_EMPTY0                        :
+STR_EMPTY1                        :{STRING}
+STR_EMPTY2                        :{STRING}{STRING}
+STR_EMPTY3                        :{STRING}{STRING}{STRING}
+STR_PLUS                          :+
+
+
+#goal gui
+STR_GLOBAL_GOAL_CB                :{ORANGE}CITY BUILDER ::: Ziel des Spiels sind  :  {GREEN}{COMMA} {BLACK}Einwohnner
+STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}Jahr{P "" s} zum spielende
+
+STR_TOWN_CB_HEADER                :  {ORANGE}Ihre Stadt benötigt:
+
+STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}mit {YELLOW}{COMMA} {BLACK}Bevölkerung in {YELLOW}{TOWN}
+STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}with {YELLOW}{COMMA} {BLACK}population  in {YELLOW}{TOWN}
+
+STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Storage : {GREEN}{COMMA} {BLACK}units  ( {YELLOW}{NUM}{BLACK} % ), Delivered / Required : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Geliefert /Benötigt: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}Town is {GREEN}growing {YELLOW}{NUM} {BLACK}month{P "" s} in row. Growed {YELLOW}{NUM} {BLACK}month{P "" s} out of {YELLOW}{NUM} {BLACK}in total
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Town is {RED}not {BLACK}growing {YELLOW}{NUM} {BLACK}month{P "" s} in row. Growth stucked {YELLOW}{NUM} {BLACK}month{P "" s} out of {YELLOW}{NUM} {BLACK}in total
+
+STR_TOWN_FUNDED                   :  {BLACK}Town buildings are funded for {YELLOW}{NUM} {BLACK}month{P "" s}. Town was funded for {YELLOW}{NUM} {BLACK}month{P "" s} in total.
+
+STR_TOWN_MISSING_CARGO            :  {BLACK}Town is missing :   {WHITE}{CARGO_LIST}
+STR_TOWN_GROWTH_RATE              :  {BLACK}1 house in {ORANGE}{COMMA} {BLACK}days ({ORANGE}{COMMA}{BLACK}%), next in {YELLOW}{COMMA}{BLACK} day{P "" s}
+
+STR_TOWN_NEXT_CARGO               :  {BLACK}Next: {GREEN}{CARGO_LIST} {BLACK}at {GREEN}{COMMA} {BLACK}population
+
+
+#town gui
+STR_TOWNGUI                       :{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}
+
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}Die Stadt {GREEN}wächst
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}Town is {RED}not {BLACK}growing
+STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}fehlende unterstützung
+
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Town is {GREEN}growing{}   {BLACK}Cargo amounts missing:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}Stadt {RED}wächst {BLACK}nicht{}   {BLACK}Fehlende Güter:
+
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Diese Stadt wurde von {COMPANY} beansprucht{}   {BLACK}Fehlende Güter:{STRING}
+
+STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
+STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
+STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
+
+
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Town is missing :   {WHITE}{CARGO_LIST}{STRING}
+STR_TOWNW_GROWTH_RATE             :{}   {BLACK}Nächster {ORANGE}{COMMA}{BLACK}%, Wachstum in {YELLOW}{COMMA}{BLACK} Tagen{P "" s}
+
+STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Next: {GREEN}{CARGO_LIST} {BLACK}at {GREEN}{COMMA} {BLACK}population
+
+STR_SEE_GOAL_GUI                  :{}   {BLACK}Mehr Details in {WHITE}"Goal Gui"{STRING}{STRING}
+
+#town names according to population
+STR_TOWNNAME_POP0                 :Siedlung
+STR_TOWNNAME_POP1                 :Urlaubsort
+STR_TOWNNAME_POP2                 :Dorf
+STR_TOWNNAME_POP3                 :Kleinstadt
+STR_TOWNNAME_POP4                 :Stadt
+STR_TOWNNAME_POP5                 :Metropole
+
+STR_TOWNNAME_PRESIDENT            : {PRESIDENT_NAME}'s {STRING}
+
+#goal progress
+STR_WINNER_GOAL                   :{YELLOW}{COMPANY} {BLACK}hat mit {YELLOW}{COMMA} {BLACK}Einwohnern gewonnen
+STR_WINNER_TIME                   :{BLACK}Das Spiel ist zu Ende.{} {YELLOW}{COMPANY} {BLACK}hat mit einer Einwohnerzahl von {YELLOW}{COMMA} {BLACK}gewonnen
+
+STR_STORY_TITLE_REQ               :{GREEN} Anforderungen zum Stadtwachstum
+
+STR_STORY_TITLE                   :{WHITE}City Builder: Jährliche gewinne
+STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}mit {YELLOW}{COMMA} {BLACK}Einwohnern ({YELLOW}{STRING}{COMMA}{BLACK}).
+
+#test
+#STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
+
+#usable and well visible in GUI:
+#{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}
+#usable colours
+#{BLACK}  {WHITE} {RED}    {GREEN} {BLUE}   {YELLOW} {ORANGE} {PURPLE} {GRAY}   {BROWN} {SILVER} {GOLD} {CREAM}  {LTBLUE} {DKBLUE} {DKGREEN} {LTBROWN}
