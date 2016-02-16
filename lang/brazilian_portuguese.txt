@@ -63,7 +63,7 @@ STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Entregue / Re
 STR_TOWN_GROWTYPE_GROW            :  {BLACK}A cidade {GREEN}está crescendo {YELLOW}{NUM} {BLACK}mes{P "" es} consecutivos. Cresceu {YELLOW}{NUM} {BLACK}mes{P "" es} de {YELLOW}{NUM} {BLACK}no total
 STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}A cidade {RED}não {BLACK}está crescendo por {YELLOW}{NUM} {BLACK}mes{P "" es} consecutivos. O crescimento ficou estagnado por {YELLOW}{NUM} {BLACK}mes{P "" es}, sendo {YELLOW}{NUM} {BLACK}no total
 
-STR_TOWN_FUNDED                   :  {BLACK}Os edificios da cidades são financiados por {YELLOW}{NUM} {BLACK}mes{P "" es}. A cidade foi fundada por {YELLOW}{NUM} {BLACK}mes{P "" es} no total.
+STR_TOWN_FUNDED                   :  {BLACK}Novos edifícios estão financiados por {YELLOW}{NUM} {BLACK}mes{P "" es}. A cidade foi fundada por {YELLOW}{NUM} {BLACK}mes{P "" es} no total.
 
 STR_TOWN_MISSING_CARGO            :  {BLACK}Falta na cidade :   {WHITE}{CARGO_LIST}
 STR_TOWN_GROWTH_RATE              :  {BLACK}1 casa em {ORANGE}{COMMA} {BLACK}dias ({ORANGE}{COMMA}{BLACK}%), próxima em {YELLOW}{COMMA}{BLACK} dia{P "" s}
