@@ -20,10 +20,12 @@ STR_NEW_HQ                        :{COMPANY} ha reclamado {TOWN}
 STR_PLACE_HQ                      :Construye tu sede (HQ) en una ciudad para reclamarla; aviso, ¡Las grandes ciudades no pueden ser reclamadas!
 STR_TOWN_CLAIMED                  :{COMPANY} reclamó {TOWN}
 STR_CITY_NOTCLAIMED               :{COMPANY} no puede reclamar una CIUDAD
+STR_TOWN_HAS_OWNER                :{TOWN} ya ha sido reclamada por {COMPANY}
 
 #information
 STR_PLACE_HQ_INFO                 :Construye tu sede (HQ) en una ciudad con una población menor de {YELLOW}{COMMA} {BLACK}personas para reclamarla, ¡Las grandes ciudades no pueden ser reclamadas!
 STR_CITY_NOTCLAIMED_INFO          :No puedes reclamar una {YELLOW}CIUDAD
+STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}ya ha sido reclamada
 STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}está muy cerca de otra ciudad reclamada
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
