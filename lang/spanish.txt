@@ -41,6 +41,8 @@ STR_GLOBAL_GOAL_CB                :{ORANGE}INGENIERO URBANO ::: La meta del jueg
 STR_GAME_LENGTH                   :{GREEN}{NUM}  {BLACK}año{P "" s} para el fin del juego
 
 
+STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}con una población de {YELLOW}{COMMA} {BLACK}personas en {YELLOW}{TOWN}
+STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}con una población de {YELLOW}{COMMA} {BLACK}personas en {YELLOW}{TOWN}
 
 
 
