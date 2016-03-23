@@ -63,6 +63,7 @@ STR_TOWN_CARGO_YES                :{} {ORANGE}{CARGO_LIST} {COMMA}
 
 
 
+STR_TOWNW_NEXT_CARGO              :{} {BLACK}Siguiente: {GREEN}{CARGO_LIST} {BLACK}por una población de {GREEN}{COMMA} {BLACK}personas
 
 
 #town names according to population
