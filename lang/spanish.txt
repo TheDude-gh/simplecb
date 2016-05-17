@@ -29,6 +29,7 @@ STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}ya ha sido reclamada
 STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}está muy cerca de otra ciudad reclamada
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+STR_POINT_TO_STORY_REQ            :{BLACK}Puedes comprobar la lista de requisitos de carga de la localidad en la {YELLOW}Página de Historia {BLACK}en cualquier momento
 
 #dummy
 STR_EMPTY0                        :
