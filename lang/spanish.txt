@@ -41,6 +41,7 @@ STR_EMPTY2                        :{STRING}{STRING}
 STR_GLOBAL_GOAL_CB                :{ORANGE}INGENIERO URBANO ::: La meta del juego es alcanzar una población de : {GREEN}{COMMA} {BLACK}personas
 STR_GAME_LENGTH                   :{GREEN}{NUM}  {BLACK}año{P "" s} para el fin del juego
 
+STR_TOWN_CB_HEADER                :  {ORANGE}Requisitos de tu ciudad
 
 STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}con una población de {YELLOW}{COMMA} {BLACK}personas en {YELLOW}{TOWN}
 STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}con una población de {YELLOW}{COMMA} {BLACK}personas en {YELLOW}{TOWN}
@@ -60,7 +61,9 @@ STR_TOWNW_GROWTYPE_GROW           :{BLACK}La Ciudad está {GREEN}creciendo
 STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}La Ciudad está {GREEN}creciendo{} {BLACK}Cantidades de carga faltantes:
 
 
+STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
 STR_TOWN_CARGO_YES                :{} {ORANGE}{CARGO_LIST} {COMMA}
+STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
 
 
 
