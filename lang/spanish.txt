@@ -24,6 +24,7 @@ STR_TOWN_HAS_OWNER                :{TOWN} ya ha sido reclamada por {COMPANY}
 
 #information
 STR_PLACE_HQ_INFO                 :Construye tu sede (HQ) en una ciudad con una población menor de {YELLOW}{COMMA} {BLACK}personas para reclamarla, ¡Las grandes ciudades no pueden ser reclamadas!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Has reclamado {YELLOW}{TOWN}{BLACK}.{}{}Puedes ver lo que necesita tu ciudad en la ventana de ciudad así como en el GUI de metas.
 STR_CITY_NOTCLAIMED_INFO          :No puedes reclamar una {YELLOW}CIUDAD
 STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}ya ha sido reclamada
 STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}está muy cerca de otra ciudad reclamada
@@ -56,9 +57,10 @@ STR_TOWN_NEXT_CARGO               :{BLACK}Siguiente/s: {GREEN}{CARGO_LIST} {BLAC
 
 #town gui
 
-STR_TOWNW_GROWTYPE_GROW           :{BLACK}La Ciudad está {GREEN}creciendo
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}La ciudad está {GREEN}creciendo
 
-STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}La Ciudad está {GREEN}creciendo{} {BLACK}Cantidades de carga faltantes:
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}La ciudad está {GREEN}creciendo{} {BLACK}Cantidades de carga faltantes:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}La ciudad {RED}no {BLACK}está creciendo{} {BLACK}Cantidades de carga faltantes:
 
 
 STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
