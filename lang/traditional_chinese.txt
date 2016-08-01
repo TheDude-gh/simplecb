@@ -60,8 +60,8 @@ STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {
 STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}庫存：{GREEN}{COMMA} {BLACK}單位  ( {YELLOW}{NUM}{BLACK} % ), 已運送 / 需求 : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}已運送 / 需求 :  {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
-STR_TOWN_GROWTYPE_GROW            :  {BLACK}城鎮連續 {GREEN}成長 {BLACK}了 {YELLOW}{NUM} {BLACK}個月。已成長 {YELLOW}{NUM} {BLACK} 個月，共 {YELLOW}{NUM} {BLACK} 個月。
-STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}城鎮已經 {YELLOW}{NUM} {BLACK}個月 {RED}沒有 {BLACK}成長。 成長停滯了 {YELLOW}{NUM} {BLACK}個月，共 {YELLOW}{NUM} {BLACK}個月。
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}城鎮連續 {GREEN}成長 {BLACK}了 {YELLOW}{NUM} {BLACK}個月。已成長共 {YELLOW}{NUM} {BLACK}個月，在全部 {YELLOW}{NUM} {BLACK}個月之中。
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}城鎮已經 {YELLOW}{NUM} {BLACK}個月 {RED}沒有 {BLACK}成長。成長共停滯了 {YELLOW}{NUM} {BLACK}個月，在全部 {YELLOW}{NUM} {BLACK}個月之中。
 
 STR_TOWN_FUNDED                   :  {BLACK}城鎮的建築已被資助 {YELLOW}{NUM} {BLACK}個月。城鎮共被資助 {YELLOW}{NUM} {BLACK}個月。
 
