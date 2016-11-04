@@ -49,6 +49,7 @@ STR_TOWN_CB_HEADER                :  {ORANGE}Requisitos de tu ciudad
 STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}con una población de {YELLOW}{COMMA} {BLACK}personas en {YELLOW}{TOWN}
 STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}con una población de {YELLOW}{COMMA} {BLACK}personas en {YELLOW}{TOWN}
 
+STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Almacen : {GREEN}{COMMA} {BLACK}unidades  ( {YELLOW}{NUM}{BLACK} % ), Entregado / Requerido : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
 
 
@@ -60,6 +61,7 @@ STR_TOWN_NEXT_CARGO               :{BLACK}Siguiente/s: {GREEN}{CARGO_LIST} {BLAC
 #town gui
 
 STR_TOWNW_GROWTYPE_GROW           :{BLACK}La ciudad está {GREEN}creciendo
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}La ciudad {RED}no {BLACK}está creciendo
 
 STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}La ciudad está {GREEN}creciendo{} {BLACK}Cantidades de carga faltantes:
 STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}La ciudad {RED}no {BLACK}está creciendo{} {BLACK}Cantidades de carga faltantes:
