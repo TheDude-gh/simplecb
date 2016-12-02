@@ -57,6 +57,7 @@ STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Entregado / R
 
 
 STR_TOWN_MISSING_CARGO            :{BLACK}Servicios adecuados aún carentes en la Ciudad :   {WHITE}{CARGO_LIST}
+STR_TOWN_GROWTH_RATE              :{BLACK}1 casa en {ORANGE}{COMMA} {BLACK}días ({ORANGE}{COMMA}{BLACK}%), siguiente en {YELLOW}{COMMA}{BLACK} día{P "" s}
 
 STR_TOWN_NEXT_CARGO               :{BLACK}Siguiente/s: {GREEN}{CARGO_LIST} {BLACK}para una población de {GREEN}{COMMA} {BLACK}ó mayor
 
