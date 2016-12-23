@@ -19,6 +19,7 @@ STR_WELCOME                       :{}{BIG_FONT}Saludos y bienvenido a la experie
 STR_NEW_HQ                        :{COMPANY} ha reclamado {TOWN}
 STR_PLACE_HQ                      :Construye tu sede (HQ) en una ciudad para reclamarla; aviso, ¡Las grandes ciudades no pueden ser reclamadas!
 STR_TOWN_CLAIMED                  :{COMPANY} reclamó {TOWN}
+STR_TOWN_POPLIMIT                 :{COMPANY} falló al reclamar {TOWN} debido a una población demasiado grande
 STR_TOWN_NOTCLAIMED               :{COMPANY} no ha encontrado ninguna ciudad cercana
 STR_CITY_NOTCLAIMED               :{COMPANY} no puede reclamar una CIUDAD
 STR_TOWN_HAS_OWNER                :{TOWN} ya ha sido reclamada por {COMPANY}
