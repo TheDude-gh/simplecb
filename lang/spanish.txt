@@ -77,6 +77,7 @@ STR_TOWN_CARGO_YES                :{} {ORANGE}{CARGO_LIST} {COMMA}
 STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
 
 
+STR_TOWNW_MISSING_CARGO           :{} {BLACK}Servicios adecuados aún carentes en la Ciudad :   {WHITE}{CARGO_LIST}{STRING}
 
 STR_TOWNW_NEXT_CARGO              :{} {BLACK}Siguiente: {GREEN}{CARGO_LIST} {BLACK}por una población de {GREEN}{COMMA} {BLACK}personas
 
