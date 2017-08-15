@@ -103,7 +103,7 @@ STR_TOWNNAME_POP3                 :Město
 STR_TOWNNAME_POP4                 :Velkoměsto
 STR_TOWNNAME_POP5                 :Metropolis
 
-STR_TOWNNAME_PRESIDENT            : {PRESIDENT_NAME} - {STRING}
+STR_TOWNNAME_PRESIDENT            :{PRESIDENT_NAME} - {STRING}
 
 #goal progress
 STR_WINNER_GOAL                   :{BLACK}Společnost {YELLOW}{COMPANY} {BLACK}zvítězila{}Cíl splněn s {YELLOW}{COMMA} {BLACK}obyvateli
