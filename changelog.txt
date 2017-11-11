@@ -13,6 +13,13 @@ CHANGELOG
 Version - date
 
 ================
+11 - 2017-11-11
+=CHANGES=
+Languages updated
+
+
+
+================
 10 - 2015-10-04
 =CHANGES=
 Code moving.

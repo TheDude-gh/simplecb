@@ -60,8 +60,8 @@ STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {
 STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Storage : {GREEN}{COMMA} {BLACK}units  ( {YELLOW}{NUM}{BLACK} % ), Delivered / Required : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Delivered / Required: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
-STR_TOWN_GROWTYPE_GROW            :  {BLACK}Town is {GREEN}growing {YELLOW}{NUM} {BLACK}month{P "" s} in row. Growed {YELLOW}{NUM} {BLACK}month{P "" s} out of {YELLOW}{NUM} {BLACK}in total
-STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Town is {RED}not {BLACK}growing {YELLOW}{NUM} {BLACK}month{P "" s} in row. Growth stucked {YELLOW}{NUM} {BLACK}month{P "" s} out of {YELLOW}{NUM} {BLACK}in total
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}Town is {GREEN}growing {YELLOW}{NUM} {BLACK}month{P "" s} in row. Grew {YELLOW}{NUM} {BLACK}month{P "" s} out of {YELLOW}{NUM} {BLACK}in total
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Town is {RED}not {BLACK}growing {YELLOW}{NUM} {BLACK}month{P "" s} in row. Growth stalled {YELLOW}{NUM} {BLACK}month{P "" s} out of {YELLOW}{NUM} {BLACK}in total
 
 STR_TOWN_FUNDED                   :  {BLACK}Town buildings are funded for {YELLOW}{NUM} {BLACK}month{P "" s}. Town was funded for {YELLOW}{NUM} {BLACK}month{P "" s} in total.
 
