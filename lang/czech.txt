@@ -60,7 +60,7 @@ STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {
 STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Sklad: {GREEN}{COMMA} {BLACK}ks  ( {YELLOW}{NUM}{BLACK} % ), Doručeno / Požadováno : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Doručeno / Požadováno: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
-STR_TOWN_GROWTYPE_GROW            :  {BLACK}Město {GREEN}roste {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} v řadě. Celkem by růst {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} z celkových {YELLOW}{NUM}
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}Město {GREEN}roste {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} v řadě. Celkem by růst {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} {BLACK}z celkových {YELLOW}{NUM}
 STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Město {RED}ne{BLACK}roste {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} v řadě. Růst zastaven {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} z {YELLOW}{NUM} {BLACK}celkem
 
 STR_TOWN_FUNDED                   :  {BLACK}Město staví budovy v období {YELLOW}{NUM} {BLACK}měsíc{P "" e ů}. Město stavělo budovy po{YELLOW}{NUM} {BLACK}měsíc{P "" e ů} celkem.
