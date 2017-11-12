@@ -60,7 +60,7 @@ STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {
 STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Zalihe : {GREEN}{COMMA} {BLACK}jedinica  ( {YELLOW}{NUM}{BLACK} % ), Dostavljeno / Potrebno : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Dostavljeno / Potrebno : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
-STR_TOWN_GROWTYPE_GROW            :  {BLACK}Grad {GREEN}raste {YELLOW}{NUM} {BLACK}mjesec{P "" a i}  zaredom. Rastao je {YELLOW}{NUM} {BLACK}mjesec{P "" a i} od {YELLOW}{NUM} {BLACK}ukupno
+STR_TOWN_GROWTYPE_GROW            :{BLACK}Grad {GREEN}raste {YELLOW}{NUM} {BLACK}mjesec{P "" a i}  zaredom. Rastao je {YELLOW}{NUM} {BLACK}mjesec{P "" a i} od {YELLOW}{NUM} {BLACK}ukupno
 STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Grad {RED}ne {BLACK}raste {YELLOW}{NUM} {BLACK}mjesec{P "" a i} zaredom. Rast je zapeo {YELLOW}{NUM} {BLACK}mjesec{P "" a i} od {YELLOW}{NUM} {BLACK}ukupno
 
 STR_TOWN_FUNDED                   :  {BLACK}Gradske zgrade su financirane na {YELLOW}{NUM} {BLACK}mjesec{P "" a i}. Grad je bio financiran na {YELLOW}{NUM} {BLACK}mjesec{P "" a i} ukupno.
