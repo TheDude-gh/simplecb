@@ -60,7 +60,7 @@ STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {
 STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Stockage : {GREEN}{COMMA} {BLACK}unités  ( {YELLOW}{NUM}{BLACK} % ), Delivrées / Requises : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Delivrées / Requises: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
-STR_TOWN_GROWTYPE_GROW            :  {BLACK}La ville est {GREEN}croissante {YELLOW}{NUM} {BLACK}mois à la suite. A grandit {YELLOW}{NUM} {BLACK}mois sur un total de {YELLOW}{NUM}
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}La ville est {GREEN}croissante {YELLOW}{NUM} {BLACK}mois à la suite. A grandi {YELLOW}{NUM} {BLACK}mois sur un total de {YELLOW}{NUM}
 STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}La ville est {RED}non {BLACK}croissante {YELLOW}{NUM} {BLACK}mois à la suite. Croissance stoppée {YELLOW}{NUM} {BLACK}mois sur un total de {YELLOW}{NUM}
 
 STR_TOWN_FUNDED                   :  {BLACK}Les constructions sont payés pour {YELLOW}{NUM} {BLACK}mois. La ville a été financée pour {YELLOW}{NUM} {BLACK}mois{P "" s} au total.
