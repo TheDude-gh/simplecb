@@ -4,10 +4,10 @@
 
 #town area
 STR_HQTOWN                        :{COMPANY}的 城鎮
-STR_HQAREA_TOP                    : ^ {COMPANY}的 領域 ^
-STR_HQAREA_RIGHT                  :> {COMPANY}的 領域
-STR_HQAREA_BOTTOM                 : v {COMPANY}的 領域 v
-STR_HQAREA_LEFT                   :{COMPANY}的 領域 <
+STR_HQAREA_TOP                    : ^ {COMPANY}的 領地 ^
+STR_HQAREA_RIGHT                  :> {COMPANY}的 領地
+STR_HQAREA_BOTTOM                 : v {COMPANY}的 領地 v
+STR_HQAREA_LEFT                   :{COMPANY}的 領地 <
 STR_HQERR                         :你不能認領 城市
 STR_CITY                          :.:: 城市 ::.
 STR_CITY2                         :{YELLOW}.:: 城市 ::.
@@ -97,8 +97,8 @@ STR_SEE_GOAL_GUI                  :{}   {BLACK}在 {WHITE}目標介面 {BLACK}�
 
 #town names according to population
 STR_TOWNNAME_POP0                 :小聚落
-STR_TOWNNAME_POP1                 :度假勝地
-STR_TOWNNAME_POP2                 :鄉村
+STR_TOWNNAME_POP1                 :度假村
+STR_TOWNNAME_POP2                 :村莊
 STR_TOWNNAME_POP3                 :城鎮
 STR_TOWNNAME_POP4                 :城市
 STR_TOWNNAME_POP5                 :大都會
