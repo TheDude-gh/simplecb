@@ -1,0 +1,122 @@
+##plural 0
+# Simpleton City Builder   english.txt
+#
+
+#town area
+STR_HQTOWN                        :Stad van {COMPANY}
+STR_HQAREA_TOP                    : ^ Gebied van {COMPANY} ^
+STR_HQAREA_RIGHT                  :> Gebied van {COMPANY}
+STR_HQAREA_BOTTOM                 : v Gebied van {COMPANY} v
+STR_HQAREA_LEFT                   :Gebied van {COMPANY} <
+STR_HQERR                         :Je kunt geen beslag leggen op een grote stad
+STR_CITY                          :.:: Stad ::.
+STR_CITY2                         :{YELLOW}.:: Stad ::.
+
+#welcome message
+STR_WELCOME                       :{}{BIG_FONT}Welkom bij het spel STEDENBOUWER{}{}Verzorgd door het{}{}{YELLOW}Novapolis-team{}{}{WHITE}http://novapolis.net{}{}
+
+
+#news
+STR_NEW_HQ                        :{COMPANY} heeft beslag gelegd op {TOWN}
+STR_PLACE_HQ                      :Plaats je hoofdkwartier in een stad om er beslag op te leggen. Je kunt geen beslag leggen op grote steden!
+STR_TOWN_CLAIMED                  :{COMPANY} heeft beslag gelegd op {TOWN}
+STR_TOWN_POPLIMIT                 :{COMPANY} kon geen beslag leggen op {TOWN} omdat de bevolking te groot is
+STR_TOWN_NOTCLAIMED               :{COMPANY} heeft geen stad gesticht in de buurt
+STR_CITY_NOTCLAIMED               :{COMPANY} kan geen beslag leggen op een grote stad
+STR_TOWN_HAS_OWNER                :{1:COMPANY} heeft al beslag gelegd op {0:TOWN}
+STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} probeerde beslag te leggen op een stad die te dichtbij een ander bedrijf was
+
+#information
+STR_PLACE_HQ_INFO                 :Plaats je hoofdkwartier in een stad met een bevolking van minder dan {YELLOW}{COMMA} {BLACK}, je kunt geen beslag leggen op grote steden!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Je hebt beslag gelegd op{YELLOW}{TOWN}{BLACK}.{}{}Je kunt zien wat je stad nodig heeft in het stadsvenster of bij het doel.
+STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}heeft een te grote bevolking om beslag op te leggen. Maximaal toegestane bevolking is {YELLOW}{COMMA}
+STR_TOWN_NOTCLAIMED_INFO          :Geen stad in de buurt
+STR_CITY_NOTCLAIMED_INFO          :Je kunt geen beslag leggen op een {YELLOW}grote stad
+STR_TOWN_HAS_OWNER_INFO           :Er is al beslag gelegd op {YELLOW}{TOWN} {BLACK}
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}is te dicht bij een andere stad waar beslag op is gelegd
+
+#STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+STR_TOWN_CLAIMED_RES              :{BLACK} Stad heeft nodig
+STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}per 1000 bev {ORANGE}* {BLACK}Van {GREEN}{COMMA} {BLACK}bev {ORANGE}* {BLACK}Afname {GREEN}{NUM}%
+STR_POINT_TO_STORY_REQ            :{BLACK}Je kunt altijd kijken welke vracht de stad nodig heeft op de {YELLOW}Verhaalpagina {BLACK}
+
+#dummy
+STR_EMPTY1                        :{STRING}
+STR_EMPTY2                        :{STRING}{STRING}
+STR_EMPTY3                        :{STRING}{STRING}{STRING}
+STR_PLUS                          :+
+
+
+#goal gui
+STR_GLOBAL_GOAL_CB                :{ORANGE}STEDENBOUWER ::: Doel van het spel is:  een bevolking van {GREEN}{COMMA} {BLACK}
+STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}jaar tot einde spel
+
+STR_TOWN_CB_HEADER                :  {ORANGE}De vereisten van je stad
+
+STR_SCORE_GOAL_CB                 :{WHITE}   Nr. {NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}met een bevolking van {YELLOW}{COMMA} {BLACK}in {YELLOW}{TOWN}
+STR_SCORE_NOGOAL_CB               :{WHITE}   Nr. {NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}met een bevolking van {YELLOW}{COMMA} {BLACK} in {YELLOW}{TOWN}
+
+STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Opslag: {GREEN}{COMMA} {BLACK}eenheden  ( {YELLOW}{NUM}{BLACK} % ), geleverd/vereist: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Afgeleverd/vereist: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
+
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}Stad {GREEN}groeit {YELLOW}{NUM} {BLACK}maand{P "" en} op een rij. Groeide {YELLOW}{NUM} {BLACK}maand{P "" en} van {YELLOW}{NUM} {BLACK}in totaal
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Stad groeit al {YELLOW}{NUM} {BLACK}maand{P "" en} {RED}niet{BLACK}. Groei gestokt gedurende {YELLOW}{NUM} {BLACK}maand{P "" en} van {YELLOW}{NUM} {BLACK}in totaal
+
+STR_TOWN_FUNDED                   :  {BLACK}Bouw van gebouwen in deze stad is gefinancierd gedurende {YELLOW}{NUM} {BLACK}maand{P "" en}. Stad is gefinancierd gedurende {YELLOW}{NUM} {BLACK}maand{P "" en} in totaal.
+
+STR_TOWN_MISSING_CARGO            :  {BLACK}Stad heeft nodig:   {WHITE}{CARGO_LIST}
+STR_TOWN_GROWTH_RATE              :  {BLACK}1 huis per {ORANGE}{COMMA} {BLACK}dag{P "" "en"} ({ORANGE}{COMMA}{BLACK}%), volgende over {YELLOW}{COMMA}{BLACK} dag{P "" en}
+
+STR_TOWN_NEXT_CARGO               :  {BLACK}Volgende: {GREEN}{CARGO_LIST} {BLACK}bij een bevolking van {GREEN}{COMMA} {BLACK}
+
+
+#town gui
+STR_TOWNGUI                       :{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}
+
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}Stad {GREEN}groeit
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}Stad groeit {RED}niet {BLACK}
+STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Service ontbreekt
+
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Stad {GREEN}groeit{}   {BLACK}Ontbrekende vracht:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}Stad groeit {RED}niet {BLACK}{}   {BLACK}Ontbrekende vracht:
+
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Op deze stad is beslag gelegd door{COMPANY}{}   {BLACK}Ontbrekende vracht:{STRING}
+
+STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
+STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
+STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
+
+
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Stad heeft nodig:   {WHITE}{CARGO_LIST}{STRING}
+STR_TOWNW_GROWTH_RATE             :{}   {BLACK}Groei {ORANGE}{COMMA}{BLACK}%, volgende over {YELLOW}{COMMA}{BLACK} dag{P "" en}
+
+STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Volgende: {GREEN}{CARGO_LIST} {BLACK}bij een bevolking van {GREEN}{COMMA} {BLACK}
+
+STR_SEE_GOAL_GUI                  :{}   {BLACK}Meer details in {WHITE}doelvenster{STRING}{STRING}
+
+#town names according to population
+STR_TOWNNAME_POP0                 :Nederzetting
+STR_TOWNNAME_POP1                 :Resort
+STR_TOWNNAME_POP2                 :Dorp
+STR_TOWNNAME_POP3                 :Stad
+STR_TOWNNAME_POP4                 :Grote stad
+STR_TOWNNAME_POP5                 :Metropolis
+
+STR_TOWNNAME_PRESIDENT            : {1:STRING} van {0:PRESIDENT_NAME}
+
+#goal progress
+STR_WINNER_GOAL                   :{YELLOW}{COMPANY} {BLACK}heeft gewonnen, bereikte het doel met een bevolking van {YELLOW}{COMMA} {BLACK}
+STR_WINNER_TIME                   :{BLACK}Spel is klaar.{} {YELLOW}{COMPANY} {BLACK}heeft gewonnen met een bevolking van {YELLOW}{COMMA} {BLACK}
+
+STR_STORY_TITLE_REQ               :{GREEN}Vereisten voor Stedenbouwer
+
+STR_STORY_TITLE                   :{WHITE}Jaarlijkse bekroningen in Stedenbouwer
+STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}met een bevolking van {YELLOW}{COMMA} {BLACK}({YELLOW}{STRING}{COMMA}{BLACK}).
+
+#test
+#STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
+
+#usable and well visible in GUI:
+#{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}
+#usable colours
+#{BLACK}  {WHITE} {RED}    {GREEN} {BLUE}   {YELLOW} {ORANGE} {PURPLE} {GRAY}   {BROWN} {SILVER} {GOLD} {CREAM}  {LTBLUE} {DKBLUE} {DKGREEN} {LTBROWN}
