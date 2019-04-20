@@ -10,6 +10,7 @@ STR_CITY                          :.:: Kota ::.
 
 
 #news
+STR_TOWN_NOTCLAIMED               :{COMPANY} tidak menemukan satu pun kota yang dekat
 
 #information
 
@@ -25,8 +26,10 @@ STR_TOWN_CB_HEADER                :{ORANGE}Kebutuhan kotamu
 
 
 
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Kota {RED}tidak {BLACK}berkembang selama {YELLOW}{NUM} {BLACK}bulan berturut. Pertumbuhan terhenti {YELLOW}{NUM} {BLACK}bulan dari {YELLOW}{NUM} {BLACK}bulan total
 
 
+STR_TOWN_MISSING_CARGO            :  {BLACK}Kota membutuhkan :   {WHITE}{CARGO_LIST}
 
 
 
@@ -49,6 +52,7 @@ STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Nanti: {GREEN}{CARGO_LIST} {BLACK
 #goal progress
 
 
+STR_STORY_TITLE                   :{WHITE}Anugerah tahunan pengembang kota
 
 #test
 #STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
