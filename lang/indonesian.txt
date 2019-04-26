@@ -11,6 +11,7 @@ STR_CITY                          :.:: Kota ::.
 
 #news
 STR_TOWN_NOTCLAIMED               :{COMPANY} tidak menemukan satu pun kota yang dekat
+STR_CITY_NOTCLAIMED               :{COMPANY} tidak dapat mengklaim KOTA
 
 #information
 
@@ -47,6 +48,7 @@ STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Nanti: {GREEN}{CARGO_LIST} {BLACK
 
 
 #town names according to population
+STR_TOWNNAME_POP0                 :Penyelesaian
 
 
 #goal progress
