@@ -16,6 +16,7 @@ STR_CITY_NOTCLAIMED               :{COMPANY} tidak dapat mengklaim KOTA
 #information
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+STR_POINT_TO_STORY_REQ            :{BLACK}Anda bisa memeriksa daftar kargo yg dibutuhkan kota pada {YELLOW}Buku Cerita {BLACK}setiap saat
 
 #dummy
 STR_EMPTY0                        :
@@ -25,6 +26,7 @@ STR_EMPTY0                        :
 
 STR_TOWN_CB_HEADER                :{ORANGE}Kebutuhan kotamu
 
+STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}dengan populasi {YELLOW}{COMMA} {BLACK}di {YELLOW}{TOWN}
 
 
 STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Kota {RED}tidak {BLACK}berkembang selama {YELLOW}{NUM} {BLACK}bulan berturut. Pertumbuhan terhenti {YELLOW}{NUM} {BLACK}bulan dari {YELLOW}{NUM} {BLACK}bulan total
@@ -32,6 +34,7 @@ STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Kota {RED}tidak {BLACK}berkembang se
 
 STR_TOWN_MISSING_CARGO            :  {BLACK}Kota membutuhkan :   {WHITE}{CARGO_LIST}
 
+STR_TOWN_NEXT_CARGO               :  {BLACK}Berikutnya: {GREEN}{CARGO_LIST} {BLACK}saat populasi {GREEN}{COMMA} {BLACK}
 
 
 #town gui
@@ -49,6 +52,8 @@ STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Nanti: {GREEN}{CARGO_LIST} {BLACK
 
 #town names according to population
 STR_TOWNNAME_POP0                 :Penyelesaian
+STR_TOWNNAME_POP2                 :Desa
+STR_TOWNNAME_POP5                 :Metropolis
 
 
 #goal progress
