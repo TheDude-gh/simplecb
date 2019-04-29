@@ -3,6 +3,8 @@
 #
 
 #town area
+STR_HQTOWN                        :Kota {COMPANY}
+STR_HQAREA_TOP                    : ^ Wilayah {COMPANY} ^
 STR_HQAREA_RIGHT                  :> Daerah {COMPANY}
 STR_CITY                          :.:: Kota ::.
 
