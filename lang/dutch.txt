@@ -41,6 +41,7 @@ STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}pe
 STR_POINT_TO_STORY_REQ            :{BLACK}Je kunt altijd kijken welke vracht de stad nodig heeft op de {YELLOW}Verhaalpagina {BLACK}
 
 #dummy
+STR_EMPTY0                        :
 STR_EMPTY1                        :{STRING}
 STR_EMPTY2                        :{STRING}{STRING}
 STR_EMPTY3                        :{STRING}{STRING}{STRING}
