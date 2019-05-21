@@ -16,6 +16,7 @@ STR_TOWN_NOTCLAIMED               :{COMPANY} tidak menemukan satu pun kota yang 
 STR_CITY_NOTCLAIMED               :{COMPANY} tidak dapat mengklaim KOTA
 
 #information
+STR_CITY_NOTCLAIMED_INFO          :Kamu enggak boleh klaim {YELLOW}Kota besar
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_POINT_TO_STORY_REQ            :{BLACK}Anda bisa memeriksa daftar kargo yg dibutuhkan kota pada {YELLOW}Buku Cerita {BLACK}setiap saat
@@ -30,6 +31,7 @@ STR_TOWN_CB_HEADER                :{ORANGE}Kebutuhan kotamu
 
 STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}dengan populasi {YELLOW}{COMMA} {BLACK}di {YELLOW}{TOWN}
 
+STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Penyimpanan : {GREEN}{COMMA} {BLACK}unit  ( {YELLOW}{NUM}{BLACK} % ), Terkirim / Dibutuhkan : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
 STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Kota {RED}tidak {BLACK}berkembang selama {YELLOW}{NUM} {BLACK}bulan berturut. Pertumbuhan terhenti {YELLOW}{NUM} {BLACK}bulan dari {YELLOW}{NUM} {BLACK}bulan total
 
@@ -46,8 +48,10 @@ STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Layanan hilang
 
 
 
+STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
 
 
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}Kota membutuhkan:   {WHITE}{CARGO_LIST}{STRING}
 
 STR_TOWNW_NEXT_CARGO              :{}   {BLACK}Nanti: {GREEN}{CARGO_LIST} {BLACK}di {GREEN}{COMMA} {BLACK}penduduk
 
