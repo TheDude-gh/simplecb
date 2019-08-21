@@ -1,0 +1,92 @@
+##plural 11
+# Simpleton City Builder   english.txt
+#
+
+#town area
+STR_HQAREA_RIGHT                  :> {COMPANY} 지역
+STR_HQAREA_BOTTOM                 : v {COMPANY} 지역 v
+STR_HQERR                         :대도시는 점유할 수 없습니다
+STR_CITY                          :.:: 도시 ::.
+
+#welcome message
+STR_WELCOME                       :{}{BIG_FONT}안녕하세요! 시티 빌더를 경험하러 오신 것을 환영합니다{}{}제작:{}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
+
+
+#news
+STR_NEW_HQ                        :{COMPANY} 회사가 {TOWN} 도시의 소유권을 주장했습니다
+STR_PLACE_HQ                      :도시를 점유하려면 본사를 설치하세요. 대도시는 점유할 수 없습니다!
+STR_TOWN_POPLIMIT                 :인구가 너무 많아서 {COMPANY} 회사가 {TOWN} 도시의 소유권을 주장하지 못했습니다.
+STR_TOWN_NOTCLAIMED               :{COMPANY} 회사가 근처의 도시를 찾지 못했습니다
+STR_CITY_NOTCLAIMED               :{COMPANY} 회사는 대도시를 점유할 수 없습니다
+
+#information
+STR_TOWN_CLAIMED_INFO             :{YELLOW}{TOWN}{BLACK} 도시를 점유하였습니다.{}{}이제 도시 창이나 목표 창에서 도시가 원하는 것을 확인하실 수 있습니다.
+STR_TOWN_NOTCLAIMED_INFO          :근처에 도시가 없음
+
+#STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
+STR_TOWN_CLAIMED_RES              :{BLACK}도시 요구 사항
+STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}/1000명 {ORANGE}* {BLACK}{GREEN}{COMMA} {BLACK}명 출발 {ORANGE}* {BLACK}쇠퇴 {GREEN}{NUM}%
+STR_POINT_TO_STORY_REQ            :{BLACK}도시가 필요로 하는 화물 목록을 {YELLOW}스토리 페이지 {BLACK}에서 언제든지 확인 가능합니다
+
+#dummy
+STR_EMPTY1                        :{STRING}
+STR_EMPTY2                        :{STRING}{STRING}
+
+
+#goal gui
+STR_GLOBAL_GOAL_CB                :{ORANGE}시티 빌더 ::: 이 게임의 목표  :  {GREEN}{COMMA}{BLACK}명의 인구
+STR_GAME_LENGTH                   :   {BLACK}게임 종료까지 {GREEN}{NUM}  {BLACK}년 남음
+
+STR_TOWN_CB_HEADER                :  {ORANGE}도시가 요구하는 것
+
+STR_SCORE_NOGOAL_CB               :{WHITE}   #{0:NUM} {BLACK}: {YELLOW}{2:COMMA}{BLACK}명 인구의 {YELLOW}{3:TOWN}{BLACK} 도시를 점유한 {YELLOW}{1:COMPANY}
+
+
+
+
+STR_TOWN_MISSING_CARGO            :  {BLACK}도시가 필요로 함 :   {WHITE}{CARGO_LIST}
+
+STR_TOWN_NEXT_CARGO               :{BLACK}다음: {GREEN}{1:COMMA}{BLACK}명 인구에 {GREEN}{0:CARGO_LIST}{BLACK} 수송
+
+
+#town gui
+STR_TOWNGUI                       :{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}
+
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}도시가 {GREEN}성장 중입니다
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}도시가 성장하고 있지 {RED}않습니다
+STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}수송 서비스 없음
+
+
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}이 도시는 {COMPANY} 회사가 점유하고 있습니다{}   {BLACK}필요한 화물 양:{STRING}
+
+STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
+STR_TOWN_CARGO_NO                 :{}    {SILVER}{CARGO_LIST}   {COMMA}
+
+
+STR_TOWNW_MISSING_CARGO           :{}   {BLACK}도시가 필요로 함 :   {WHITE}{CARGO_LIST}{STRING}
+
+STR_TOWNW_NEXT_CARGO              :{}   {BLACK}다음: {GREEN}{1:COMMA}{BLACK}명 인구에 {GREEN}{0:CARGO_LIST}{BLACK} 수송
+
+
+#town names according to population
+STR_TOWNNAME_POP0                 :거주지
+STR_TOWNNAME_POP1                 :리조트
+STR_TOWNNAME_POP2                 :마을
+STR_TOWNNAME_POP3                 :도시
+
+STR_TOWNNAME_PRESIDENT            : {PRESIDENT_NAME}의 {STRING}
+
+#goal progress
+STR_WINNER_GOAL                   :{YELLOW}{COMPANY} {BLACK}회사가 {YELLOW}{COMMA}{BLACK}명으로 우승하였습니다
+STR_WINNER_TIME                   :{BLACK}게임이 종료되었습니다{} {YELLOW}{COMPANY} {BLACK}회사가 {YELLOW}{COMMA}{BLACK}명의 인구로 우승하였습니다
+
+STR_STORY_TITLE_REQ               :{GREEN}시티 빌더가 요구하는 것
+
+
+#test
+#STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
+
+#usable and well visible in GUI:
+#{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}
+#usable colours
+#{BLACK}  {WHITE} {RED}    {GREEN} {BLUE}   {YELLOW} {ORANGE} {PURPLE} {GRAY}   {BROWN} {SILVER} {GOLD} {CREAM}  {LTBLUE} {DKBLUE} {DKGREEN} {LTBROWN}
