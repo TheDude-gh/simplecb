@@ -5,6 +5,7 @@
 #town area
 STR_HQAREA_RIGHT                  :> {COMPANY} 지역
 STR_HQAREA_BOTTOM                 : v {COMPANY} 지역 v
+STR_HQAREA_LEFT                   :{COMPANY}' 지역 <
 STR_HQERR                         :대도시는 점유할 수 없습니다
 STR_CITY                          :.:: 도시 ::.
 
@@ -31,6 +32,7 @@ STR_POINT_TO_STORY_REQ            :{BLACK}도시가 필요로 하는 화물 목�
 #dummy
 STR_EMPTY1                        :{STRING}
 STR_EMPTY2                        :{STRING}{STRING}
+STR_EMPTY3                        :{STRING}{STRING}{STRING}
 
 
 #goal gui
@@ -43,6 +45,7 @@ STR_SCORE_NOGOAL_CB               :{WHITE}   #{0:NUM} {BLACK}: {YELLOW}{2:COMMA}
 
 
 
+STR_TOWN_FUNDED                   :  {BLACK}Town buildings are funded for {YELLOW}{NUM} {BLACK}month{P "" s}. Town was funded for {YELLOW}{NUM} {BLACK}month{P "" s} in total.
 
 STR_TOWN_MISSING_CARGO            :  {BLACK}도시가 필요로 함 :   {WHITE}{CARGO_LIST}
 
