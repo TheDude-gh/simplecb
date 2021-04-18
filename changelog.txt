@@ -11,6 +11,17 @@ You can support adding new API for this by voting in https://bugs.openttd.org/ta
 CHANGELOG
 
 Version - date
+12 - 2021-04-17
+=CHANGES=
+Languages updated
+- industry cargo sets presets
+- support new 64 cargo limit
+- one change in language file, and project url
+- warning messages with WARN flag
+- visual code reformatting
+- change of default values of some settings
+- demolition function preparation
+
 
 ================
 11 - 2017-11-11

@@ -1,5 +1,5 @@
 Simpleton's City Builder
-Novapolis team, http://novapolis.net
+Novapolis team, http://www.novapolis.net
 
 
 ===Basic setting===
@@ -46,6 +46,10 @@ Novapolis team, http://novapolis.net
  - enable town storage. Storage is equal to x times the requirements at current town population
  - set 0 to disable
 
+=City Builder Economy Preset
+ - Select cargo requirement based on chosen economy and NewGRF cargosets.
+ - You can select recommended vanilla presets or preset based on NewGRF industry and cargo set you want to play with
+ - If you want your own cargo requirements, choose CUSTOM and set desired settings. In description it is hinted what number each cargo is, but since GS cannot read NewGRF settings, it is not reliable and if NewGRF authors change cargo ID in their GRF, description here will not fit
 
 ===CARGO SETTINGS===
 
@@ -58,8 +62,8 @@ Novapolis team, http://novapolis.net
 =From
  - town will require this cargo once population reaches this amount
 
-=Decay
- - part of the stored cargo that will decay each month in percents. When storage is set to 0, decay is automatically 100%
+=Store
+ - part of the delivered cargo that will be stored each month in percents. When storage is set to 0, nothing will be stored
 
 
 
