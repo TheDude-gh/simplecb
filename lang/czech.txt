@@ -13,7 +13,7 @@ STR_CITY                          :.:: Velkoměsto ::.
 STR_CITY2                         :{YELLOW}.:: Velkoměsto ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Vítej ve hře Budování města{}{}Připraveno pro Vás{}{}{YELLOW}skupinou vývojářů Novapolis{}{}{WHITE}http://novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Vítej ve hře Budování města{}{}Připraveno pro Vás{}{}{YELLOW}skupinou vývojářů Novapolis{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
 
 
 #news
@@ -27,13 +27,13 @@ STR_TOWN_HAS_OWNER                :{TOWN} je už zabráno společností {COMPANY
 STR_TOWN_NEIGHBOUR_CLOSE          :Společnost {COMPANY} neúspěšně zkusila zabrat město, které už je v okolí jiné společnosti
 
 #information
-STR_PLACE_HQ_INFO                 :Postav svojí centrálu poblíž města s populací méně než {YELLOW}{COMMA} {BLACK} abys ho zabral. Velkoměsta nelze zabrat
-STR_TOWN_CLAIMED_INFO             :{BLACK}Zvolil sis {YELLOW}{TOWN}{BLACK}.{}{}V okně cílů můžeš vidět, co tvoje město potřebuje.
-STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK} má příliš velkou populaci. Maximální počet obyvatel pro zabrání je {YELLOW}{COMMA}
+STR_PLACE_HQ_INFO                 :Postav svojí centrálu poblíž města s populací méně než {WHITE}{COMMA} {BLACK} abys ho zabral. Velkoměsta nelze zabrat
+STR_TOWN_CLAIMED_INFO             :{BLACK}Zvolil sis {WHITE}{TOWN}{BLACK}.{}{}V okně cílů můžeš vidět, co tvoje město potřebuje.
+STR_TOWN_POPLIMIT_INFO            :{WHITE}{TOWN} {BLACK} má příliš velkou populaci. Maximální počet obyvatel pro zabrání je {WHITE}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :Poblíž není žádné město
-STR_CITY_NOTCLAIMED_INFO          :Nemůžeš zabrat {YELLOW}Velkoměsto
-STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}je už zabrané
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}je příliš blízko jinému město
+STR_CITY_NOTCLAIMED_INFO          :Nemůžeš zabrat {WHITE}Velkoměsto
+STR_TOWN_HAS_OWNER_INFO           :{WHITE}{TOWN} {BLACK}je už zabrané společností {WHITE}{COMPANY}
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{WHITE}{TOWN} {BLACK}je příliš blízko jinému město
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}Město bude potřebovat

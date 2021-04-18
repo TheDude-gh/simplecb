@@ -13,7 +13,7 @@ STR_CITY                          :.:: Cité ::.
 STR_CITY2                         :{YELLOW}.:: Cité ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Bonjour et bienvenue dans l'expérience City Builder{}{}Auteurs{}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Bonjour et bienvenue dans l'expérience City Builder{}{}Auteurs{}{}{YELLOW}Novapolis Team{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
 
 
 #news
@@ -27,13 +27,12 @@ STR_TOWN_HAS_OWNER                :{TOWN} est déjà prise par {COMPANY}
 STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} a tenté de prendre une ville trop proche d'un concurrant
 
 #information
-STR_PLACE_HQ_INFO                 :Placez votre QG dans une ville avec une population inférieure à {YELLOW}{COMMA} {BLACK}pour la prendre, les cités ne peuvent être prises!
-STR_TOWN_CLAIMED_INFO             :{BLACK}Vous avez pris {YELLOW}{TOWN}{BLACK}.{}{}Vous pouvez voir les besoins de la ville dans l'interface de la ville ou le menu Objectif.
-STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}a une trop grande population pour être prise. Population maximum acceptable {YELLOW}{COMMA}
+STR_PLACE_HQ_INFO                 :Placez votre QG dans une ville avec une population inférieure à {WHITE}{COMMA} {BLACK}pour la prendre, les cités ne peuvent être prises!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Vous avez pris {WHITE}{TOWN}{BLACK}.{}{}Vous pouvez voir les besoins de la ville dans l'interface de la ville ou le menu Objectif.
+STR_TOWN_POPLIMIT_INFO            :{WHITE}{TOWN} {BLACK}a une trop grande population pour être prise. Population maximum acceptable {WHITE}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :Pas de ville proche
-STR_CITY_NOTCLAIMED_INFO          :Vous ne pouvez prendre une {YELLOW}CITE
-STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}est déjà prise
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}est trop proche d'une autre ville prise
+STR_CITY_NOTCLAIMED_INFO          :Vous ne pouvez prendre une {WHITE}CITE
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{WHITE}{TOWN} {BLACK}est trop proche d'une autre ville prise
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}La ville va avoir besoin

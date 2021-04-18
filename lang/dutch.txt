@@ -13,7 +13,7 @@ STR_CITY                          :.:: Stad ::.
 STR_CITY2                         :{YELLOW}.:: Stad ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Welkom bij het spel STEDENBOUWER{}{}Verzorgd door het{}{}{YELLOW}Novapolis-team{}{}{WHITE}http://novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Welkom bij het spel STEDENBOUWER{}{}Verzorgd door het{}{}{YELLOW}Novapolis-team{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
 
 
 #news
@@ -27,13 +27,12 @@ STR_TOWN_HAS_OWNER                :{1:COMPANY} heeft al beslag gelegd op {0:TOWN
 STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} probeerde beslag te leggen op een stad die te dichtbij een ander bedrijf was
 
 #information
-STR_PLACE_HQ_INFO                 :Plaats je hoofdkwartier in een stad met een bevolking van minder dan {YELLOW}{COMMA} {BLACK}, je kunt geen beslag leggen op grote steden!
-STR_TOWN_CLAIMED_INFO             :{BLACK}Je hebt beslag gelegd op{YELLOW}{TOWN}{BLACK}.{}{}Je kunt zien wat je stad nodig heeft in het stadsvenster of bij het doel.
-STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}heeft een te grote bevolking om beslag op te leggen. Maximaal toegestane bevolking is {YELLOW}{COMMA}
+STR_PLACE_HQ_INFO                 :Plaats je hoofdkwartier in een stad met een bevolking van minder dan {WHITE}{COMMA} {BLACK}, je kunt geen beslag leggen op grote steden!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Je hebt beslag gelegd op{WHITE}{TOWN}{BLACK}.{}{}Je kunt zien wat je stad nodig heeft in het stadsvenster of bij het doel.
+STR_TOWN_POPLIMIT_INFO            :{WHITE}{TOWN} {BLACK}heeft een te grote bevolking om beslag op te leggen. Maximaal toegestane bevolking is {WHITE}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :Geen stad in de buurt
-STR_CITY_NOTCLAIMED_INFO          :Je kunt geen beslag leggen op een {YELLOW}grote stad
-STR_TOWN_HAS_OWNER_INFO           :Er is al beslag gelegd op {YELLOW}{TOWN} {BLACK}
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}is te dicht bij een andere stad waar beslag op is gelegd
+STR_CITY_NOTCLAIMED_INFO          :Je kunt geen beslag leggen op een {WHITE}grote stad
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{WHITE}{TOWN} {BLACK}is te dicht bij een andere stad waar beslag op is gelegd
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK} Stad heeft nodig

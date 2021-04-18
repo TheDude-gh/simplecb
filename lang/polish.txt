@@ -13,7 +13,7 @@ STR_CITY                          :.:: Stolica województwa ::.
 STR_CITY2                         :{YELLOW}.:: Miasto ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Witamy w trybie City Builder{}{}strzworzonemu dzięki zespołowi{}{}{YELLOW}Novapolis{}{}{WHITE}http://novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Witamy w trybie City Builder{}{}strzworzonemu dzięki zespołowi{}{}{YELLOW}Novapolis{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
 
 
 #news
@@ -27,13 +27,12 @@ STR_TOWN_HAS_OWNER                :Miasto {TOWN} jest już zajętę przez firmę
 STR_TOWN_NEIGHBOUR_CLOSE          :Firma {COMPANY} próbowała zająć miejscowość zbyt blisko innej firmy
 
 #information
-STR_PLACE_HQ_INFO                 :Aby wybrać miasto należy umieścić siedzibę firmy w miejscowości poniżej {YELLOW}{COMMA} {BLACK}mieszkańców, w przeciwnym razie miasto nie zostanie wybrane!
-STR_TOWN_CLAIMED_INFO             :{BLACK}Miasto {YELLOW}{TOWN}{BLACK} zostało wybrane.{}{} Wymagania miasta do rozwoju można znaleźć klikając miasto lub listę celów (żółta chorągiewka).
-STR_TOWN_POPLIMIT_INFO            :Miejscowość{YELLOW}{TOWN} {BLACK}posiada zbyt dużo mieszkańców. Maksymalna liczba to {YELLOW}{COMMA}
+STR_PLACE_HQ_INFO                 :Aby wybrać miasto należy umieścić siedzibę firmy w miejscowości poniżej {WHITE}{COMMA} {BLACK}mieszkańców, w przeciwnym razie miasto nie zostanie wybrane!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Miasto {WHITE}{TOWN}{BLACK} zostało wybrane.{}{} Wymagania miasta do rozwoju można znaleźć klikając miasto lub listę celów (żółta chorągiewka).
+STR_TOWN_POPLIMIT_INFO            :Miejscowość{WHITE}{TOWN} {BLACK}posiada zbyt dużo mieszkańców. Maksymalna liczba to {WHITE}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :Brak wybranej miejscowości
-STR_CITY_NOTCLAIMED_INFO          :Nie można wybrać {YELLOW}STOLICY WOJEWÓDZTWA
-STR_TOWN_HAS_OWNER_INFO           :miasto {YELLOW}{TOWN} {BLACK}jest już zajęte
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :Miasto {YELLOW}{TOWN} {BLACK}jest zbyt blisko innego już wybranego miasta
+STR_CITY_NOTCLAIMED_INFO          :Nie można wybrać {WHITE}STOLICY WOJEWÓDZTWA
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :Miasto {WHITE}{TOWN} {BLACK}jest zbyt blisko innego już wybranego miasta
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}Miejscowość wymaga

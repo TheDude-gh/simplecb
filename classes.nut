@@ -23,12 +23,12 @@ class Cargo
 	id = 0xFF;
 	req = 0;
 	from = 0;
-	decay = 0;
+	store = 0;
 
-	constructor(id, req = 0, from = 0, decay = 0){
+	constructor(id, req = 0, from = 0, store = 0){
 		this.id = id;
 		this.req = req;
 		this.from = from;
-		this.decay = decay;
+		this.store = store;
 	}
 }

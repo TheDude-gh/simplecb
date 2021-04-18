@@ -13,7 +13,7 @@ STR_CITY                          :.:: Cidade ::.
 STR_CITY2                         :{YELLOW}.:: Cidade ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Olá! bem vindo a experiência City Builder{}{}Trazido até você por{}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Olá! bem vindo a experiência City Builder{}{}Trazido até você por{}{}{YELLOW}Novapolis Team{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
 
 
 #news
@@ -27,13 +27,12 @@ STR_TOWN_HAS_OWNER                :{TOWN} já foi reivindicada por {COMPANY}
 STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} tentou reivindicar uma cidade muito próxima de outra empresa
 
 #information
-STR_PLACE_HQ_INFO                 :Construa a sua sede em um município com menos de {YELLOW}{COMMA} {BLACK} de população para reivindicar, municípios e cidades maiores não podem ser reivindicados!
-STR_TOWN_CLAIMED_INFO             :{BLACK}Você reivindicou {YELLOW}{TOWN}{BLACK}.{}{}Você pode ver o que a sua cidade precisa na lista de objetivos e informações da cidade.
-STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}tem uma população muito alta para ser reivindicada. O máximo de população permitida é {YELLOW}{COMMA}
+STR_PLACE_HQ_INFO                 :Construa a sua sede em um município com menos de {WHITE}{COMMA} {BLACK} de população para reivindicar, municípios e cidades maiores não podem ser reivindicados!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Você reivindicou {WHITE}{TOWN}{BLACK}.{}{}Você pode ver o que a sua cidade precisa na lista de objetivos e informações da cidade.
+STR_TOWN_POPLIMIT_INFO            :{WHITE}{TOWN} {BLACK}tem uma população muito alta para ser reivindicada. O máximo de população permitida é {WHITE}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :Nenhum município próximo
-STR_CITY_NOTCLAIMED_INFO          :Você não pode reivindicar uma {YELLOW}CIDADE
-STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}já foi reivindicada
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}está muito perto de outro município já reivindicado
+STR_CITY_NOTCLAIMED_INFO          :Você não pode reivindicar uma {WHITE}CIDADE
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{WHITE}{TOWN} {BLACK}está muito perto de outro município já reivindicado
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}O município vai precisar de:

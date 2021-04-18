@@ -13,7 +13,7 @@ STR_CITY                          :.:: Città ::.
 STR_CITY2                         :{YELLOW}.:: Città ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Ciao e benvenuti a Costruttore di Città{}{}Presentato da{}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Ciao e benvenuti a Costruttore di Città{}{}Presentato da{}{}{YELLOW}Novapolis Team{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
 
 
 #news
@@ -27,13 +27,12 @@ STR_TOWN_HAS_OWNER                :{TOWN} è già stata presa da {COMPANY}
 STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} ha provato a prendere un paese troppo vicino a un'altra compagnia
 
 #information
-STR_PLACE_HQ_INFO                 :Mettere il proprio Quartier Generale in un paese con meno di {YELLOW}{COMMA} {BLACK}abitanti per impossessarsene, le cittá non possono essere prese!
-STR_TOWN_CLAIMED_INFO             :{BLACK}Avete preso {YELLOW}{TOWN}{BLACK}.{}{}Consultate la finestra del paese, o la schermata degli obiettivi, per vedere ciò di cui il paese ha bisogno.
-STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}è un paese troppo grande per essere preso. La popolazione massima é {YELLOW}{COMMA}
+STR_PLACE_HQ_INFO                 :Mettere il proprio Quartier Generale in un paese con meno di {WHITE}{COMMA} {BLACK}abitanti per impossessarsene, le cittá non possono essere prese!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Avete preso {WHITE}{TOWN}{BLACK}.{}{}Consultate la finestra del paese, o la schermata degli obiettivi, per vedere ciò di cui il paese ha bisogno.
+STR_TOWN_POPLIMIT_INFO            :{WHITE}{TOWN} {BLACK}è un paese troppo grande per essere preso. La popolazione massima é {WHITE}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :Nessun paese nei dintorni
-STR_CITY_NOTCLAIMED_INFO          :Non è possibile prendere una {YELLOW}CITTÀ
-STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}è già stata presa
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}è troppo vicina a un altro paese già preso.
+STR_CITY_NOTCLAIMED_INFO          :Non è possibile prendere una {WHITE}CITTÀ
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{WHITE}{TOWN} {BLACK}è troppo vicina a un altro paese già preso.
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}Il paese avrà bisogno di

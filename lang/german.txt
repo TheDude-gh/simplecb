@@ -13,7 +13,7 @@ STR_CITY                          :.:: Stadt ::.
 STR_CITY2                         :{YELLOW}.:: Stadt ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Hello and welcome to the City Builder experience{}{}Brought to you by{}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Hello and welcome to the City Builder experience{}{}Brought to you by{}{}{YELLOW}Novapolis Team{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
 
 
 #news
@@ -27,13 +27,12 @@ STR_TOWN_HAS_OWNER                :{TOWN} wurde beireits von {COMPANY} beanspruc
 STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY}versucht eine Stadt zu beanspruchen, welche zu nah an einer bereits beanspruchten Stadt liegt
 
 #information
-STR_PLACE_HQ_INFO                 :Platzieren sie ihr Hauptquartier in eine Stadt mit weniger als {YELLOW}{COMMA} {BLACK}Einwohnern um sie zu beanspruchen. Städte mit einer höheren Einwohnerzahl können nicht beansprucht werden.
-STR_TOWN_CLAIMED_INFO             :{BLACK}Sie haben {YELLOW}{TOWN}{BLACK}beansprucht.{}{}Sie können im Stadtmenü, oder im Spielziel-Menü schauen was ihre Stadt braucht.
-STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}hat eine zu hohe Einwohnerzahl um beansprucht zu werden. Die höchste erlaubte Einwohnerzahl liegt bei {YELLOW}{COMMA}
+STR_PLACE_HQ_INFO                 :Platzieren sie ihr Hauptquartier in eine Stadt mit weniger als {WHITE}{COMMA} {BLACK}Einwohnern um sie zu beanspruchen. Städte mit einer höheren Einwohnerzahl können nicht beansprucht werden.
+STR_TOWN_CLAIMED_INFO             :{BLACK}Sie haben {WHITE}{TOWN}{BLACK}beansprucht.{}{}Sie können im Stadtmenü, oder im Spielziel-Menü schauen was ihre Stadt braucht.
+STR_TOWN_POPLIMIT_INFO            :{WHITE}{TOWN} {BLACK}hat eine zu hohe Einwohnerzahl um beansprucht zu werden. Die höchste erlaubte Einwohnerzahl liegt bei {WHITE}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :Zu weit von der nächsten Stadt entfernt
-STR_CITY_NOTCLAIMED_INFO          :Sie können kein {YELLOW}Großstadt beanspruchen
-STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}ist bereits beansprucht
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}ist zu nahe an einer anderen, bereits beanspruchten, Stadt
+STR_CITY_NOTCLAIMED_INFO          :Sie können kein {WHITE}Großstadt beanspruchen
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{WHITE}{TOWN} {BLACK}ist zu nahe an einer anderen, bereits beanspruchten, Stadt
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :Stadt wird{BLACK} benötigen

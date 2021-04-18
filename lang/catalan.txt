@@ -13,7 +13,7 @@ STR_CITY                          :.:: Ciutat ::.
 STR_CITY2                         :{YELLOW}.:: Ciutat ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Benvinguts a l'experiència City Builder{}{}Portada a terme per{}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Benvinguts a l'experiència City Builder{}{}Portada a terme per{}{}{YELLOW}Novapolis Team{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
 
 
 #news
@@ -27,13 +27,12 @@ STR_TOWN_HAS_OWNER                :{TOWN} ja ha estat reclamada per {COMPANY}
 STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} ha intentat reclamar una població massa propera a una altra companyia
 
 #information
-STR_PLACE_HQ_INFO                 :Construeix la teva seu en una població de menys de {YELLOW}{COMMA} {BLACK}habitants per a reclamar-la. Les ciutats no poden ser reclamades!
-STR_TOWN_CLAIMED_INFO             :{BLACK}Has reclamat {YELLOW}{TOWN}{BLACK}.{}{}Pots veure què necessita la població en les finestres de població o d'objectius.
-STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}té massa habitants per a reclamar-la. El màxim nombre d'habitants permès és {YELLOW}{COMMA}
+STR_PLACE_HQ_INFO                 :Construeix la teva seu en una població de menys de {WHITE}{COMMA} {BLACK}habitants per a reclamar-la. Les ciutats no poden ser reclamades!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Has reclamat {WHITE}{TOWN}{BLACK}.{}{}Pots veure què necessita la població en les finestres de població o d'objectius.
+STR_TOWN_POPLIMIT_INFO            :{WHITE}{TOWN} {BLACK}té massa habitants per a reclamar-la. El màxim nombre d'habitants permès és {WHITE}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :No hi ha poblacions a prop
-STR_CITY_NOTCLAIMED_INFO          :No pots reclamar cap {YELLOW}CIUTAT
-STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}ja ha estat reclamada
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}està massa prop d'una altra població reclamada
+STR_CITY_NOTCLAIMED_INFO          :No pots reclamar cap {WHITE}CIUTAT
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{WHITE}{TOWN} {BLACK}està massa prop d'una altra població reclamada
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}La població necessitarà

@@ -13,7 +13,7 @@ STR_CITY                          :.:: 都市 ::.
 STR_CITY2                         :{YELLOW}.:: 都市 ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}欢迎来到城建世界{}{}由{}{}{YELLOW}Novapolis Team{}呈现{}{WHITE}http://novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}欢迎来到城建世界{}{}由{}{}{YELLOW}Novapolis Team{}呈现{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
 
 
 #news
@@ -27,13 +27,12 @@ STR_TOWN_HAS_OWNER                :{TOWN} 已被 {COMPANY} 认领
 STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} 试图认领的城镇太靠近另一公司
 
 #information
-STR_PLACE_HQ_INFO                 :将你的 总部 建设在人口少于 {YELLOW}{COMMA} {BLACK} 的城镇来认领她, 都市不可认领!
-STR_TOWN_CLAIMED_INFO             :{BLACK}你认领了 {YELLOW}{TOWN}{BLACK}.{}{}你可以在城镇窗口或者目标界面查看城镇需求。
-STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}人口太多不能认领. 允许认领的最大人口数为 {YELLOW}{COMMA}
+STR_PLACE_HQ_INFO                 :将你的 总部 建设在人口少于 {WHITE}{COMMA} {BLACK} 的城镇来认领她, 都市不可认领!
+STR_TOWN_CLAIMED_INFO             :{BLACK}你认领了 {WHITE}{TOWN}{BLACK}.{}{}你可以在城镇窗口或者目标界面查看城镇需求。
+STR_TOWN_POPLIMIT_INFO            :{WHITE}{TOWN} {BLACK}人口太多不能认领. 允许认领的最大人口数为 {WHITE}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :附近没有城镇
-STR_CITY_NOTCLAIMED_INFO          :你不能认领 {YELLOW} 都市
-STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}已被认领
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK} 距离另一个被认领的城镇太近
+STR_CITY_NOTCLAIMED_INFO          :你不能认领 {WHITE} 都市
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{WHITE}{TOWN} {BLACK} 距离另一个被认领的城镇太近
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}城镇将需要

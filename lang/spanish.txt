@@ -12,7 +12,7 @@ STR_CITY                          :.:: Ciudad ::.
 STR_CITY2                         :{YELLOW}.:: Ciudad ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Saludos y bienvenido a la experiencia City Builder o Ingenieros Urbanos{}{}Traido para ti por{}{}{YELLOW}El Equipo de Novapolis{}{}{WHITE}http://novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Saludos y bienvenido a la experiencia City Builder o Ingenieros Urbanos{}{}Traido para ti por{}{}{YELLOW}El Equipo de Novapolis{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
 
 
 #news
@@ -26,12 +26,11 @@ STR_TOWN_HAS_OWNER                :{TOWN} ya ha sido reclamada por {COMPANY}
 STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} ha intentado reclamar una ciudad demasiado cerca de otra empresa
 
 #information
-STR_PLACE_HQ_INFO                 :Construye tu sede (HQ) en una ciudad con una población menor de {YELLOW}{COMMA} {BLACK}personas para reclamarla, ¡Las grandes ciudades no pueden ser reclamadas!
-STR_TOWN_CLAIMED_INFO             :{BLACK}Has reclamado {YELLOW}{TOWN}{BLACK}.{}{}Puedes ver lo que necesita tu ciudad en la ventana de ciudad así como en el GUI de metas.
+STR_PLACE_HQ_INFO                 :Construye tu sede (HQ) en una ciudad con una población menor de {WHITE}{COMMA} {BLACK}personas para reclamarla, ¡Las grandes ciudades no pueden ser reclamadas!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Has reclamado {WHITE}{TOWN}{BLACK}.{}{}Puedes ver lo que necesita tu ciudad en la ventana de ciudad así como en el GUI de metas.
 STR_TOWN_NOTCLAIMED_INFO          :No hay ninguna ciudad cerca
-STR_CITY_NOTCLAIMED_INFO          :No puedes reclamar una {YELLOW}CIUDAD
-STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}ya ha sido reclamada
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}está muy cerca de otra ciudad reclamada
+STR_CITY_NOTCLAIMED_INFO          :No puedes reclamar una {WHITE}CIUDAD
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{WHITE}{TOWN} {BLACK}está muy cerca de otra ciudad reclamada
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}La ciudad requerirá

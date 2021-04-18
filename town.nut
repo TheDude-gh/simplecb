@@ -33,8 +33,14 @@ class Town
 		this.delta = GSDate.GetCurrentDate();
 		this.nameid = 0;
 		this.president = "";
-		this.storage =   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //32x
-		this.delivered = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //32x
+		this.storage = [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+		]; //64x
+		this.delivered = [
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+		]; //64x
 
 		this.missing = 0;
 		this.service = false;
@@ -51,6 +57,7 @@ class Town
 
 	function Grow(growmech);
 	function Service();
+	function Demolish_House();
 }
 
 function Town::Grow(growmech){
@@ -72,7 +79,9 @@ function Town::Grow(growmech){
 	this.growinrow++;
 	this.growtotal++;
 
-	if(this.funddur > 0) this.fundedtotal++;
+	if(this.funddur > 0) {
+		this.fundedtotal++;
+	}
 
 	if(growmech == Growth.GROW_NORMAL){
 		if(!this.prevgrowed){
@@ -96,13 +105,19 @@ function Town::Grow(growmech){
 		
 		local grow_value = grow_values[funded][min(service, 5)];
 
-		if (service == 0 && !((GSBase.RandRange(12)+1)/12) == 1) return 0;
+		if (service == 0 && !( (GSBase.RandRange(12) + 1) / 12) == 1) {
+			return 0;
+		}
 		growrate = (growrate != 0) ? (growrate - 1) : 1;
 		growrate = grow_value >> growrate;
 		growrate /= (GSTown.GetHouseCount(this.id) / 50 + 1);
-		if(growrate == 0) growrate++;
+		if(growrate == 0) {
+			growrate++;
+		}
 		GSTown.SetGrowthRate(this.id, growrate);
-		if(this.grow_counter > growrate) this.grow_counter = growrate;
+		if(this.grow_counter > growrate) {
+			this.grow_counter = growrate;
+		}
 		this.prevgrowed = true;
 		return growrate;
 	}
@@ -113,7 +128,9 @@ function Town::Service(){
 	local service = 0; //serviced stations of our town
 	local vstate;
 	foreach(stid, _ in stlist){ //cycle through stations
-		if(service >= 5) break; //we dont need more than 5
+		if(service >= 5) {
+			break; //we dont need more than 5
+		}
 		//is station ours and is close to town centre?
 		if(GSStation.IsValidStation(stid) && GSStation.GetOwner(stid) == this.owner
 			&& GSStation.GetDistanceManhattanToTile(stid, GSTown.GetLocation(this.id)) < 20
@@ -132,4 +149,41 @@ function Town::Service(){
 		}
 	}
 	return service;
+}
+
+function Town::Demolish_House() {
+	GSCompanyMode(GSCompany.COMPANY_INVALID);
+
+	local demoresult = 0;
+	local ttile = GSTown.GetLocation(this.id);
+	local locationX = GSMap.GetTileX(ttile);
+	local locationY = GSMap.GetTileY(ttile);
+	for(local x = -2; x < 3; x++) {
+		for(local y = -2; y < 3; y++) {
+			local ti = GSMap.GetTileIndex(locationX + x, locationY + y);
+			local tiowner = GSTile.GetOwner(ti);
+
+			//skip if not house - there is no direct function to know a tile has house, so it's guessed with another functions
+			if(tiowner == -1
+				&& !GSTile.IsBuildable(ti)
+				&& !GSTile.HasTransportType(ti, GSTile.TRANSPORT_ROAD)
+				&& !GSIndustry.IsValidIndustry(GSIndustry.GetIndustryID(ti))
+				&& !GSTile.IsStationTile(ti)
+				&& !GSTile.IsWaterTile(ti)
+				&& !GSTile.HasTreeOnTile(ti)
+				&& !GSTile.IsFarmTile(ti)
+				&& !GSTile.IsRockTile(ti)
+				&& !GSTile.IsRoughTile(ti)
+				&& !GSTile.IsSnowTile(ti)
+				&& !GSTile.IsDesertTile(ti)
+			) {
+				demoresult = GSTile.DemolishTile(ti);
+				GSLog.Info("tile " + x + ":" + y + " Owner=" + tiowner + " demo=" + (demoresult ? 1 : 0) + " ERR = " + GSError.GetLastErrorString());
+				if(demoresult) {
+				  return demoresult;
+				}
+			}
+		}
+	}
+	return demoresult;
 }

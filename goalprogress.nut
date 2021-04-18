@@ -27,8 +27,12 @@ function SimpletonCB::GoalProgress(checkgamelength = 0){
 			this.goalstatus = 1;
 			//if(GSGame.IsMultiplayer()) GSGame.Pause(); //pause only multiplayer, in single player it would be impossible to unpause
 			local txt;
-			if(checkgamelength >= this.game_length) txt = GSText.STR_WINNER_TIME;
-			else txt = GSText.STR_WINNER_GOAL;
+			if(checkgamelength >= this.game_length) {
+				txt = GSText.STR_WINNER_TIME;
+			}
+			else {
+				txt = GSText.STR_WINNER_GOAL;
+			}
 			this.SendGlobalMessage(GSText(txt, winner, winamount));
 		}
 	}
@@ -57,7 +61,7 @@ function SimpletonCB::StoryStart(){
 			this.story[1],
 			GSStoryPage.SPET_TEXT,
 			0,
-			GSText(GSText.STR_TOWN_CLAIMED_CARGOS, cargo.req, 1 << cargo.id, cargo.from, cargo.decay)
+			GSText(GSText.STR_TOWN_CLAIMED_CARGOS, cargo.req, 1 << cargo.id, cargo.from, cargo.store)
 		);
 	}
 }
@@ -67,7 +71,9 @@ function SimpletonCB::Story(){
 	local companyid = leader[0];
 	local score = leader[1];
 	
-	if(companyid == 255) return;
+	if(companyid == 255) {
+		return;
+	}
 	local company = this.GetCompanyByID(companyid);
 	local diff = score - company.score_last_year; //pop increase during last year
 	local Tpositive = diff > 0 ? GSText.STR_PLUS : GSText.STR_EMPTY0; //plus or minus sign?

@@ -36,7 +36,7 @@ function SimpletonCB::Save() {
 		//Log("Saving data for goal id #" + goal_id, 2);
 	}
 	foreach(cargo in this.CBcargo){
-		data.sv_cargos.append([cargo.id, cargo.req, cargo.from, cargo.decay]);
+		data.sv_cargos.append([cargo.id, cargo.req, cargo.from, cargo.store]);
 		Log("Saving data for cargo id #" + cargo.id, 2);
 	}
 	foreach(town in this.townlistCB){
@@ -86,7 +86,7 @@ function SimpletonCB::Load(version, tbl) {
 		}
 		else if(key == "sv_cargos"){
 			foreach(cargo in val){
-				//cargo.id, cargo.req, cargo.from, cargo.decay
+				//cargo.id, cargo.req, cargo.from, cargo.store
 				this.CBcargo.append( Cargo(cargo[0], cargo[1], cargo[2], cargo[3]) );
 				Log("loading cargoid " + cargo[0] + " req: " + cargo[1], 2);
 			}

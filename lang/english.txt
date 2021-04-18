@@ -13,7 +13,7 @@ STR_CITY                          :.:: City ::.
 STR_CITY2                         :{YELLOW}.:: City ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Hello and welcome to the City Builder experience{}{}Brought to you by {}{}{YELLOW}Novapolis Team{}{}{WHITE}http://novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Hello and welcome to the City Builder experience{}{}Brought to you by {}{}{YELLOW}Novapolis Team{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
 
 
 #news
@@ -27,17 +27,17 @@ STR_TOWN_HAS_OWNER                :{TOWN} is already claimed by {COMPANY}
 STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} tried to claim town too close to another company
 
 #information
-STR_PLACE_HQ_INFO                 :Place your HQ in a town with less than {YELLOW}{COMMA} {BLACK}population to claim it, cities cannot be claimed!
-STR_TOWN_CLAIMED_INFO             :{BLACK}You claimed {YELLOW}{TOWN}{BLACK}. {}{}You can see what your town need in town window or in goal gui.
-STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}has too high population to be claimed. Maximum population allowed is {YELLOW}{COMMA}
+STR_PLACE_HQ_INFO                 :Place your HQ in a town with less than {WHITE}{COMMA} {BLACK}population to claim it, cities cannot be claimed!
+STR_TOWN_CLAIMED_INFO             :{BLACK}You claimed {WHITE}{TOWN}{BLACK}. {}{}You can see what your town need in town window or in goal gui.
+STR_TOWN_POPLIMIT_INFO            :{WHITE}{TOWN} {BLACK}has too high population to be claimed. Maximum population allowed is {WHITE}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :No town nearby
-STR_CITY_NOTCLAIMED_INFO          :You can not claim a {YELLOW}CITY
-STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}is already claimed
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}is too close to another claimed town
+STR_CITY_NOTCLAIMED_INFO          :You can not claim a {WHITE}CITY
+STR_TOWN_HAS_OWNER_INFO           :{WHITE}{TOWN} {BLACK}is already claimed by {WHITE}{COMPANY}
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{WHITE}{TOWN} {BLACK}is too close to another claimed town
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}Town will require
-STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}per 1000 pop {ORANGE}* {BLACK}From {GREEN}{COMMA} {BLACK}pop {ORANGE}* {BLACK}Decay {GREEN}{NUM}%
+STR_TOWN_CLAIMED_CARGOS           :{GREEN}{NUM}   {LTBLUE}{CARGO_LIST} {BLACK}per 1000 pop {ORANGE}* {BLACK}From {GREEN}{COMMA} {BLACK}pop {ORANGE}* {BLACK}Stored {GREEN}{NUM}%
 STR_POINT_TO_STORY_REQ            :{BLACK}You can check town required cargo list at {YELLOW}Story Page {BLACK}anytime
 
 #dummy

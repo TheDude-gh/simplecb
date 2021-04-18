@@ -13,7 +13,7 @@ STR_CITY                          :.:: Grad ::.
 STR_CITY2                         :{YELLOW}.:: Grad ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Pozdrav i dobrodošli u iskustvo Graditelja Gradova{}{}Prezentirano od{}{}{YELLOW}Novapolis Tima{}{}{WHITE}http://novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Pozdrav i dobrodošli u iskustvo Graditelja Gradova{}{}Prezentirano od{}{}{YELLOW}Novapolis Tima{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
 
 
 #news
@@ -27,13 +27,12 @@ STR_TOWN_HAS_OWNER                :{TOWN} je već zauzet od strane {COMPANY}
 STR_TOWN_NEIGHBOUR_CLOSE          :{COMPANY} je pokušala zauzeti grad preblizu drugoj kompaniji
 
 #information
-STR_PLACE_HQ_INFO                 :Postavite vaše Sjedište u grad sa manje od {YELLOW}{COMMA} {BLACK}stanovnika da bi ga zauzeli, veliki gradovi ne mogu biti zauzeti!
-STR_TOWN_CLAIMED_INFO             :{BLACK}Zauzeli ste {YELLOW}{TOWN}{BLACK}.{}{}Možete vidjeti što vaš grad treba u prozoru grada ili u sučelju ciljeva.
-STR_TOWN_POPLIMIT_INFO            :{YELLOW}{TOWN} {BLACK}ima preveliki broj stanovnika da bi bio zauzet. Najveći dozvoljeni broj stanovnika je {YELLOW}{COMMA}
+STR_PLACE_HQ_INFO                 :Postavite vaše Sjedište u grad sa manje od {WHITE}{COMMA} {BLACK}stanovnika da bi ga zauzeli, veliki gradovi ne mogu biti zauzeti!
+STR_TOWN_CLAIMED_INFO             :{BLACK}Zauzeli ste {WHITE}{TOWN}{BLACK}.{}{}Možete vidjeti što vaš grad treba u prozoru grada ili u sučelju ciljeva.
+STR_TOWN_POPLIMIT_INFO            :{WHITE}{TOWN} {BLACK}ima preveliki broj stanovnika da bi bio zauzet. Najveći dozvoljeni broj stanovnika je {WHITE}{COMMA}
 STR_TOWN_NOTCLAIMED_INFO          :Nema grada u blizini
-STR_CITY_NOTCLAIMED_INFO          :Ne možete zauzeti {YELLOW}GRAD
-STR_TOWN_HAS_OWNER_INFO           :{YELLOW}{TOWN} {BLACK}je već zauzet
-STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{YELLOW}{TOWN} {BLACK}je preblizu drugom zauzetom gradu
+STR_CITY_NOTCLAIMED_INFO          :Ne možete zauzeti {WHITE}GRAD
+STR_TOWN_NEIGHBOUR_CLOSE_INFO     :{WHITE}{TOWN} {BLACK}je preblizu drugom zauzetom gradu
 
 #STR_TOWN_CLAIMED_RES              :{}Town will require {}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}{}{STRING2}
 STR_TOWN_CLAIMED_RES              :{BLACK}Grad će trebati
