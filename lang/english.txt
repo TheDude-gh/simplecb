@@ -53,6 +53,7 @@ STR_GLOBAL_GOAL_CB                :{ORANGE}CITY BUILDER ::: Goal for the game is
 STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}year{P "" s} to game end
 
 STR_TOWN_CB_HEADER                :  {ORANGE}Your town requirements
+STR_TOWN_CB_TOWN_INFO             :  {BLACK}{TOWN}  Population: {YELLOW}{COMMA}   {BLACK}Houses: {YELLOW}{COMMA}
 
 STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK}with {YELLOW}{COMMA} {BLACK}population in {YELLOW}{TOWN}
 STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}with {YELLOW}{COMMA} {BLACK}population  in {YELLOW}{TOWN}
@@ -60,10 +61,14 @@ STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {
 STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Storage : {GREEN}{COMMA} {BLACK}units  ( {YELLOW}{NUM}{BLACK} % ), Delivered / Required : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Delivered / Required: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
-STR_TOWN_GROWTYPE_GROW            :  {BLACK}Town is {GREEN}growing {YELLOW}{NUM} {BLACK}month{P "" s} in row. Grew {YELLOW}{NUM} {BLACK}month{P "" s} out of {YELLOW}{NUM} {BLACK}in total
-STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Town is {RED}not {BLACK}growing {YELLOW}{NUM} {BLACK}month{P "" s} in row. Growth stalled {YELLOW}{NUM} {BLACK}month{P "" s} out of {YELLOW}{NUM} {BLACK}in total
+STR_TOWN_DELIVERED_PERCENT        :  {BLACK}Least delivered percentage for single cargo {YELLOW}{COMMA}%
+
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}Town is {GREEN}supplied {YELLOW}{NUM} {BLACK}month{P "" s} in row. Grew {YELLOW}{NUM} {BLACK}month{P "" s} out of {YELLOW}{NUM} {BLACK}in total
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Town is {ORANGE}not {BLACK}supplied {YELLOW}{NUM} {BLACK}month{P "" s} in row. Growth stalled {YELLOW}{NUM} {BLACK}month{P "" s} out of {YELLOW}{NUM} {BLACK}in total
 
 STR_TOWN_FUNDED                   :  {BLACK}Town buildings are funded for {YELLOW}{NUM} {BLACK}month{P "" s}. Town was funded for {YELLOW}{NUM} {BLACK}month{P "" s} in total.
+STR_TOWN_CHANGE_POS               :  {BLACK}Monthly Population change: {GREEN}{COMMA}{BLACK}.  Total Houses demolished: {YELLOW}{COMMA}
+STR_TOWN_CHANGE_NEG               :  {BLACK}Monthly Population change: {ORANGE}{COMMA}{BLACK}.  Total Houses demolished: {YELLOW}{COMMA}
 
 STR_TOWN_MISSING_CARGO            :  {BLACK}Town is missing :   {WHITE}{CARGO_LIST}
 STR_TOWN_GROWTH_RATE              :  {BLACK}1 house in {ORANGE}{COMMA} {BLACK}days ({ORANGE}{COMMA}{BLACK}%), next in {YELLOW}{COMMA}{BLACK} day{P "" s}
@@ -74,12 +79,12 @@ STR_TOWN_NEXT_CARGO               :  {BLACK}Next: {GREEN}{CARGO_LIST} {BLACK}at 
 #town gui
 STR_TOWNGUI                       :{STRING}{STRING2}{STRING2}{STRING2}{STRING2}{STRING2}{STRING2}
 
-STR_TOWNW_GROWTYPE_GROW           :{BLACK}Town is {GREEN}growing
-STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}Town is {RED}not {BLACK}growing
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}Town is {GREEN}supplied
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}Town is {RED}not {BLACK}supplied
 STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Missing service
 
-STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Town is {GREEN}growing{}   {BLACK}Cargo amounts missing:
-STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}Town is {RED}not {BLACK}growing{}   {BLACK}Cargo amounts missing:
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Town is {GREEN}supplied{}   {BLACK}Cargo amounts missing:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}Town is {RED}not {BLACK}supplied{}   {BLACK}Cargo amounts missing:
 
 STR_TOWN_OWNED_COMPANY            :{}{YELLOW}This town is claimed by {COMPANY}{}   {BLACK}Cargo amounts missing:{STRING}
 
@@ -116,6 +121,7 @@ STR_STORY_PROGRESS                :{WHITE}{NUM} {BLACK}: {YELLOW}{COMPANY} {BLAC
 
 #test
 #STR_COLOURS                       :{BLACK}ABC  {WHITE}ABC {RED}ABC    {GREEN}ABC {BLUE}ABC   {YELLOW}ABC {ORANGE}ABC {PURPLE}ABC {GRAY}ABC   {BROWN}ABC {SILVER}ABC {GOLD}ABC {CREAM}ABC  {LTBLUE}ABC {DKBLUE}ABC {DKGREEN}ABC {LTBROWN}ABC
+STR_RAW                            :{RAW_STRING}
 
 #usable and well visible in GUI:
 #{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}

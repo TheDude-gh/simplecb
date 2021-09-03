@@ -17,13 +17,17 @@ function SimpletonCB::BestCompany(score = 0){
 }
 
 function SimpletonCB::GoalProgress(checkgamelength = 0){
-	if(this.goalstatus == 1) return;
-	if(this.goal > 0 || checkgamelength >= this.game_length){ //when goal or time limit was reached
+	if(this.goalstatus == 1) {
+		return;
+	}
+
+	local gameTimeEnd = this.game_length > 0 && checkgamelength >= this.game_length;
+	if(this.goal > 0 || gameTimeEnd){ //when goal or time limit was reached
 		local winQ = BestCompany();
 		local winner = winQ[0];
 		local winamount = winQ[1];
 
-		if(winamount >= this.goal || checkgamelength >= this.game_length){ //somebody won or time up
+		if(winamount >= this.goal || gameTimeEnd){ //somebody won or time up
 			this.goalstatus = 1;
 			//if(GSGame.IsMultiplayer()) GSGame.Pause(); //pause only multiplayer, in single player it would be impossible to unpause
 			local txt;
@@ -45,8 +49,25 @@ function SimpletonCB::SendGlobalMessage(txt){
 }
 
 /* story page */
+//functio to prepare story page on script start/load
 function SimpletonCB::StoryStart(){
-	this.story.append(GSStoryPage.New(GSCompany.COMPANY_INVALID, GSText(GSText.STR_STORY_TITLE))); //id0, yearly progress
+	//always remove cargo requirements page when starting or form save
+	if(GSStoryPage.IsValidStoryPage(1)) {
+		GSStoryPage.Remove(1);
+	}
+
+	//only add goal progress page when there is none
+	if(!GSStoryPage.IsValidStoryPage(0)) {
+		this.story.append(GSStoryPage.New(GSCompany.COMPANY_INVALID, GSText(GSText.STR_STORY_TITLE))); //id0, yearly progress
+	}
+	//if exists, just add to internal list
+	else {
+		this.story.append(0);
+		local elemList = GSStoryPageElementList(0);
+		foreach(elemid, _ in elemList) {
+			this.storyElement.append(elemid);
+		}
+	}
 
 	this.story.append(GSStoryPage.New(GSCompany.COMPANY_INVALID, GSText(GSText.STR_STORY_TITLE_REQ))); //id 1, cargo requirements
 
@@ -56,6 +77,7 @@ function SimpletonCB::StoryStart(){
 		0,
 		GSText(GSText.STR_TOWN_CLAIMED_RES)
 	);
+
 	foreach(cargo in this.CBcargo){
 		GSStoryPage.NewElement(
 			this.story[1],

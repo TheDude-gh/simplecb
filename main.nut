@@ -7,6 +7,7 @@ require("town.nut");
 require("classes.nut");
 
 scriptInstance <- null;
+const SCRIPT_VERSION = 13; //the same as in info.nut. For save/load
 const NUMCARGO = 64; //number of cargos in OpenTTD
 const INVALID_TOWN = 0xFFFF; //invalid town id
 const INVALID_COMPANY = 0xFF; //invalid company id
@@ -18,6 +19,9 @@ const TOWNGUI_LIMIT = 6;
 const BREAKDAYS = 1; //daily process period in days
 const TOWNTICKS = 70;
 const DAYTICKS = 74;
+const SHRINK_FACTOR = 5; // how fast town will shrink in multiplication of growth. Higher number = slower demolishing
+
+cbloglevel <- 1;
 
 /* grow mechanics */
 enum Growth {
@@ -61,11 +65,13 @@ class SimpletonCB extends GSController
 	goals = []; //goals pool
 	goal = 0; //game goal
 	scorelist = null; //score pool
+	cityList = []; //only used when limit cities growth enabled
 
 	townnames = [];
 	CBcargo = []; //required cargos pool
 	townlistCB = []; //owned towns pool
 	growmech = 0;
+	townshrink = false;
 	claim_pop = 250;
 	max_storage = 4;
 	
@@ -106,6 +112,7 @@ class SimpletonCB extends GSController
 	function RemoveSign(tileIndex);
 	function TownArea(tileIndex, companyid, place);
 	function CargoGetNext(population);
+	function xMapgenRem();
 	function xMapgen();
 	function PlaceIndustry(ind, cargo, distmin, method, distmax);
 	function Log(string, level = 0);
@@ -124,9 +131,6 @@ function SimpletonCB::Start() {
 	/* load settings */
 	this.log = GSController.GetSetting("morelogs");
 	if(this.from_save == false) {
-		this.goal = GSController.GetSetting("goal");
-		this.game_length = GSController.GetSetting("gamelength");
-		
 		//if there are alrady some companies and goals at start, fill pools
 		for(local id = 0; id < 16; id++) {
 			if(GSCompany.ResolveCompanyID(id) != GSCompany.COMPANY_INVALID) {
@@ -139,12 +143,14 @@ function SimpletonCB::Start() {
 			}
 		}
 
-		//global goal
-		GSGoal.New(GSCompany.COMPANY_INVALID, GSText(GSText.STR_GLOBAL_GOAL_CB, this.goal), GSGoal.GT_NONE, 0);
-
+		this.xMapgenRem();
 		this.xMapgen();
-		this.PrepareCB();
 	}
+
+	//PrepareCB reloads settings
+	this.PrepareCB();
+
+	this.StoryStart();
 
 	//debug - show cargo ID list
 	if(this.log >= 1) {
@@ -160,9 +166,7 @@ function SimpletonCB::Start() {
 
 	// day tick = 74
 	// 31 ticks ~= 1 second,	 1 game day ~= 2,3s, 1 game month ~= 75s
-	sleeptime = TOWNTICKS; 
-
-	this.StoryStart();
+	sleeptime = TOWNTICKS;
 
 	while (true) {
 		this.Process();
@@ -200,6 +204,7 @@ function SimpletonCB::Process() {
 
 	this.last_month = this.current_month;
 	this.MonthlyLoop();
+	//this.xMapgenRem();
 
 	if(this.current_month == 1) {
 		this.YearlyLoop();
@@ -239,6 +244,10 @@ function SimpletonCB::CheckEvents() {
 				//new company
 				local newcompany = GSEventCompanyNew.Convert(event);
 				local cid = newcompany.GetCompanyID();
+				//if company already exists, do not add it to list. Can happen with scenarios
+				if(this.GetCompanyByID(cid)) {
+					continue;
+				}
 				this.companies.append( Company(cid) );
 				if(this.log == 0) {
 					GSGoal.Question(0, cid, GSText(GSText.STR_WELCOME), GSGoal.QT_INFORMATION, GSGoal.BUTTON_START);
@@ -256,6 +265,9 @@ function SimpletonCB::CheckEvents() {
 				local newtown = GSEventTownFounded.Convert(event);
 				local townid = newtown.GetTownID();
 				this.PrepareTown(townid);
+				if(this.maxCityPop != 0 && GSTown.IsCity(townid)) {
+					this.cityList.append(townid);
+				}
 				break;
 			}
 		}
@@ -282,14 +294,23 @@ function SimpletonCB::DailyLoop() {
 }
 
 function SimpletonCB::MonthlyLoop() {
+	this.log = GSController.GetSetting("morelogs");
+
 	local goal_id;
 	this.LimitCityPopulation(); //check for overgrown cities
 
 	//clear goals to show new info
 	for (local i = 0; i < this.goals.len(); i++) {
-		if(GSGoal.IsValidGoal(this.goals[i])) GSGoal.Remove(this.goals[i]);
+		if(GSGoal.IsValidGoal(this.goals[i])) {
+			GSGoal.Remove(this.goals[i]);
+		}
 	}
 	this.goals.clear();
+	
+	//main goal
+	//global goal
+	goal_id = GSGoal.New(GSCompany.COMPANY_INVALID, GSText(GSText.STR_GLOBAL_GOAL_CB, this.goal), GSGoal.GT_NONE, 0);
+	this.goals.append(goal_id);
 
 	//ADDITIONAL GOAL INFO
 	if(this.game_length != 0) {
@@ -316,7 +337,9 @@ function SimpletonCB::MonthlyLoop() {
 		company = GetCompanyByID(companyid);
 		textobj = null;
 
-		if(!company || company.hq == GSMap.TILE_INVALID || company.town_id == INVALID_TOWN) continue;
+		if(!company || company.hq == GSMap.TILE_INVALID || company.town_id == INVALID_TOWN) {
+			continue;
+		}
 
 		if(this.goal != 0) {
 			textobj = GSText(GSText.STR_SCORE_GOAL_CB, rank, (100 * score / this.goal), company.id, score, company.town_id);
@@ -562,7 +585,7 @@ function SimpletonCB::PrepareCB() {
 	
 	local cargoid, ireq, ipop, istore;
 	local cbeconomy = GSController.GetSetting("cbeconomy");
-	
+	Log("preparing CB");
 	//CUSTOM cargo settings
 	if(cbeconomy == 0) {
 		for(local i = 0; i < NUMCARGO; i++) {
@@ -573,7 +596,7 @@ function SimpletonCB::PrepareCB() {
 			ipop = GSController.GetSetting("pop"+i);
 			istore = GSController.GetSetting("store"+i);
 			this.CBcargo.append( Cargo(i, ireq, ipop, istore) ); //add new cargo
-			//Log("load " + GSCargo.GetCargoLabel(i) + " req: " + ireq + "	 pop " + ipop + "	 store " + istore, 1);
+			Log("load " + GSCargo.GetCargoLabel(i) + " req: " + ireq + "	 pop " + ipop + "	 store " + istore, 1);
 		}
 	}
 	//chosen Preset
@@ -596,15 +619,19 @@ function SimpletonCB::PrepareCB() {
 	/*foreach(cargo in this.CBcargo) {
 		Log("load " + GSCargo.GetCargoLabel(cargo.id) + " req: " + cargo.req + " pop " + cargo.from + " store " + cargo.store, 1);
 	}*/
-
+	
+	this.goal         = GSController.GetSetting("goal");
+	this.game_length  = GSController.GetSetting("gamelength");
 	this.max_storage  = GSController.GetSetting("storage");
 	this.claim_pop    = GSController.GetSetting("claimpop");
 	this.townarea     = GSController.GetSetting("townarea");
 	this.townstring   = GSController.GetSetting("changetownname");
 	this.growmech     = GSController.GetSetting("growmechanism");
+	this.townshrink   = GSController.GetSetting("townshrink");
 	this.dyn_growth   = GSController.GetSetting("dyngrowth");
 	this.goalprogress = GSController.GetSetting("goalprogress");
 	this.maxCityPop   = GSController.GetSetting("cityPopLimit");
+
 	if(this.growmech < Growth.GROW_NORMAL || this.growmech >= Growth.GROW_END) {
 		this.growmech = Growth.GROW_NORMAL;
 	}
@@ -619,10 +646,19 @@ function SimpletonCB::PrepareCB() {
 		GSGameSettings.SetValue("economy.exclusive_rights", 0);
 	}
 
+	//prepare towns
 	local townlist = GSTownList();
 	foreach(townid, _ in townlist) {
-		this.PrepareTown(townid);
+	  if(this.from_save == false) {
+			this.PrepareTown(townid);
+		}
+		
+		//cities for limiting pop later
+		if(this.maxCityPop != 0 && GSTown.IsCity(townid)) {
+			this.cityList.append(townid);
+		}
 	}
+	
 }
 
 /* Prepare towns at start or new funded town */
@@ -661,23 +697,18 @@ function SimpletonCB::StopTownMonitor(companyid, townid) {
 
 //limit city growing if population is too big
 function SimpletonCB::LimitCityPopulation() {
-	if(this.maxCityPop == 0) return; //disabled
-
-	local townlist = GSTownList();
-	local cityList = [];
-	local maxTownPop = 2000; //least allowable city size
-	foreach(townid, _ in townlist) {
-		if(!GSTown.IsCity(townid)) {
-			maxTownPop = max(maxTownPop, GSTown.GetPopulation(townid)); //get max town pop
-		}
-		else {
-			cityList.append(townid); //cities for later
-		}
+	if(this.maxCityPop == 0) {
+		return; //disabled
 	}
 
-	maxTownPop = maxTownPop * this.maxCityPop;
-	//Log("max "  + maxTownPop);
-	foreach(townid in cityList) {
+	local maxTownPop = 0;
+	foreach(town in this.townlistCB) {
+		maxTownPop = max(maxTownPop, GSTown.GetPopulation(town.id)); //get max town pop
+	}
+	//least allowable city size
+	maxTownPop = max(maxTownPop * this.maxCityPop / 100, 2000);
+
+	foreach(townid in this.cityList) {
 		local growrate = GSTown.GetGrowthRate(townid);
 		if(GSTown.GetPopulation(townid) > maxTownPop) { //if bigger
 			//Log(GSTown.GetName(townid) + " NOT growing " + GSTown.GetPopulation(townid));
@@ -722,20 +753,26 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 	deltadays = (this.current_date - town.delta); //how many days from last check
 	town.grow_counter -= deltadays; //update grow_counter
 	town.delta = this.current_date;
-	//Log("next house" + town.grow_counter, 2);
+
 	if(town.grow_counter <= 0) {
 		if(this.growmech == Growth.GROW_EXPAND && town.growing) {
 			local houses = (growrate < deltadays) ? (deltadays / growrate).tointeger() : 1;
-			GSTown.ExpandTown (town.id, houses); //grow a house
+			GSTown.ExpandTown(town.id, houses); //grow a house
 		}
 		town.grow_counter = max(town.grow_counter + growrate, 1); //save new value
 	}
 
 	/* UPDATE */
 	if(update) {
-		town.growing = true; //grow by default, check later
+		//grow by default, check later
+		town.growing = true; 
 		town.service = true;
-		
+		town.supplied = true;
+		town.percentage_delivered = 100; //default value for perc delivered
+
+		goal_id = GSGoal.New(companyid, GSText(GSText.STR_TOWN_CB_TOWN_INFO, townid, townpop, GSTown.GetHouseCount(townid)), GSGoal.GT_TOWN, townid);
+		this.goals.append(goal_id);
+
 		goal_id = GSGoal.New(companyid, GSText(GSText.STR_TOWN_CB_HEADER), GSGoal.GT_TOWN, townid);
 		this.goals.append(goal_id);
 	}
@@ -746,6 +783,7 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 		towngui.append(GSText(GSText.STR_TOWN_OWNED_COMPANY, companyid, GSText.STR_EMPTY0)); //2
 	}
 
+	/* MONTHLY DELIVERY CHECK */
 	foreach(cargo in this.CBcargo) {
 		delivered = GSCargoMonitor.GetTownDeliveryAmount(companyid, cargo.id, townid, true); //deliver since last check
 		req = townpop * cargo.req / 1000;	//current requirements
@@ -757,6 +795,9 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 			local act_cargo = town.delivered[cargo.id] + town.storage[cargo.id]; //how much we have
 			if(townpop >= cargo.from) {
 				act_cargo -= req; //how much is left after req substracted - only if required
+
+				//when required, get percentage delivered, clamp between 0 - last value - 100
+				town.percentage_delivered = max( min( (100 * town.delivered[cargo.id] / req),  town.percentage_delivered), 0);
 			}
 
 			if(act_cargo >= 0 || townpop < cargo.from) { //positive - delivered enough OR not required yet -> just store
@@ -767,6 +808,7 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 				}
 			}
 			else if(townpop >= cargo.from) { //if required but not delivered, stop growth and empty storage
+				town.supplied = false;
 				town.growing = false;
 				town.storage[cargo.id] = 0;
 				missing_cargo = missing_cargo | (1 << cargo.id);
@@ -781,6 +823,7 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 					txt = GSText(GSText.STR_TOWN_REQ_GUI,
 						1 << cargo.id, town.storage[cargo.id], 100 * town.storage[cargo.id] / (this.max_storage * req + 1), town.delivered[cargo.id], req);
 				}
+				//cargo detail in goal gui
 				goal_id = GSGoal.New(companyid, txt, GSGoal.GT_NONE, 0);
 				this.goals.append(goal_id);
 			}
@@ -788,6 +831,7 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 		}
 		/* /UPDATE */
 
+		//town gui
 		if(townpop >= cargo.from) { //if cargo is required
 			missing = max(req - (town.delivered[cargo.id] + town.storage[cargo.id]), 0); //how much cargo is missing to satisfy town
 			
@@ -809,16 +853,28 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 	}
 
 	//bad service
-	if(growrate == GSTown.TOWN_GROWTH_NONE && town.growing == true) {
+	if(growrate == GSTown.TOWN_GROWTH_NONE && town.supplied == true) {
+		Log("service");
 		town.growing = false; 
 		town.service = false;
 	}
 	
-	//if town does not grow and it is monthly update, try to demolish house
-	/*if(update && !town.growing) {
-	  town.Demolish_House();
-	}*/
+	//Log("PD = " + town.percentage_delivered);
+	if(this.townshrink) {
+		if(update && town.growing) {
+			town.growth_last = GSTown.GetGrowthRate(town.id);
+			town.demolish_counter = SHRINK_FACTOR * town.growth_last;
+		}
+		//if town does not grow and it is monthly update, try to demolish house
+		if(!town.growing) {
+		 	town.Demolish_House();
+		}
+	}
+	
+	//GSLog.Info("GROWTH LAST " + town.growth_last);
+	
 
+	//TOWN GUI display
 	//next required cargo
 	local cargonext = this.CargoGetNext(townpop);
 	if(cargonext) {
@@ -876,9 +932,16 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 		)
 	);
 
-	/* UPDATE */
+
+	/* UPDATE GOAL GUI */
 	if(update) { //update grow and display in goal gui
 		//growrate = town.Grow(this.growmech); //grow grow grow, or not
+		//least delivered cargo percentage info
+
+
+		goal_id = GSGoal.New(companyid, GSText(GSText.STR_TOWN_DELIVERED_PERCENT, town.percentage_delivered), GSGoal.GT_NONE, 0);
+		this.goals.append(goal_id);
+		
 		//growth info
 		if(town.growing) {
 			txt = GSText(GSText.STR_TOWN_GROWTYPE_GROW, town.growinrow, town.growtotal, town.monthstotal);
@@ -889,15 +952,23 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 		goal_id = GSGoal.New(companyid, txt, GSGoal.GT_NONE, 0);
 		this.goals.append(goal_id);
 
+		//funded buildings
 		if(GSGameSettings.GetValue("economy.fund_buildings")) {
 			goal_id = GSGoal.New(companyid, GSText(GSText.STR_TOWN_FUNDED, town.funddur, town.fundedtotal), GSGoal.GT_NONE, 0);
 			this.goals.append(goal_id);
 		}
 
+		//growth rate
 		if(town.growing) {
 			goal_id = GSGoal.New(companyid, GSText(GSText.STR_TOWN_GROWTH_RATE, growrate, grow_ratio, town.grow_counter), GSGoal.GT_NONE, 0);
 			this.goals.append(goal_id);
 		}
+		//pop change and demoslished houses
+		local popchange = townpop - town.popchange;
+		town.popchange = townpop;
+		local STR_change = popchange >= 0 ? GSText.STR_TOWN_CHANGE_POS : GSText.STR_TOWN_CHANGE_NEG;
+		goal_id = GSGoal.New(companyid, GSText(STR_change, popchange, town.demolished), GSGoal.GT_NONE, 0);
+		this.goals.append(goal_id);
 		//missing cargo
 		if(missing_cargo) {
 			goal_id = GSGoal.New(companyid, GSText(GSText.STR_TOWN_MISSING_CARGO, missing_cargo), GSGoal.GT_NONE, 0);

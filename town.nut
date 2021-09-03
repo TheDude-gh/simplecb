@@ -9,6 +9,7 @@ class Town
 	owner = INVALID_COMPANY;
 	city = null;
 	growing = false; //is town growing?
+	supplied = false; //is town supplied? Supplied does not equal growing (because service)
 	grow_counter = 320; //when <0 build a house
 	delta = 0; //date of last growth check, updates grow_counter
 	nameid = 0; //town string name
@@ -25,6 +26,12 @@ class Town
 	prevgrowed = false; //did town grew last month?
 	funddur = 0;  //duratio nof funding buildings
 	fundedtotal = 0; //total funded months
+	
+	growth_last = NO_GROWTH; //last growth when town was growing
+	demolish_counter = NO_GROWTH; //counter for demolish house every x days
+	demolished = 0;  //demolished house count
+	popchange  = 0;  //population from last month
+	percentage_delivered = 0;  //percentage of least delivered cargo
 
 	constructor(id, owner, city = null){
 		this.id = id;
@@ -46,6 +53,7 @@ class Town
 		this.service = false;
 		this.grow_counter = 320;
 		this.growing = false;
+		this.supplied = false;
 		this.notgrowinrow = 0;
 		this.growinrow = 0;
 		this.growtotal = 0;
@@ -64,6 +72,7 @@ function Town::Grow(growmech){
 	this.monthstotal++;
 	this.funddur = GSTown.GetFundBuildingsDuration(this.id);
 	
+	//not growing
 	if(!this.growing){
 		if(this.prevgrowed){
 			GSTown.SetGrowthRate(this.id, GSTown.TOWN_GROWTH_NONE);
@@ -75,6 +84,7 @@ function Town::Grow(growmech){
 		return 0;
 	}
 	
+	//growing
 	this.notgrowinrow = 0;
 	this.growinrow++;
 	this.growtotal++;
@@ -83,8 +93,9 @@ function Town::Grow(growmech){
 		this.fundedtotal++;
 	}
 
-	if(growmech == Growth.GROW_NORMAL){
-		if(!this.prevgrowed){
+	//mechanism NORMAL
+	if(growmech == Growth.GROW_NORMAL) {
+		if(!this.prevgrowed) {
 			GSTown.SetGrowthRate(this.id, GSTown.TOWN_GROWTH_NORMAL);
 			this.grow_counter = 0;
 		}
@@ -92,6 +103,8 @@ function Town::Grow(growmech){
 		return GSTown.GetGrowthRate(this.id);
 	}
 	
+	
+	//mechanism EXPAND
 	if(growmech == Growth.GROW_EXPAND){
 		// Try to get close to OpenTTD native grow mechanics
 		local service = this.Service(); 
@@ -153,15 +166,49 @@ function Town::Service(){
 
 function Town::Demolish_House() {
 	GSCompanyMode(GSCompany.COMPANY_INVALID);
+	
+	local population = GSTown.GetPopulation(this.id);
+
+	this.demolish_counter--;
+	//GSLog.Info("DC = " + this.demolish_counter);
+	//if population lower, or demolish counter no zero or at least 25% of least delivered cargo, do not demolish
+	if(population < 500 || this.demolish_counter > 0 || this.percentage_delivered > 25) {
+		return;
+	}
+	this.demolish_counter = SHRINK_FACTOR * this.growth_last;
 
 	local demoresult = 0;
-	local ttile = GSTown.GetLocation(this.id);
-	local locationX = GSMap.GetTileX(ttile);
-	local locationY = GSMap.GetTileY(ttile);
-	for(local x = -2; x < 3; x++) {
-		for(local y = -2; y < 3; y++) {
-			local ti = GSMap.GetTileIndex(locationX + x, locationY + y);
+	local tcenter = GSTown.GetLocation(this.id);
+	local cX = GSMap.GetTileX(tcenter);
+	local cY = GSMap.GetTileY(tcenter);
+	
+	
+	local size = (sqrt(GSTown.GetHouseCount(this.id) * 2.5)).tointeger();
+	if(size % 2 == 1) {
+		size++;
+	}
+	//GSLog.Info("SQ = " + size);
+	
+	//local start = -(size / 2);
+	//local end = (size / 2);
+
+	local x, y, maxtries = 25; //max tries to demolish house. Higher number means more success in demolishing
+	
+	//for(local x = -start; x <= end; x++) {
+		//for(local y = -start; y <= end; y++) {
+	while(true) {
+			x = GSBase.RandRange(size + 1) - (size >> 1);
+			y = GSBase.RandRange(size + 1) - (size >> 1);
+			//local ti = GSMap.GetTileIndex(locationX + x, locationY + y);
+			local ti = GSMap.GetTileIndex(cX + x, cY + y);
 			local tiowner = GSTile.GetOwner(ti);
+			
+			//GSLog.Info("TRY  " + maxtries + "  tile " + x + ":" + y);
+			
+			maxtries--;
+			if(maxtries == 0) {
+				break;
+			}
 
 			//skip if not house - there is no direct function to know a tile has house, so it's guessed with another functions
 			if(tiowner == -1
@@ -178,12 +225,15 @@ function Town::Demolish_House() {
 				&& !GSTile.IsDesertTile(ti)
 			) {
 				demoresult = GSTile.DemolishTile(ti);
-				GSLog.Info("tile " + x + ":" + y + " Owner=" + tiowner + " demo=" + (demoresult ? 1 : 0) + " ERR = " + GSError.GetLastErrorString());
+				//GSLog.Info("tile " + x + ":" + y + " Owner=" + tiowner + " demo=" + (demoresult ? 1 : 0) + " ERR = " + GSError.GetLastErrorString());
 				if(demoresult) {
-				  return demoresult;
+					population = population - GSTown.GetPopulation(this.id);
+					this.demolished++;
+					//GSLog.Info("POP reduced : " + population + ",   counter every " + this.demolish_counter + " days");
+					return demoresult;
 				}
 			}
-		}
+		//}
 	}
 	return demoresult;
 }

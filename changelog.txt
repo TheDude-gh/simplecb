@@ -11,6 +11,24 @@ You can support adding new API for this by voting in https://bugs.openttd.org/ta
 CHANGELOG
 
 Version - date
+13 - 2021-08-25
+=FIXES=
+ - Prevent duplicate companies in scores. Could happen playing scenarios.
+
+=CHANGES=
+Town skrinking - new optional setting
+	- When town is not supplied properly, it has a chance of demolishing house and decreasing population
+	- town will shrink on condition any cargo is supplied less then 25% of requirement and population is less than 500
+
+CityPopLimit setting
+ - now cities can be limited by population percentage of biggest town instead of its multiplication. Range is 0 to 1000% instead of previous multiplier 1 to 10.
+
+Changing settings in running game
+ - now you can change any setting in running game so no need to start from beggining when you are not happy with some setting.
+ - You can do this by changing setting in game (SHIFT+F12 or whatever hotkey you set), saving the game and on load the new settings will update.
+ 
+
+Version - date
 12 - 2021-04-17
 =CHANGES=
 Languages updated

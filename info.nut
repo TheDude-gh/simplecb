@@ -15,12 +15,12 @@ class SimpletonCBInfo extends GSInfo {
 	function GetAuthor()      { return "TheDude"; }
 	function GetName()        { return "Simpleton's City Builder"; }
 	function GetDescription() { return "Easily configured City Builder simulation script"; }
-	function GetVersion()     { return 12; }
-	function GetDate()        { return "2021-04-17"; }
+	function GetVersion()     { return 13; }
+	function GetDate()        { return "2021-08-25"; }
 	function CreateInstance() { return "SimpletonCB"; }
 	function GetShortName()   { return "SMCB"; }
 	function GetAPIVersion()  { return "1.11"; }
-	function GetUrl()         { return "http://www.novapolis.net"; }
+	function GetUrl()         { return "https://www.novapolis.net"; }
 
 	function GetSettings() {
 		AddSetting({
@@ -32,7 +32,7 @@ class SimpletonCBInfo extends GSInfo {
 			custom_value = 0,
 			min_value = 0,
 			max_value = 2,
-			flags = CONFIG_NONE | CONFIG_INGAME,
+			flags = CONFIG_NONE | CONFIG_INGAME
 		});
 		AddLabels(
 			"morelogs", {_0 = "Normal", _1 = "More", _2 = "More more"}
@@ -45,7 +45,7 @@ class SimpletonCBInfo extends GSInfo {
 			medium_value = 0,
 			hard_value = 0,
 			custom_value = 0,
-			flags = CONFIG_BOOLEAN,
+			flags = CONFIG_BOOLEAN | CONFIG_INGAME
 		});
 		AddSetting({
 			name = "xMapgen",
@@ -54,7 +54,7 @@ class SimpletonCBInfo extends GSInfo {
 			medium_value = 0,
 			hard_value = 0,
 			custom_value = 0,
-			flags = CONFIG_BOOLEAN,
+			flags = CONFIG_BOOLEAN
 		});
 		AddSetting({
 			name = "goal",
@@ -65,7 +65,7 @@ class SimpletonCBInfo extends GSInfo {
 			custom_value = 10000,
 			flags = CONFIG_NONE | CONFIG_INGAME,
 			min_value = 0,
-			max_value = 1000000,
+			max_value = 1000000
 		});
 		AddSetting({
 			name = "gamelength",
@@ -76,7 +76,7 @@ class SimpletonCBInfo extends GSInfo {
 			custom_value = 12,
 			flags = CONFIG_NONE | CONFIG_INGAME,
 			min_value = 0,
-			max_value = 1000,
+			max_value = 1000
 		});
 		AddSetting({
 			name = "changetownname",
@@ -85,7 +85,7 @@ class SimpletonCBInfo extends GSInfo {
 			medium_value = 1,
 			hard_value = 1,
 			custom_value = 1,
-			flags = CONFIG_BOOLEAN | CONFIG_INGAME,
+			flags = CONFIG_BOOLEAN | CONFIG_INGAME
 		});
 		AddSetting({
 			name = "goalprogress",
@@ -94,42 +94,42 @@ class SimpletonCBInfo extends GSInfo {
 			medium_value = 0,
 			hard_value = 0,
 			custom_value = 0,
-			flags = CONFIG_BOOLEAN | CONFIG_INGAME,
+			flags = CONFIG_BOOLEAN | CONFIG_INGAME
 		});
 		AddSetting({
 			name = "townarea",
-			description = "Town area - place signs around town, set 0 to disable",
+			description = "Town area - place signs around town. Set 0 to disable.",
 			easy_value = 0,
 			medium_value = 0,
 			hard_value = 0,
 			custom_value = 0,
 			flags = CONFIG_NONE | CONFIG_INGAME,
 			min_value = 0,
-			max_value = 50,
+			max_value = 50
 		});
 
 		AddSetting({
 			name = "dyngrowth",
-			description = "Dynamic change of town growth rate. Every X years is increased by 1 up to maximum 4. Set to 0 to disable it",
+			description = "Dynamic change of town growth rate. Every X years is increased by 1 up to maximum 4. Set to 0 to disable.",
 			easy_value = 0,
 			medium_value = 0,
 			hard_value = 0,
 			custom_value = 0,
-			flags = CONFIG_NONE | CONFIG_INGAME,
+			flags = CONFIG_NONE,
 			min_value = 0,
-			max_value = 100,
+			max_value = 100
 		});
 		
 		AddSetting({
 			name = "cityPopLimit",
-			description = "Limit cities population to X times biggest town on map",
-			easy_value = 0,
-			medium_value = 0,
-			hard_value = 0,
-			custom_value = 0,
+			description = "Limit cities population to percentage of the biggest claimed town on map. Set to 0 to disable.",
+			easy_value = 50,
+			medium_value = 50,
+			hard_value = 50,
+			custom_value = 50,
 			flags = CONFIG_NONE | CONFIG_INGAME,
 			min_value = 0,
-			max_value = 10,
+			max_value = 1000
 		});
 
 		AddSetting({
@@ -141,11 +141,21 @@ class SimpletonCBInfo extends GSInfo {
 			custom_value = 0,
 			min_value = 0,
 			max_value = 1,
-			flags = CONFIG_NONE | CONFIG_INGAME,
+			flags = CONFIG_NONE | CONFIG_INGAME
 		});
 		AddLabels(
 			"growmechanism", {_0 = "Normal", _1 = "Expand"} //, _2 = "diversified"
 		);
+		
+		AddSetting({
+			name = "townshrink",
+			description = "Town will shrink slightly when not supplied",
+			easy_value = 0,
+			medium_value = 0,
+			hard_value = 0,
+			custom_value = 0,
+			flags = CONFIG_BOOLEAN | CONFIG_INGAME
+		});
 
 		AddSetting({
 			name = "claimpop",
@@ -156,7 +166,7 @@ class SimpletonCBInfo extends GSInfo {
 			custom_value = 250,
 			flags = CONFIG_NONE | CONFIG_INGAME,
 			min_value = 0,
-			max_value = 50000,
+			max_value = 50000
 		});
 
 		AddSetting({
@@ -168,14 +178,15 @@ class SimpletonCBInfo extends GSInfo {
 			custom_value = 4,
 			flags = CONFIG_NONE | CONFIG_INGAME,
 			min_value = 0,
-			max_value = 100,
+			max_value = 100
 		});
 		
+
 		AddSetting({
-			name = "div000", description = "City Builder Economy - Choose between various cargosets and climates presets. If you choose this, you don't have to set anything else regarding cargo requirements.", easy_value = 0, medium_value = 0, hard_value = 0, custom_value = 0, flags = CONFIG_BOOLEAN,
+			name = "div000", description = "City Builder Economy - Choose between various cargosets and climates presets. If you choose this, you don't have to set anything else regarding cargo requirements.", easy_value = 0, medium_value = 0, hard_value = 0, custom_value = 0, flags = CONFIG_BOOLEAN
 		});
 		AddSetting({
-			name = "div001", description = "If you choose CUSTOM and want your own settins you need to configure the individual cargo requirements in the next settings.", easy_value = 0, medium_value = 0, hard_value = 0, custom_value = 0, flags = CONFIG_BOOLEAN,
+			name = "div001", description = "If you choose CUSTOM and want your own settins you need to configure the individual cargo requirements in the next settings.", easy_value = 0, medium_value = 0, hard_value = 0, custom_value = 0, flags = CONFIG_BOOLEAN
 		});
 		
 		AddSetting({
@@ -187,7 +198,7 @@ class SimpletonCBInfo extends GSInfo {
 			custom_value = 1,
 			min_value = 0,
 			max_value = 18,
-			flags = CONFIG_NONE | CONFIG_INGAME,
+			flags = CONFIG_NONE | CONFIG_INGAME
 		});
 		AddLabels(
 			"cbeconomy", {
@@ -216,14 +227,14 @@ class SimpletonCBInfo extends GSInfo {
 		);
 
 		AddSetting({
-			name = "div002", description = "", easy_value = 0, medium_value = 0, hard_value = 0, custom_value = 0, flags = CONFIG_BOOLEAN,
+			name = "div002", description = "", easy_value = 0, medium_value = 0, hard_value = 0, custom_value = 0, flags = CONFIG_BOOLEAN
 		});
 		AddSetting({
-			name = "category000", description = " >>> TOWN REQUIREMENTS PER 1000 INHABITANTS <<< ", easy_value = 1, medium_value = 1, hard_value = 1, custom_value = 1, flags = CONFIG_BOOLEAN,
+			name = "category000", description = " >>> TOWN REQUIREMENTS PER 1000 INHABITANTS <<< ", easy_value = 1, medium_value = 1, hard_value = 1, custom_value = 1, flags = CONFIG_BOOLEAN
 		});
 		AddSetting({
 			name = "category001", description = "   > Different cargosets are marked like this: empty:Vannila | E:ECS | F2=FIRS2 | F3T=FIRS3 TEMP | F3S=FIRS3 STEEL | F4T=FIRS4 TEMP | F4S=FIRS4 STEEL | Y=YETI | X=XIS  < ",
-				easy_value = 1, medium_value = 1, hard_value = 1, custom_value = 1, flags = CONFIG_BOOLEAN,
+				easy_value = 1, medium_value = 1, hard_value = 1, custom_value = 1, flags = CONFIG_BOOLEAN
 		});
 
 		local cargoDef = [
@@ -297,13 +308,13 @@ class SimpletonCBInfo extends GSInfo {
 
 		local var = "";
 		for(local i = 0; i < 64; i++){
-			AddSetting({ name = "cat"+i, description = " #" + (i + 1) + " >>> " + cargoDef[i][3] + " <<< ", easy_value = 1, medium_value = 1, hard_value = 1, custom_value = 1, flags = CONFIG_BOOLEAN, });
+			AddSetting({ name = "cat"+i, description = " #" + (i + 1) + " >>> " + cargoDef[i][3] + " <<< ", easy_value = 1, medium_value = 1, hard_value = 1, custom_value = 1, flags = CONFIG_BOOLEAN });
 			var = "req" + i;
-			AddSetting({ name = var, description = "Requirements ", min_value = 0, max_value = 10000, easy_value = cargoDef[i][0], medium_value = cargoDef[i][0], hard_value = cargoDef[i][0], custom_value = cargoDef[i][0], flags = CONFIG_NONE | CONFIG_INGAME, });
+			AddSetting({ name = var, description = "Requirements ", min_value = 0, max_value = 10000, easy_value = cargoDef[i][0], medium_value = cargoDef[i][0], hard_value = cargoDef[i][0], custom_value = cargoDef[i][0], flags = CONFIG_NONE | CONFIG_INGAME });
 			var = "pop" + i;
-			AddSetting({ name = var, description = "From", min_value = 0, max_value = 50000, easy_value = cargoDef[i][1], medium_value = cargoDef[i][1], hard_value = cargoDef[i][1], custom_value = cargoDef[i][1], flags = CONFIG_NONE | CONFIG_INGAME, });
+			AddSetting({ name = var, description = "From", min_value = 0, max_value = 50000, easy_value = cargoDef[i][1], medium_value = cargoDef[i][1], hard_value = cargoDef[i][1], custom_value = cargoDef[i][1], flags = CONFIG_NONE | CONFIG_INGAME });
 			var = "store" + i;
-			AddSetting({ name = var, description = "% Stored per month", min_value = 0, max_value = 100, easy_value = cargoDef[i][2], medium_value = cargoDef[i][2], hard_value = cargoDef[i][2], custom_value = cargoDef[i][2], flags = CONFIG_NONE | CONFIG_INGAME, });
+			AddSetting({ name = var, description = "% Stored per month", min_value = 0, max_value = 100, easy_value = cargoDef[i][2], medium_value = cargoDef[i][2], hard_value = cargoDef[i][2], custom_value = cargoDef[i][2], flags = CONFIG_NONE | CONFIG_INGAME });
 		}
 	}
 }

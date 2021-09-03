@@ -1,5 +1,5 @@
 Simpleton's City Builder
-Novapolis team, http://www.novapolis.net
+Novapolis team, https://www.novapolis.net
 
 
 ===Basic setting===
@@ -34,10 +34,16 @@ Novapolis team, http://www.novapolis.net
 =Dynamic change of town growth rate. Every 5 years is increased by 1 up to maximum 4
  - Says all
 
+=Limit cities population to percentage of the biggest claimed town on map. Set to 0 to disable.
+	Will limit all cities to percentage of any claimed town. Range 0 to 1000%.
+
 =Town Growth mechanism
  - You can choose from 2 mechanisms:
 	- Normal - the same as original OpenTTD growth, it only requires the cargo and OpenTTD places new houses (and transport service)
 	- Expand - Similar to Normal, but uses own mechanism, GS places houses instead of OpenTTD. Requires transport service and cargo to grow town
+
+=Town will shrink slightly when not supplied
+	Town will shrink when not properly supplied.
 
 =Max claimable town population
  - maximum town population of claimable towns

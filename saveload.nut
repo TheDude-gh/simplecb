@@ -6,6 +6,7 @@
 function SimpletonCB::Save() {
 	GSLog.Info("Saving data");
 	this.data = {
+		sv_script_version = SCRIPT_VERSION,
 		sv_goal = this.goal,
 		sv_game_length = this.game_length,
 		sv_last_month = this.last_month,
@@ -21,10 +22,12 @@ function SimpletonCB::Save() {
 		sv_townarea = this.townarea,
 		sv_townstring = this.townstring,
 		sv_growmech = this.growmech,
+		sv_townshrink = this.townshrink,
 		sv_goalprogress = this.goalprogress,
 		sv_dyngrowth = this.dyn_growth,
 		sv_maxCityPop = this.maxCityPop,
 		sv_townstring = this.townstring,
+		sv_goalstatus = this.goalstatus,
 	};
 
 	foreach(company in this.companies){
@@ -35,14 +38,15 @@ function SimpletonCB::Save() {
 		data.sv_goals.append(goal_id);
 		//Log("Saving data for goal id #" + goal_id, 2);
 	}
-	foreach(cargo in this.CBcargo){
+	/*foreach(cargo in this.CBcargo){
 		data.sv_cargos.append([cargo.id, cargo.req, cargo.from, cargo.store]);
 		Log("Saving data for cargo id #" + cargo.id, 2);
-	}
-	foreach(town in this.townlistCB){
+	}*/
+	foreach(town in this.townlistCB) {
 		data.sv_towns.append([town.id, town.owner, town.city, town.growing, town.storage, town.delivered, town.notgrowinrow,
 			town.growinrow, town.growtotal, town.monthstotal, town.grow_counter, town.delta,
-			town.nameid, town.president, town.service, town.prevgrowed, town.funddur, town.fundedtotal]);
+			town.nameid, town.president, town.service, town.prevgrowed, town.funddur, town.fundedtotal,
+			town.growth_last, town.demolish_counter, town.supplied, town.demolished, town.popchange ]);
 		Log("Saving data for town id #" + town.id + " owned by " + town.owner, 2);
 	}
 	foreach (signid, signtile in this.signlist) {
@@ -54,22 +58,28 @@ function SimpletonCB::Save() {
 
 function SimpletonCB::Load(version, tbl) {
 	GSLog.Info("Loading data");
-	foreach(key, val in tbl)	{
-		if(key == "sv_game_length") this.game_length = val;
-		else if(key == "sv_goal")	this.goal = val;
-		else if(key == "sv_last_month")	this.last_month = val;
-		else if(key == "sv_firstrun")	this.firstrun = val;
-		else if(key == "sv_claim")	this.claim_pop = val;
-		else if(key == "sv_logs") this.log = val;
-		else if(key == "sv_storage") this.max_storage = val;
-		else if(key == "sv_townarea") this.townarea = val;
-		else if(key == "sv_townstring") this.townstring = val;
-		else if(key == "sv_growmech") this.growmech = val;
+
+	local script_version = 0;
+
+	foreach(key, val in tbl) {
+		if(key == "sv_script_version")    script_version = val;
+		else if(key == "sv_game_length")  this.game_length = val;
+		else if(key == "sv_goal")	        this.goal = val;
+		else if(key == "sv_last_month")	  this.last_month = val;
+		else if(key == "sv_firstrun")	    this.firstrun = val;
+		else if(key == "sv_claim")	      this.claim_pop = val;
+		else if(key == "sv_logs")         this.log = val;
+		else if(key == "sv_storage")      this.max_storage = val;
+		else if(key == "sv_townarea")     this.townarea = val;
+		else if(key == "sv_townstring")   this.townstring = val;
+		else if(key == "sv_growmech")     this.growmech = val;
+		else if(key == "sv_townshrink")   this.townshrink = val;
 		else if(key == "sv_goalprogress") this.goalprogress = val;
-		else if(key == "sv_dyngrowth") this.dyn_growth = val;
-		else if(key == "sv_maxCityPop") this.maxCityPop = val;
-		else if(key == "sv_townstring") this.townstring = val;
-		else if(key == "sv_companies"){
+		else if(key == "sv_dyngrowth")    this.dyn_growth = val;
+		else if(key == "sv_maxCityPop")   this.maxCityPop = val;
+		else if(key == "sv_townstring")   this.townstring = val;
+		else if(key == "sv_goalstatus")   this.goalstatus = val;
+		else if(key == "sv_companies") {
 			foreach(company in val){
 				//company.id, company.hq, company.town_id
 				this.companies.append( Company(company[0], company[1], company[2]) );
@@ -84,13 +94,13 @@ function SimpletonCB::Load(version, tbl) {
 				//Log("loading goal " + key + " => " + goal_id, 2);
 			}
 		}
-		else if(key == "sv_cargos"){
+		/*else if(key == "sv_cargos"){
 			foreach(cargo in val){
 				//cargo.id, cargo.req, cargo.from, cargo.store
 				this.CBcargo.append( Cargo(cargo[0], cargo[1], cargo[2], cargo[3]) );
 				Log("loading cargoid " + cargo[0] + " req: " + cargo[1], 2);
 			}
-		}
+		}*/
 		else if(key == "sv_towns"){
 			foreach(svtown in val){
 				//town.id, town.owner, town.city, town.growing, town.storage, town.delivered, town.growinrow, town.growtotal, town.monthstotal
@@ -111,6 +121,13 @@ function SimpletonCB::Load(version, tbl) {
 				town.prevgrowed = svtown[15];
 				town.funddur = svtown[16];
 				town.fundedtotal = svtown[17];
+				town.growth_last = svtown[18];
+				town.demolish_counter = svtown[19];
+				town.supplied = svtown[20];
+				if(script_version >= 13) {
+					town.demolished = svtown[21];
+					town.popchange = svtown[22];
+				}
 
 				Log("loading townid " + town.id, 2);
 			}

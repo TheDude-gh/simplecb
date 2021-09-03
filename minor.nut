@@ -136,6 +136,70 @@ function SimpletonCB::PlaceIndustry(ind, cargo, distmin, distmax, method, onlyCi
 }
 /* /MAP GENERATION */
 
+function SimpletonCB::xMapgenRem() {
+	return;
+	local townlist = GSTownList();
+	local indlist = GSIndustryList();
+	
+	local txy, tx, rx, ry, ty, rtile, n, success, built = 0, skip = 0, towncount = 0, ntotal = 0, isCity;
+	
+	
+	/*foreach(indid, _ in indlist){
+		if(GSIndustry.GetIndustryType(indid) != ind) {
+			continue; //if industry is not desired, skip
+		}
+		local closetownid = GSTile.GetClosestTown(GSIndustry.GetLocation(indid));
+		xtownlist.RemoveItem(closetownid);
+		skip++;
+	}*/
+	
+
+	GSCompanyMode(GSCompany.COMPANY_INVALID); //since 1.3.0 we can use GAIA company
+
+	//GSExecMode.GSExecMode();
+
+	//GSCompany.ChangeBankBalance(GSCompany.COMPANY_FIRST, 1000000, GSCompany.EXPENSES_OTHER, GSMap.TILE_INVALID);
+
+	
+
+	/*foreach(townid, _ in townlist) {
+		
+	}*/
+	for(local i = 0; i < 200; i++) {
+	  Log("TICK " + GSController.GetTick() + "   OPSUSP " + GSController.GetOpsTillSuspend());
+		for(local j = 0; j < 200; j++) {
+			local ti = GSMap.GetTileIndex(i, j);
+			GSTile.DemolishTile(ti);
+		}
+	}
+	return
+	
+	foreach(indid, _ in indlist) {
+		local tile = GSIndustry.GetLocation(indid);
+		local townid = GSTile.GetClosestTown(tile);
+		
+		local distance = GSTown.GetDistanceManhattanToTile(townid, tile);
+		if(distance < 40) {
+		  local demoresult = GSTile.DemolishTile(tile);
+		  Log("CLOSE Town " + GSTown.GetName(townid) + " IID " + indid + "  " + GSIndustry.GetName(indid) + "  DEMO=" + (demoresult ? 1 : 0));
+		}
+		continue;
+		
+		local demoresult = GSTile.DemolishTile(tile);
+		
+		local X = GSMap.GetTileX(tile);
+		local Y = GSMap.GetTileY(tile);
+		
+		local ti = GSMap.GetTileIndex(X + 1, Y + 1);
+		local demoresult = GSTile.DemolishTile(ti);
+		//GSIndustry.SetText(indid, GSText(GSText.STR_RAW, "IID " + indid));
+		GSIndustry.SetText(indid, "IID " + indid);
+		GSLog.Info("IND ITEM " + indid + "  tile " + X + ":" + Y + " demo=" + (demoresult ? 1 : 0) + " ERR = " + GSError.GetLastErrorString());
+		
+		
+	}
+}
+
 /* SIGNS */
 function SimpletonCB::PlaceSign(tileIndex, text) {
 	local signid = GSSign.BuildSign(tileIndex, text);
@@ -206,7 +270,7 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 			[1,  100,   250,   0], //coal
 			[2,   40,  1000,   0], //mail
 			[5,  200,  1500, 100], //goods
-			[10,   10, 2500, 100], //valuables
+			[10,  10, 2500, 100], //valuables
 		],
 		//2 vannila ARCTIC
 		[
@@ -247,7 +311,7 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 			[19,   13,  5000, 100], //wood products
 			[24,    4, 10000, 100], //vehicles
 			[25,   15,  4000, 100], //gasoline
-			[28,   13,  6000, 100], //cement
+			[28,   13,  6000, 100], //building materials
 			[31,    4,  2000,   0], //tourists
 		],
 		//6 XIS
@@ -373,4 +437,11 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 	}
 
 	return presets[cbeconomy];
+}
+
+//global log
+function gLog(string, level = 0){
+	if(level <= ::cbloglevel) {
+		GSLog.Info(string);
+	}
 }

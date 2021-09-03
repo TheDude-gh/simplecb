@@ -53,6 +53,7 @@ STR_GLOBAL_GOAL_CB                :{ORANGE}Stavitel města ::: Cíl hry je  :  {
 STR_GAME_LENGTH                   :   {GREEN}{NUM}  {BLACK}rok{P "" y ů} do konce hry
 
 STR_TOWN_CB_HEADER                :  {ORANGE}Požadavky tvého města
+STR_TOWN_CB_TOWN_INFO             :  {BLACK}{TOWN}  Populace: {YELLOW}{COMMA}   {BLACK}Budovy: {YELLOW}{COMMA}
 
 STR_SCORE_GOAL_CB                 :{WHITE}   #{NUM} {YELLOW}[{NUM}%] {BLACK}: {YELLOW}{COMPANY} {BLACK} s{YELLOW}{COMMA} {BLACK} obyvateli v {YELLOW}{TOWN}
 STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {BLACK}s{YELLOW}{COMMA} {BLACK}obyvateli v {YELLOW}{TOWN}
@@ -60,10 +61,15 @@ STR_SCORE_NOGOAL_CB               :{WHITE}   #{NUM} {BLACK}: {YELLOW}{COMPANY} {
 STR_TOWN_REQ_GUI                  :  {LTBLUE}{CARGO_LIST}   {BLACK}Sklad: {GREEN}{COMMA} {BLACK}ks  ( {YELLOW}{NUM}{BLACK} % ), Doručeno / Požadováno : {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 STR_TOWN_REQ_GUI_NOSTORAGE        :  {LTBLUE}{CARGO_LIST}   {BLACK}Doručeno / Požadováno: {YELLOW}{COMMA} {BLACK}/ {DKGREEN}{COMMA}
 
-STR_TOWN_GROWTYPE_GROW            :  {BLACK}Město {GREEN}roste {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} v řadě. Celkem by růst {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} {BLACK}z celkových {YELLOW}{NUM}
-STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Město {RED}ne{BLACK}roste {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} v řadě. Růst zastaven {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} z {YELLOW}{NUM} {BLACK}celkem
+STR_TOWN_DELIVERED_PERCENT        :  {BLACK}Nejmenší podíl doručení jednotlivé suroviny {YELLOW}{COMMA}%
+
+STR_TOWN_GROWTYPE_GROW            :  {BLACK}Město {GREEN}je zásobeno {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} v řadě. Celkem by růst {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} {BLACK}z celkových {YELLOW}{NUM}
+STR_TOWN_GROWTYPE_NOTGROW         :  {BLACK}Město {RED}není zásobeno {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} v řadě. Růst zastaven {YELLOW}{NUM} {BLACK}měsíc{P "" e ů} z {YELLOW}{NUM} {BLACK}celkem
+
 
 STR_TOWN_FUNDED                   :  {BLACK}Město staví budovy v období {YELLOW}{NUM} {BLACK}měsíc{P "" e ů}. Město stavělo budovy po{YELLOW}{NUM} {BLACK}měsíc{P "" e ů} celkem.
+STR_TOWN_CHANGE_POS               :  {BLACK}Měsíční změna populace: {GREEN}{COMMA}{BLACK}.  Celkem zbořeno budov: {YELLOW}{COMMA}
+STR_TOWN_CHANGE_NEG               :  {BLACK}Měsíční změna populace: {ORANGE}{COMMA}{BLACK}.  Celkem zbořeno budov: {YELLOW}{COMMA}
 
 STR_TOWN_MISSING_CARGO            :  {BLACK}Městu chybí :   {WHITE}{CARGO_LIST}
 STR_TOWN_GROWTH_RATE              :  {BLACK}1 budova každých{ORANGE}{COMMA} {BLACK}d{P en ny ní} ({ORANGE}{COMMA}{BLACK}%), další za {YELLOW}{COMMA}{BLACK} d{P en ny ní}
@@ -74,12 +80,12 @@ STR_TOWN_NEXT_CARGO               :  {BLACK}Další: {GREEN}{CARGO_LIST} {BLACK}
 #town gui
 STR_TOWNGUI                       :{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}{STRING}
 
-STR_TOWNW_GROWTYPE_GROW           :{BLACK}Město {GREEN}roste
-STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}Město {RED}ne{BLACK}roste
+STR_TOWNW_GROWTYPE_GROW           :{BLACK}Město {GREEN}je zásobeno
+STR_TOWNW_GROWTYPE_NOTGROW        :{BLACK}Město {RED}není zásobeno
 STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Chybí dopravní služby
 
-STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Město {GREEN}roste{}   {BLACK}Chybějící suroviny:
-STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}Město {RED}ne{BLACK}roste{}   {BLACK}Chybějící suroviny:
+STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Město {GREEN}je zásobeno{}   {BLACK}Chybějící suroviny:
+STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}Město {RED}není zásobeno{}   {BLACK}Chybějící suroviny:
 
 STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Město patří společnosti {COMPANY}{}   {BLACK}Chybějící suroviny: {STRING}
 
