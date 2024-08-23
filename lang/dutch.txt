@@ -13,7 +13,7 @@ STR_CITY                          :.:: Stad ::.
 STR_CITY2                         :{YELLOW}.:: Stad ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Welkom bij het spel STEDENBOUWER{}{}Verzorgd door het{}{}{YELLOW}Novapolis-team{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Welkom bij het spel STEDENBOUWER{}{}Verzorgd door het{}{}{YELLOW}Novapolis-team{}{}{NORMAL_FONT}{WHITE}https://www.novapolis.net{}{}
 
 
 #news

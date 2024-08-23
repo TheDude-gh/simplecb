@@ -2,7 +2,7 @@
 	Simpleton City Builder info.nut
 	SimpletonCBInfo class - information and settings
 
-	Origin - Novapolis team, http://novapolis.net
+	Origin - Novapolis team, https://novapolis.net
 	Author - The Dude
 	Licence - GPLv2
 	Purpose - Simple city builder script, towns require cargos to grow
@@ -187,6 +187,9 @@ class SimpletonCBInfo extends GSInfo {
 		});
 		AddSetting({
 			name = "div001", description = "If you choose CUSTOM and want your own settins you need to configure the individual cargo requirements in the next settings.", easy_value = 0, medium_value = 0, hard_value = 0, custom_value = 0, flags = CONFIG_BOOLEAN
+		});
+		AddSetting({
+			name = "div002", description = "If you choose any PRESET, changing values in cargo settings will have no effect. See readme for each PRESET values.", easy_value = 0, medium_value = 0, hard_value = 0, custom_value = 0, flags = CONFIG_BOOLEAN
 		});
 		
 		AddSetting({

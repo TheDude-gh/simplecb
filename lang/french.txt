@@ -13,7 +13,7 @@ STR_CITY                          :.:: Cité ::.
 STR_CITY2                         :{YELLOW}.:: Cité ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Bonjour et bienvenue dans l'expérience City Builder{}{}Auteurs{}{}{YELLOW}Novapolis Team{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Bonjour et bienvenue dans l'expérience City Builder{}{}Auteurs{}{}{YELLOW}Novapolis Team{}{}{NORMAL_FONT}{WHITE}https://www.novapolis.net{}{}
 
 
 #news

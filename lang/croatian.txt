@@ -13,7 +13,7 @@ STR_CITY                          :.:: Grad ::.
 STR_CITY2                         :{YELLOW}.:: Grad ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Pozdrav i dobrodošli u iskustvo Graditelja Gradova{}{}Prezentirano od{}{}{YELLOW}Novapolis Tima{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Pozdrav i dobrodošli u iskustvo Graditelja Gradova{}{}Prezentirano od{}{}{YELLOW}Novapolis Tima{}{}{NORMAL_FONT}{WHITE}https://www.novapolis.net{}{}
 
 
 #news

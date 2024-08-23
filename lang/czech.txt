@@ -13,7 +13,7 @@ STR_CITY                          :.:: Velkoměsto ::.
 STR_CITY2                         :{YELLOW}.:: Velkoměsto ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Vítej ve hře Budování města{}{}Připraveno pro Vás{}{}{YELLOW}skupinou vývojářů Novapolis{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Vítej ve hře Budování města{}{}Připraveno pro Vás{}{}{YELLOW}skupinou vývojářů Novapolis{}{}{NORMAL_FONT}{WHITE}https://www.novapolis.net{}{}
 
 
 #news

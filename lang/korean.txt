@@ -10,7 +10,7 @@ STR_HQERR                         :대도시는 점유할 수 없습니다
 STR_CITY                          :.:: 도시 ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}안녕하세요! 시티 빌더를 경험하러 오신 것을 환영합니다{}{}제작:{}{}{YELLOW}Novapolis Team{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}안녕하세요! 시티 빌더를 경험하러 오신 것을 환영합니다{}{}제작:{}{}{YELLOW}Novapolis Team{}{}{NORMAL_FONT}{WHITE}https://www.novapolis.net{}{}
 
 
 #news

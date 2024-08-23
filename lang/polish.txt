@@ -13,7 +13,7 @@ STR_CITY                          :.:: Stolica województwa ::.
 STR_CITY2                         :{YELLOW}.:: Miasto ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}Witamy w trybie City Builder{}{}strzworzonemu dzięki zespołowi{}{}{YELLOW}Novapolis{}{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}Witamy w trybie City Builder{}{}strzworzonemu dzięki zespołowi{}{}{YELLOW}Novapolis{}{}{NORMAL_FONT}{WHITE}https://www.novapolis.net{}{}
 
 
 #news

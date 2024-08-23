@@ -13,7 +13,7 @@ STR_CITY                          :.:: 都市 ::.
 STR_CITY2                         :{YELLOW}.:: 都市 ::.
 
 #welcome message
-STR_WELCOME                       :{}{BIG_FONT}欢迎来到城建世界{}{}由{}{}{YELLOW}Novapolis Team{}呈现{}{NORMAL_FONT}{WHITE}http://www.novapolis.net{}{}
+STR_WELCOME                       :{}{BIG_FONT}欢迎来到城建世界{}{}由{}{}{YELLOW}Novapolis Team{}呈现{}{NORMAL_FONT}{WHITE}https://www.novapolis.net{}{}
 
 
 #news
