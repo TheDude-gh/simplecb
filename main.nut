@@ -780,7 +780,7 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 
 	//when cargosize is less or more than towngui limit, add owned string, if equal, we display all cargos instead
 	if(cargoSize != TOWNGUI_LIMIT) {
-		towngui.append(GSText(GSText.STR_TOWN_OWNED_COMPANY, companyid, GSText.STR_EMPTY0)); //2
+		towngui.append(GSText(GSText.STR_TOWN_OWNED_COMPANY, companyid, GSText(GSText.STR_EMPTY0))); //2
 	}
 
 	/* MONTHLY DELIVERY CHECK */
@@ -901,7 +901,7 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 	}
 
 	while(towngui.len() < TOWNGUI_LIMIT) { //feed pool with empty string to satisfy town gui
-		towngui.append(GSText(GSText.STR_EMPTY2));
+		towngui.append(GSText(GSText.STR_EMPTY2, GSText(GSText.STR_EMPTY0), GSText(GSText.STR_EMPTY0)));
 	}
 
 	if(cargoSize != TOWNGUI_LIMIT) {
