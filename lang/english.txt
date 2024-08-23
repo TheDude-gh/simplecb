@@ -5,7 +5,7 @@
 #town area
 STR_HQTOWN                        :{COMPANY}'s Town
 STR_HQAREA_TOP                    : ^ {COMPANY}'s Area ^
-STR_HQAREA_RIGHT                  :> {COMPANY}'s Area 
+STR_HQAREA_RIGHT                  :> {COMPANY}'s Area
 STR_HQAREA_BOTTOM                 : v {COMPANY}'s Area v
 STR_HQAREA_LEFT                   :{COMPANY}'s Area <
 STR_HQERR                         :You can't claim CITY
@@ -46,7 +46,7 @@ STR_EMPTY1                        :{STRING}
 STR_EMPTY2                        :{STRING}{STRING}
 STR_EMPTY3                        :{STRING}{STRING}{STRING}
 STR_PLUS                          :+
-
+STR_RAWX                          :{}{GREEN}{RAW_STRING}
 
 #goal gui
 STR_GLOBAL_GOAL_CB                :{ORANGE}CITY BUILDER ::: Goal for the game is  :  {GREEN}{COMMA} {BLACK}population
