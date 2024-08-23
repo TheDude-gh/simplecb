@@ -1,7 +1,7 @@
 
 KNOWN BUGS
 GUI growing flaw
-When town grow mechanism Normal is selected and when town is supplied, but has no transport service, 
+When town grow mechanism Normal is selected and when town is supplied, but has no transport service,
 as required in normal OpenTTD for town growing, GUI will incorrectly say town is growing even when it is
 in fact not.
 Currently games script cannot recognize whether town is or is not growing because of missing transport service.
@@ -9,6 +9,12 @@ You can support adding new API for this by voting in https://bugs.openttd.org/ta
 
 
 CHANGELOG
+
+Version - date
+14 - 2024-04-13
+=FIXES=
+ - fixed GSText objects at few places to comply with current OpenTTD formatting
+
 
 Version - date
 13 - 2021-08-25
