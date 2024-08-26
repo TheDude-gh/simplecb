@@ -15,6 +15,8 @@ Version - date
 =FIXES=
  - fixed GSText objects at few places to comply with current OpenTTD formatting
 
+=CHANGES=
+ - Dropped all languages that were not updated for latest string changes (missing eints so much)
 
 Version - date
 13 - 2021-08-25
