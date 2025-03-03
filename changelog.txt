@@ -11,6 +11,12 @@ You can support adding new API for this by voting in https://bugs.openttd.org/ta
 CHANGELOG
 
 Version - date
+15 - 2024-12-28
+=FIXES=
+ - fixed town's funding building counter
+
+
+Version - date
 14 - 2024-04-13
 =FIXES=
  - fixed GSText objects at few places to comply with current OpenTTD formatting

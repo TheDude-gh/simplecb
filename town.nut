@@ -70,8 +70,7 @@ class Town
 
 function Town::Grow(growmech){
 	this.monthstotal++;
-	this.funddur = GSTown.GetFundBuildingsDuration(this.id);
-	
+
 	//not growing
 	if(!this.growing){
 		if(this.prevgrowed){
@@ -83,11 +82,21 @@ function Town::Grow(growmech){
 		this.prevgrowed = false;
 		return 0;
 	}
-	
+
 	//growing
 	this.notgrowinrow = 0;
 	this.growinrow++;
 	this.growtotal++;
+
+	//fund building counter
+	local current_fund = GSTown.GetFundBuildingsDuration(this.id);
+	//if previous fund was zero add extra increment.
+	//This is because the month, where funding starts, is not counted, as this funcion is only evaluated on 1st of every month
+	if(current_fund == 2 && this.funddur == 0) {
+		this.fundedtotal++;
+	}
+
+	this.funddur = current_fund;
 
 	if(this.funddur > 0) {
 		this.fundedtotal++;
