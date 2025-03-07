@@ -18,7 +18,7 @@ class Town
 	delivered = [];
 	missing = 0; //mask of missing cargos
 	service = false; //has town transport service?
-	
+
 	notgrowinrow = 0; //consecutive months when town did not grew
 	growinrow = 0; //consecutive months when town did grew
 	growtotal = 0; //total months when town did grew
@@ -73,9 +73,7 @@ function Town::Grow(growmech){
 
 	//not growing
 	if(!this.growing){
-		if(this.prevgrowed){
-			GSTown.SetGrowthRate(this.id, GSTown.TOWN_GROWTH_NONE);
-		}
+		GSTown.SetGrowthRate(this.id, GSTown.TOWN_GROWTH_NONE);
 		this.grow_counter = 0;
 		this.notgrowinrow++;
 		this.growinrow = 0;
@@ -104,15 +102,13 @@ function Town::Grow(growmech){
 
 	//mechanism NORMAL
 	if(growmech == Growth.GROW_NORMAL) {
-		if(!this.prevgrowed) {
-			GSTown.SetGrowthRate(this.id, GSTown.TOWN_GROWTH_NORMAL);
-			this.grow_counter = 0;
-		}
+		GSTown.SetGrowthRate(this.id, GSTown.TOWN_GROWTH_NORMAL);
+		this.grow_counter = 0;
 		this.prevgrowed = true;
 		return GSTown.GetGrowthRate(this.id);
 	}
-	
-	
+
+
 	//mechanism EXPAND
 	if(growmech == Growth.GROW_EXPAND){
 		// Try to get close to OpenTTD native grow mechanics

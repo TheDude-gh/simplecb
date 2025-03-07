@@ -86,7 +86,8 @@ STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Missing service
 STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Town is {GREEN}supplied{}   {BLACK}Cargo amounts missing:
 STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}Town is {RED}not {BLACK}supplied{}   {BLACK}Cargo amounts missing:
 
-STR_TOWN_OWNED_COMPANY            :{}{YELLOW}This town is claimed by {COMPANY}{}   {BLACK}Cargo amounts missing:{STRING}
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}This town is claimed by {COMPANY}{STRING}
+STR_TOWN_OWNED_COMPANY_MISSING    :{}{YELLOW}This town is claimed by {COMPANY}{}   {BLACK}Cargo amounts missing:{STRING}
 
 STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
 STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
@@ -127,4 +128,3 @@ STR_RAW                            :{RAW_STRING}
 #{BLACK} {WHITE} {GREEN} {YELLOW} {ORANGE} {SILVER} {GOLD} {LTBLUE} {DKGREEN}
 #usable colours
 #{BLACK}  {WHITE} {RED}    {GREEN} {BLUE}   {YELLOW} {ORANGE} {PURPLE} {GRAY}   {BROWN} {SILVER} {GOLD} {CREAM}  {LTBLUE} {DKBLUE} {DKGREEN} {LTBROWN}
-

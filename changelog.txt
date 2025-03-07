@@ -11,10 +11,15 @@ You can support adding new API for this by voting in https://bugs.openttd.org/ta
 CHANGELOG
 
 Version - date
-15 - 2024-12-28
+15 - 2024-03-07
 =FIXES=
  - fixed town's funding building counter
+ - some string in town gui had wrong amount of parameters
+ - fixed rare bug when town would grow even when not conditions were met and vice versa when it would not grow when it should
 
+=CHANGES=
+ - Added preset for FIRS 5 and Apollo Rocket industry set
+ - Lowered some requirements for FIRS presets, mainly passengers
 
 Version - date
 14 - 2024-04-13

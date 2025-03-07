@@ -7,7 +7,7 @@ require("town.nut");
 require("classes.nut");
 
 scriptInstance <- null;
-const SCRIPT_VERSION = 13; //the same as in info.nut. For save/load
+const SCRIPT_VERSION = 15; //the same as in info.nut. For save/load
 const NUMCARGO = 64; //number of cargos in OpenTTD
 const INVALID_TOWN = 0xFFFF; //invalid town id
 const INVALID_COMPANY = 0xFF; //invalid company id
@@ -765,7 +765,7 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 	/* UPDATE */
 	if(update) {
 		//grow by default, check later
-		town.growing = true; 
+		town.growing = true;
 		town.service = true;
 		town.supplied = true;
 		town.percentage_delivered = 100; //default value for perc delivered
@@ -779,7 +779,12 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 	/* /UPDATE */
 
 	//when cargosize is less or more than towngui limit, add owned string, if equal, we display all cargos instead
-	if(cargoSize != TOWNGUI_LIMIT) {
+	//if less add also cargo missing title, because cargos will be displayed
+	if(cargoSize < TOWNGUI_LIMIT) {
+		towngui.append(GSText(GSText.STR_TOWN_OWNED_COMPANY_MISSING, companyid, GSText(GSText.STR_EMPTY0))); //2
+	}
+	//when more, display just owner, since cargos wont be displayed
+	else if(cargoSize > TOWNGUI_LIMIT) {
 		towngui.append(GSText(GSText.STR_TOWN_OWNED_COMPANY, companyid, GSText(GSText.STR_EMPTY0))); //2
 	}
 
@@ -854,8 +859,8 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 
 	//bad service
 	if(growrate == GSTown.TOWN_GROWTH_NONE && town.supplied == true) {
-		Log("service");
-		town.growing = false; 
+		//Log("service");
+		town.growing = false;
 		town.service = false;
 	}
 	
@@ -895,9 +900,9 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 			town.missing = missing_cargo;
 		}
 		if(town.missing) {
-			towngui.append(GSText(GSText.STR_TOWNW_MISSING_CARGO, town.missing));
+			towngui.append(GSText(GSText.STR_TOWNW_MISSING_CARGO, town.missing, GSText(GSText.STR_EMPTY0)));
 		}
-	 	towngui.append(GSText(GSText.STR_SEE_GOAL_GUI));
+	 	towngui.append(GSText(GSText.STR_SEE_GOAL_GUI, GSText(GSText.STR_EMPTY0), GSText(GSText.STR_EMPTY0)));
 	}
 
 	while(towngui.len() < TOWNGUI_LIMIT) { //feed pool with empty string to satisfy town gui
@@ -919,16 +924,17 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 		txt = town.growing ? GSText.STR_TOWNW_GROWTYPE_GROW_PLUS : GSText.STR_TOWNW_GROWTYPE_NOTGROW_PLUS;
 	}
 
+	//town gui limit is 20 string parameters. Each entry counts as parameter as they go deeper
 	GSTown.SetText( //19
 		townid,
 		GSText(GSText.STR_TOWNGUI,	//7
-			GSText(txt), //0
-			towngui[0], //2
-			towngui[1], //2
-			towngui[2], //2
-			towngui[3], //2
-			towngui[4], //2
-			towngui[5]  //2
+			GSText(txt), //0  STR_TOWNW_GROWTYPE_NOTGROW_SRV / STR_TOWNW_GROWTYPE_GROW / STR_EMPTY0 / STR_TOWNW_GROWTYPE_GROW_PLUS / STR_TOWNW_GROWTYPE_NOTGROW_PLUS
+			towngui[0], //2  STR_TOWN_OWNED_COMPANY / STR_TOWN_CARGO_GOOD / STR_TOWN_CARGO_YES
+			towngui[1], //2  STR_TOWNW_NEXT_CARGO / STR_TOWN_CARGO_GOOD / STR_TOWN_CARGO_YES
+			towngui[2], //2  STR_TOWNW_GROWTH_RATE / STR_TOWNW_NEXT_CARGO / STR_TOWN_CARGO_GOOD / STR_TOWN_CARGO_YES
+			towngui[3], //2  STR_SEE_GOAL_GUI / STR_TOWNW_MISSING_CARGO / STR_TOWNW_NEXT_CARGO / STR_TOWN_CARGO_GOOD / STR_TOWN_CARGO_YES
+			towngui[4], //2  STR_EMPTY2 / STR_SEE_GOAL_GUI / STR_TOWNW_NEXT_CARGO / STR_TOWN_CARGO_GOOD / STR_TOWN_CARGO_YES
+			towngui[5]  //2  STR_EMPTY2 / STR_TOWNW_NEXT_CARGO / STR_TOWN_CARGO_GOOD / STR_TOWN_CARGO_YES
 		)
 	);
 
@@ -941,7 +947,7 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 
 		goal_id = GSGoal.New(companyid, GSText(GSText.STR_TOWN_DELIVERED_PERCENT, town.percentage_delivered), GSGoal.GT_NONE, 0);
 		this.goals.append(goal_id);
-		
+
 		//growth info
 		if(town.growing) {
 			txt = GSText(GSText.STR_TOWN_GROWTYPE_GROW, town.growinrow, town.growtotal, town.monthstotal);

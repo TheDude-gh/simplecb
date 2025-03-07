@@ -326,7 +326,7 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 		],
 		//7 YETI
 		[
-			[ 0,  200,  250,   0], //pax
+			[ 0,  150,  250,   0], //pax
 			[ 2,   25,  500,   0], //mail
 			[ 4,   40, 1000, 100], //building materials
 			[ 8,   40, 2500, 100], //food
@@ -335,7 +335,7 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 		],
 		//8 FIRS 3 TEMP
 		[
-			[ 0, 200,   250,   0], //pax
+			[ 0, 150,   250,   0], //pax
 			[ 1,  40,  5000, 100], //alcohol
 			[ 2,  20,   500,   0], //mail
 			[ 5, 150,  2500, 100], //goods
@@ -343,7 +343,7 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 		],
 		//9 FIRS 3 ARCTIC
 		[
-			[ 0, 200,   250,   0], //pax
+			[ 0, 150,   250,   0], //pax
 			[ 2,  20,   500,   0], //mail
 			[ 5, 150,  2500, 100], //goods
 			[ 8,  40,  5000, 100], //alcohol
@@ -351,7 +351,7 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 		],
 		//10 FIRS 3 TROPIC
 		[
-			[ 0, 200,   250,   0], //pax
+			[ 0, 150,   250,   0], //pax
 			[ 1,  40,  5000, 100], //alcohol
 			[ 2,  20,   500,   0], //mail
 			[ 5, 150,  2500, 100], //goods
@@ -360,7 +360,7 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 		],
 		//11 FIRS 3 HOT COUNTRY
 		[
-			[ 0, 200,   250,   0], //pax
+			[ 0, 150,   250,   0], //pax
 			[ 1,  40,  5000, 100], //alcohol
 			[ 2,  20,   500,   0], //mail
 			[ 5, 150,  2500, 100], //goods
@@ -369,7 +369,7 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 		],
 		//12 FIRS 3 STEEL TOWN
 		[
-			[ 0, 150,   250,   0], //pax
+			[ 0, 100,   250,   0], //pax
 			[ 2,  20,   500,   0], //mail
 			[ 5,  50,  7500, 100], //vehicles
 			[11,  40,  1000, 100], //food
@@ -378,7 +378,7 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 		],
 		//13 FIRS 3 EXTREME
 		[
-			[ 0, 200,   250,   0], //pax
+			[ 0, 100,   250,   0], //pax
 			[ 1,  40,  5000, 100], //alcohol
 			[ 2,  20,   500,   0], //mail
 			[ 5, 150,  2500, 100], //goods
@@ -386,9 +386,10 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 			[22,  30,  7500, 100], //petroleum fuels
 			[24,  40, 10000, 100], //recyclables
 		],
+
 		//14 FIRS 4 TEMP
 		[
-			[ 0, 200,   250,   0], //pax
+			[ 0, 150,   250,   0], //pax
 			[ 1,  40,  5000, 100], //alcohol
 			[ 2,  20,   500,   0], //mail
 			[ 5, 150,  2500, 100], //goods
@@ -396,41 +397,98 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 		],
 		//15 FIRS 4 ARCTIC
 		[
-			[ 0, 200,   250,   0], //pax
+			[ 0, 150,   250,   0], //pax
 			[ 2,  20,   500,   0], //mail
 			[12,  80,  2500, 100], //peat
 			[11,  50,  1000, 100], //food
 		],
 		//16 FIRS 4 TROPIC
 		[
-			[ 0, 200,   250,   0], //pax
+			[ 0, 150,   250,   0], //pax
 			[ 1,  40,  5000, 100], //alcohol
 			[ 2,  20,   500,   0], //mail
-			[ 5, 150,  2500, 100], //goods
+			[ 5, 120,  2500, 100], //goods
 			[ 6,  30, 10000, 100], //coffee
 			[11,  50,  1000, 100], //food
 		],
 		//17 FIRS 4 HOT COUNTRY
 		[
-			[ 0, 200,   250,   0], //pax
+			[ 0, 150,   250,   0], //pax
 			[ 1,  40,  5000, 100], //alcohol
 			[ 2,  20,   500,   0], //mail
-			[ 5, 150,  2500, 100], //goods
+			[ 5, 100,  2500, 100], //goods
 			[ 8,  30, 10000, 100], //coffee
 			[11,  50,  1000, 100], //food
 			[23,  25,  7500, 100], //petroleum fuels
 		],
 		//18 FIRS 4 STEEL TOWN
 		[
-			[ 0, 150,   250,   0], //pax
+			[ 0, 100,   250,   0], //pax
 			[ 2,  20,   500,   0], //mail
 			[ 5,  50,  7500, 100], //vehicles
 			[11,  40,  1000, 100], //food
-			[13, 200,  2500,   0], //coal
+			[13, 150,  2500,   0], //coal
+		],
+
+		//19 FIRS 5 TEMP
+		[
+			[14, 150,   250,   0], //pax
+			[ 0,  40,  5000, 100], //alcohol
+			[12,  20,   500,   0], //mail
+			[ 7, 150,  2500, 100], //goods
+			[ 9,  50,  1000, 100], //food
+		],
+		//20 FIRS 5 ARCTIC
+		[
+			[11, 150,   250,   0], //pax
+			[ 9,  20,   500,   0], //mail
+			[12,  80,  2500, 100], //peat
+			[ 6,  50,  1000, 100], //food
+		],
+		//21 FIRS 5 TROPIC
+		[
+			[17, 150,   250,   0], //pax
+			[ 0,  40,  5000, 100], //alcohol
+			[14,  20,   500,   0], //mail
+			[11, 125,  2500, 100], //goods
+			[ 3,  30, 10000, 100], //coffee
+			[ 9,  50,  1000, 100], //food
+		],
+		//22 FIRS 5 HOT COUNTRY
+		[
+			[23, 150,   250,   0], //pax
+			[ 1,  40,  5000, 100], //alcohol
+			[18,  20,   500,   0], //mail
+			[15, 100,  2500, 100], //goods
+			[ 6,  30, 10000, 100], //coffee
+			[13,  50,  1000, 100], //food
+			[24,  25,  7500, 100], //petroleum fuels
+		],
+		//23 FIRS 5 STEEL TOWN
+		[
+			[28, 100,   250,   0], //pax
+			[24,  25,   500,   0], //mail
+			[ 6,  30,  1000, 100], //food
+			[19,  40,  4000, 100], //goods
+			[12,  15,  7500, 100], //concrete products
+			[20,  20, 12500, 100], //hardware
+			[54,  50, 25000, 100], //vehicles
+		],
+
+		//24 Apollo rocket IS
+		[
+			[ 0, 100,   250,   0], //pax
+			[ 2,  25,  1000,   0], //mail
+			[ 1,  50,   500,   0], //coal
+			[ 5,  50,  3000, 100], //goods
+			[10,   5,  5000, 100], //valuables
+			[17,  40, 10000, 100], //apollo landers
+			[16,  40, 10000, 100], //apollo spacecraft
+			[18,  40, 10000, 100], //rocket stages
 		],
 		//[0,  0,   0,   0], //
 	];
-	
+
 	//on invalid index just return first preset
 	if(cbeconomy <= 0 || cbeconomy >= presets.len()) {
 		return presets[0];

@@ -3,6 +3,7 @@
 	SimpletonCBInfo class - information and settings
 
 	Origin - Novapolis team, https://novapolis.net
+	Source code - https://github.com/TheDude-gh/simplecb
 	Author - The Dude
 	Licence - GPLv2
 	Purpose - Simple city builder script, towns require cargos to grow
@@ -16,11 +17,11 @@ class SimpletonCBInfo extends GSInfo {
 	function GetName()        { return "Simpleton's City Builder"; }
 	function GetDescription() { return "Easily configured City Builder simulation script"; }
 	function GetVersion()     { return 15; }
-	function GetDate()        { return "2024-12-28"; }
+	function GetDate()        { return "2025-03-07"; }
 	function CreateInstance() { return "SimpletonCB"; }
 	function GetShortName()   { return "SMCB"; }
 	function GetAPIVersion()  { return "1.11"; }
-	function GetUrl()         { return "https://www.novapolis.net"; }
+	function GetUrl()         { return "https://github.com/TheDude-gh/simplecb"; }
 
 	function GetSettings() {
 		AddSetting({
@@ -200,7 +201,7 @@ class SimpletonCBInfo extends GSInfo {
 			hard_value = 1,
 			custom_value = 1,
 			min_value = 0,
-			max_value = 18,
+			max_value = 24,
 			flags = CONFIG_NONE | CONFIG_INGAME
 		});
 		AddLabels(
@@ -213,7 +214,7 @@ class SimpletonCBInfo extends GSInfo {
 				_5 = "ECS",
 				_6 = "XIS"
 				_7 = "YETI",
-				
+
 				_8  = "FIRS 3 Temperate",
 				_9 = "FIRS 3 Arctic",
 				_10 = "FIRS 3 Tropic",
@@ -225,8 +226,16 @@ class SimpletonCBInfo extends GSInfo {
 				_15 = "FIRS 4 Arctic",
 				_16 = "FIRS 4 Tropic",
 				_17 = "FIRS 4 Hot Country",
-				_18 = "FIRS 4 Steel Town"
-			} 
+				_18 = "FIRS 4 Steel Town",
+
+				_19 = "FIRS 5 Temperate",
+				_20 = "FIRS 5 Arctic",
+				_21 = "FIRS 5 Tropic",
+				_22 = "FIRS 5 Hot Country",
+				_23 = "FIRS 5 Steel Town"
+
+				_24 = "Apollo Rocker Industry Set"
+			}
 		);
 
 		AddSetting({

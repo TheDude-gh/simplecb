@@ -87,7 +87,8 @@ STR_TOWNW_GROWTYPE_NOTGROW_SRV    :{WHITE}Chybí dopravní služby
 STR_TOWNW_GROWTYPE_GROW_PLUS      :{BLACK}Město {GREEN}je zásobeno{}   {BLACK}Chybějící suroviny:
 STR_TOWNW_GROWTYPE_NOTGROW_PLUS   :{BLACK}Město {RED}není zásobeno{}   {BLACK}Chybějící suroviny:
 
-STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Město patří společnosti {COMPANY}{}   {BLACK}Chybějící suroviny: {STRING}
+STR_TOWN_OWNED_COMPANY            :{}{YELLOW}Město patří společnosti {COMPANY}{STRING}
+STR_TOWN_OWNED_COMPANY_MISSING    :{}{YELLOW}Město patří společnosti {COMPANY}{}   {BLACK}Chybějící suroviny: {STRING}
 
 STR_TOWN_CARGO_GOOD               :{}    {GREEN}{CARGO_LIST}   OK{STRING}
 STR_TOWN_CARGO_YES                :{}    {ORANGE}{CARGO_LIST}   {COMMA}
