@@ -20,15 +20,17 @@ class Company
 
 class Cargo
 {
-	id = 0xFF;
-	req = 0;
-	from = 0;
+	id    = 0xFF;
+	req   = 0;
+	from  = 0;
 	store = 0;
+	self  = 0; //bool - if true, cargo delivered within the town wont count towards the requirements. Used for passengers and mail
 
-	constructor(id, req = 0, from = 0, store = 0){
-		this.id = id;
-		this.req = req;
-		this.from = from;
+	constructor(id, req = 0, from = 0, store = 0, self = 0) {
+		this.id    = id;
+		this.req   = req;
+		this.from  = from;
 		this.store = store;
+		this.self  = self;
 	}
 }

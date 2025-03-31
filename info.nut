@@ -16,8 +16,8 @@ class SimpletonCBInfo extends GSInfo {
 	function GetAuthor()      { return "TheDude"; }
 	function GetName()        { return "Simpleton's City Builder"; }
 	function GetDescription() { return "Easily configured City Builder simulation script"; }
-	function GetVersion()     { return 15; }
-	function GetDate()        { return "2025-03-07"; }
+	function GetVersion()     { return 16; }
+	function GetDate()        { return "2025-03-18"; }
 	function CreateInstance() { return "SimpletonCB"; }
 	function GetShortName()   { return "SMCB"; }
 	function GetAPIVersion()  { return "1.11"; }

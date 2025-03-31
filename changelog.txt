@@ -11,6 +11,13 @@ You can support adding new API for this by voting in https://bugs.openttd.org/ta
 CHANGELOG
 
 Version - date
+16 - 2024-03-18
+=CHANGES=
+ - passengers and mail delivered within claimed town is no longer counted towards the deliveries.
+   Due to the nature of GS mechanics, any passengers or mail delivered out of the town will lower the actual deliveries, 
+   so it is advised to not deliver passengers and mail out of the claimed town
+
+Version - date
 15 - 2024-03-07
 =FIXES=
  - fixed town's funding building counter
@@ -37,7 +44,7 @@ Version - date
 =CHANGES=
 Town skrinking - new optional setting
 	- When town is not supplied properly, it has a chance of demolishing house and decreasing population
-	- town will shrink on condition any cargo is supplied less then 25% of requirement and population is less than 500
+	- town will shrink on condition any cargo is supplied less then 25% of requirement and population is more than 500
 
 CityPopLimit setting
  - now cities can be limited by population percentage of biggest town instead of its multiplication. Range is 0 to 1000% instead of previous multiplier 1 to 10.

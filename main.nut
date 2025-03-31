@@ -7,13 +7,13 @@ require("town.nut");
 require("classes.nut");
 
 scriptInstance <- null;
-const SCRIPT_VERSION = 15; //the same as in info.nut. For save/load
+const SCRIPT_VERSION = 16; //the same as in info.nut. For save/load
 const NUMCARGO = 64; //number of cargos in OpenTTD
 const INVALID_TOWN = 0xFFFF; //invalid town id
 const INVALID_COMPANY = 0xFF; //invalid company id
 const INVALID_TILE = -1;
 const CLAIM_DISTANCE = 30;
-const NEIGHBOUR_DISTANCE_MAX = 2500; //50 tiles (square)
+const NEIGHBOUR_DISTANCE_MAX = 2500; //50 tiles (squared)
 const NO_GROWTH = 0x3FFF;
 const TOWNGUI_LIMIT = 6;
 const BREAKDAYS = 1; //daily process period in days
@@ -124,28 +124,13 @@ class SimpletonCB extends GSController
 	function Story();
 }
 
-
-
+//script start
 function SimpletonCB::Start() {
-	Log("### Simpleton city Builder STARTS ###");
+	this.Log("### Simpleton city Builder STARTS ###");
 	/* load settings */
 	this.log = GSController.GetSetting("morelogs");
-	if(this.from_save == false) {
-		//if there are alrady some companies and goals at start, fill pools
-		for(local id = 0; id < 16; id++) {
-			if(GSCompany.ResolveCompanyID(id) != GSCompany.COMPANY_INVALID) {
-				this.companies.append( Company(id) );
-			}
-		}
-		for(local id = 0; id < 256; id++) {
-			if(GSGoal.IsValidGoal(id)) {
-				GSGoal.Remove(id);
-			}
-		}
 
-		this.xMapgenRem();
-		this.xMapgen();
-	}
+	this.PrepareGame();
 
 	//PrepareCB reloads settings
 	this.PrepareCB();
@@ -153,27 +138,20 @@ function SimpletonCB::Start() {
 	this.StoryStart();
 
 	//debug - show cargo ID list
-	if(this.log >= 1) {
-		for(local i = 0; i < NUMCARGO; i++) {
-			if(GSCargo.IsValidCargo(i)) {
-				Log("CARGO   " + i + "   " + GSCargo.GetCargoLabel(i) + "   " + GSCargo.GetName(i));
-			}
-		}
-	}
-
-	this.mapX = GSMap.GetMapSizeX() - 2;
-	this.mapY = GSMap.GetMapSizeY() - 2;
+	this.CargoDetailsDebug();
 
 	// day tick = 74
 	// 31 ticks ~= 1 second,	 1 game day ~= 2,3s, 1 game month ~= 75s
 	sleeptime = TOWNTICKS;
 
+	//game loop
 	while (true) {
 		this.Process();
 		this.Sleep(sleeptime);
 	}
 }
 
+//main loop handle - time, events
 function SimpletonCB::Process() {
 	this.current_date = GSDate.GetCurrentDate();
 	this.current_month = GSDate.GetMonth(this.current_date);
@@ -204,13 +182,48 @@ function SimpletonCB::Process() {
 
 	this.last_month = this.current_month;
 	this.MonthlyLoop();
-	//this.xMapgenRem();
 
 	if(this.current_month == 1) {
 		this.YearlyLoop();
 	}
 
 	this.TownsUpdate(true); //update all
+}
+
+
+function SimpletonCB::PrepareGame() {
+	this.mapX = GSMap.GetMapSizeX() - 2;
+	this.mapY = GSMap.GetMapSizeY() - 2;
+
+	//new game
+	if(this.from_save == false) {
+		//if there are alrady some companies and goals at start, fill pools
+		for(local id = 0; id < 16; id++) {
+			if(GSCompany.ResolveCompanyID(id) != GSCompany.COMPANY_INVALID) {
+				this.companies.append( Company(id) );
+			}
+		}
+		for(local id = 0; id < 256; id++) {
+			if(GSGoal.IsValidGoal(id)) {
+				GSGoal.Remove(id);
+			}
+		}
+
+		//this.xMapgenRem();
+		this.xMapgen();
+	}
+}
+
+//debug - show cargo ID list
+function SimpletonCB::CargoDetailsDebug() {
+	if(this.log == 0) return;
+
+	for(local i = 0; i < NUMCARGO; i++) {
+		if(GSCargo.IsValidCargo(i)) {
+			//local ll = " TE=" + GSCargo.GetTownEffect(i) + " PAX=" + GSCargo.HasCargoClass(i, GSCargo.CC_PASSENGERS) + " MAIL=" + GSCargo.HasCargoClass(i, GSCargo.CC_MAIL);
+			this.Log("CARGO   " + i + "   " + GSCargo.GetCargoLabel(i) + "   " + GSCargo.GetName(i));
+		}
+	}
 }
 
 function SimpletonCB::CheckEvents() {
@@ -582,10 +595,10 @@ function SimpletonCB::CargoGetNext(population) {
 
 /* load cargo settings */
 function SimpletonCB::PrepareCB() {
-	
-	local cargoid, ireq, ipop, istore;
+
+	local cargoid, ireq, ipop, istore, iself;
 	local cbeconomy = GSController.GetSetting("cbeconomy");
-	Log("preparing CB");
+	this.Log("preparing CB");
 	//CUSTOM cargo settings
 	if(cbeconomy == 0) {
 		for(local i = 0; i < NUMCARGO; i++) {
@@ -595,8 +608,9 @@ function SimpletonCB::PrepareCB() {
 			}
 			ipop = GSController.GetSetting("pop"+i);
 			istore = GSController.GetSetting("store"+i);
-			this.CBcargo.append( Cargo(i, ireq, ipop, istore) ); //add new cargo
-			Log("load " + GSCargo.GetCargoLabel(i) + " req: " + ireq + "	 pop " + ipop + "	 store " + istore, 1);
+			iself = (GSCargo.HasCargoClass(i, GSCargo.CC_PASSENGERS) || GSCargo.HasCargoClass(i, GSCargo.CC_MAIL)) ? 1 : 0;
+
+			this.CBcargo.append( Cargo(i, ireq, ipop, istore, iself) ); //add new cargo
 		}
 	}
 	//chosen Preset
@@ -610,15 +624,17 @@ function SimpletonCB::PrepareCB() {
 			}
 			ipop = preset[2];
 			istore = preset[3];
-			this.CBcargo.append( Cargo(cargoid, ireq, ipop, istore) ); //add new cargo
+			iself = (GSCargo.HasCargoClass(cargoid, GSCargo.CC_PASSENGERS) || GSCargo.HasCargoClass(cargoid, GSCargo.CC_MAIL)) ? 1 : 0;
+
+			this.CBcargo.append( Cargo(cargoid, ireq, ipop, istore, iself) ); //add new cargo
 		}
 	}
 
 	this.CBcargo.sort(arrcmp); //sort by from population
-	
-	/*foreach(cargo in this.CBcargo) {
-		Log("load " + GSCargo.GetCargoLabel(cargo.id) + " req: " + cargo.req + " pop " + cargo.from + " store " + cargo.store, 1);
-	}*/
+
+	foreach(cargo in this.CBcargo) {
+		this.Log("load " + GSCargo.GetCargoLabel(cargo.id) + " req: " + cargo.req + " pop " + cargo.from + " store " + cargo.store + (cargo.self ? " (self)" : ""), 1);
+	}
 	
 	this.goal         = GSController.GetSetting("goal");
 	this.game_length  = GSController.GetSetting("gamelength");
@@ -679,18 +695,28 @@ function SimpletonCB::PrepareTown(townid) {
 
 /* start monitoring town once claimed */
 function SimpletonCB::StartTownMonitor(companyid, townid) {
+	if (companyid == GSCompany.COMPANY_INVALID || !GSTown.IsValidTown(townid)) {
+		return;
+	}
+
 	foreach(cargo in this.CBcargo) {
-		if (companyid != GSCompany.COMPANY_INVALID && GSTown.IsValidTown(townid)) {
-			GSCargoMonitor.GetTownDeliveryAmount(companyid, cargo.id, townid, true); //return value is not important
+		GSCargoMonitor.GetTownDeliveryAmount(companyid, cargo.id, townid, true); //return value is not important
+		if(cargo.self) {
+			GSCargoMonitor.GetTownPickupAmount(companyid, cargo.id, townid, true);
 		}
 	}
 }
 
 /* stop monitoring town if unclaimed */
 function SimpletonCB::StopTownMonitor(companyid, townid) {
+	if (companyid == GSCompany.COMPANY_INVALID || !GSTown.IsValidTown(townid)) {
+		return;
+	}
+
 	foreach(cargo in this.CBcargo) {
-		if (companyid != GSCompany.COMPANY_INVALID && GSTown.IsValidTown(townid)) {
-			GSCargoMonitor.GetTownDeliveryAmount(companyid, cargo.id, townid, false);
+		GSCargoMonitor.GetTownDeliveryAmount(companyid, cargo.id, townid, false);
+		if(cargo.self) {
+			GSCargoMonitor.GetTownPickupAmount(companyid, cargo.id, townid, false);
 		}
 	}
 }
@@ -746,6 +772,7 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 
 	local townpop = GSTown.GetPopulation(townid);
 	local delivered = 0, missing = 0, req = 0, goal_id, act_cargo, missing_cargo = 0, txt, towngui = [], deltadays, service_good = true, grow_ratio = 0;
+	local pickup = 0;
 	local cargoSize = this.CBcargo.len(); //how much cargos we need
 	local growrate = GSTown.GetGrowthRate(town.id); //curent growth rate
 
@@ -791,7 +818,16 @@ function SimpletonCB::TownUpdate(companyid, townid, update) {
 	/* MONTHLY DELIVERY CHECK */
 	foreach(cargo in this.CBcargo) {
 		delivered = GSCargoMonitor.GetTownDeliveryAmount(companyid, cargo.id, townid, true); //deliver since last check
-		req = townpop * cargo.req / 1000;	//current requirements
+
+		//when passenger or mail class, get pickup from within town and substract it from delivery
+		if(cargo.self) {
+			pickup = GSCargoMonitor.GetTownPickupAmount(companyid, cargo.id, townid, true);
+			//if cargo is picked up in claimed town and delivered to another town, it could increase requirements
+			//to prevent that, do not allow negative values, but delivering elsewhere can still go against valid deliveries
+			delivered = max(delivered - pickup, 0);
+		}
+
+		req = townpop * cargo.req / 1000; //current requirements
 		town.delivered[cargo.id] += delivered; //add to total month deliveries
 
 		/* UPDATE */

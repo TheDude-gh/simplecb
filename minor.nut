@@ -136,8 +136,10 @@ function SimpletonCB::PlaceIndustry(ind, cargo, distmin, distmax, method, onlyCi
 }
 /* /MAP GENERATION */
 
+//function intended to remove industries which are too close to town, but it's not possible to demolish industries wiht GS
 function SimpletonCB::xMapgenRem() {
 	return;
+
 	local townlist = GSTownList();
 	local indlist = GSIndustryList();
 	
@@ -152,51 +154,48 @@ function SimpletonCB::xMapgenRem() {
 		xtownlist.RemoveItem(closetownid);
 		skip++;
 	}*/
-	
 
-	GSCompanyMode(GSCompany.COMPANY_INVALID); //since 1.3.0 we can use GAIA company
+
+	GSCompanyMode(GSCompany.COMPANY_INVALID); //since 1.3.0 we can use DEITY company
 
 	//GSExecMode.GSExecMode();
 
 	//GSCompany.ChangeBankBalance(GSCompany.COMPANY_FIRST, 1000000, GSCompany.EXPENSES_OTHER, GSMap.TILE_INVALID);
 
-	
 
-	/*foreach(townid, _ in townlist) {
-		
-	}*/
 	for(local i = 0; i < 200; i++) {
-	  Log("TICK " + GSController.GetTick() + "   OPSUSP " + GSController.GetOpsTillSuspend());
+	  this.Log("TICK " + GSController.GetTick() + "   OPSUSP " + GSController.GetOpsTillSuspend());
 		for(local j = 0; j < 200; j++) {
 			local ti = GSMap.GetTileIndex(i, j);
-			GSTile.DemolishTile(ti);
+			if(!GSTile.IsBuildable(ti)) {
+				local demoresult = GSTile.DemolishTile(ti);
+				this.Log("DEMO " + i + "," + j + "   " + demoresult);
+			}
 		}
 	}
-	return
-	
+	return;
+
 	foreach(indid, _ in indlist) {
 		local tile = GSIndustry.GetLocation(indid);
 		local townid = GSTile.GetClosestTown(tile);
-		
+
 		local distance = GSTown.GetDistanceManhattanToTile(townid, tile);
 		if(distance < 40) {
 		  local demoresult = GSTile.DemolishTile(tile);
-		  Log("CLOSE Town " + GSTown.GetName(townid) + " IID " + indid + "  " + GSIndustry.GetName(indid) + "  DEMO=" + (demoresult ? 1 : 0));
+		  this.Log("CLOSE Town " + GSTown.GetName(townid) + " IID " + indid + "  " + GSIndustry.GetName(indid) + "  DEMO=" + (demoresult ? 1 : 0));
 		}
 		continue;
-		
+
 		local demoresult = GSTile.DemolishTile(tile);
-		
+
 		local X = GSMap.GetTileX(tile);
 		local Y = GSMap.GetTileY(tile);
-		
+
 		local ti = GSMap.GetTileIndex(X + 1, Y + 1);
 		local demoresult = GSTile.DemolishTile(ti);
 		//GSIndustry.SetText(indid, GSText(GSText.STR_RAW, "IID " + indid));
 		GSIndustry.SetText(indid, "IID " + indid);
 		GSLog.Info("IND ITEM " + indid + "  tile " + X + ":" + Y + " demo=" + (demoresult ? 1 : 0) + " ERR = " + GSError.GetLastErrorString());
-		
-		
 	}
 }
 
@@ -270,7 +269,7 @@ function SimpletonCB::SelectPresetCB(cbeconomy) {
 			[1,  100,   250,   0], //coal
 			[2,   40,  1000,   0], //mail
 			[5,  200,  1500, 100], //goods
-			[10,  10, 2500, 100], //valuables
+			[10,  10,  2500, 100], //valuables
 		],
 		//2 vannila ARCTIC
 		[
